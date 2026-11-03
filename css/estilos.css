@@ -1,0 +1,1545 @@
+/* =========================================
+   CONFIGURACIÓN GENERAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eef6fc;
+    color: #172b4d;
+    line-height: 1.6;
+
+    padding-top: 100px;
+}
+
+
+/* =========================================
+   PÁGINA 1 - PORTADA
+========================================= */
+
+.pagina-inicio {
+    min-height: 100vh;
+    background: linear-gradient(
+        135deg,
+        #063b70,
+        #006eb7,
+        #0d9de0
+    );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.portada {
+    text-align: center;
+    background-color: rgb(180, 212, 250);
+
+    width: 90%;
+    max-width: 600px;
+
+    padding: 45px 30px;
+
+    border-radius: 25px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+
+.logo-portada {
+    width: 500px;
+    max-width: 80%;
+
+    display: block;
+
+    margin: 0 auto 15px auto;
+}
+
+
+.portada h1 {
+    font-size: 65px;
+    color: #075397;
+
+    margin-top: 5px;
+}
+
+
+.nombre-mtc {
+    color: #1769aa;
+    font-size: 30px;
+
+    margin-bottom: 30px;
+}
+
+
+.boton-principal {
+    display: inline-block;
+
+    background-color: #fdfdfd;
+    color: rgb(17, 0, 0);
+
+    padding: 13px 35px;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+.boton-principal:hover {
+    background-color: #064b82;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   ENCABEZADO SECUNDARIO
+========================================= */
+
+.encabezado-secundario {
+    background: linear-gradient(
+        90deg,
+        #063b70,
+        #087ec1
+    );
+
+    color: white;
+
+    padding: 20px 40px;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.logo-pequeno {
+    width: 100px;
+    height: 80px;
+
+    object-fit: contain;
+}
+
+
+.encabezado-secundario h1 {
+    font-size: 10px;
+}
+
+
+.encabezado-secundario p {
+    font-size: 15px;
+}
+
+
+/* =========================================
+   PÁGINA DE BIENVENIDA
+========================================= */
+
+.pagina-bienvenida {
+    padding-top: 0;
+}
+
+.pagina-bienvenida .contenedor-bienvenida {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.pagina-bienvenida .bienvenida {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.pagina-bienvenida .tarjetas-integrantes {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin: 30px auto 0;
+}
+/*??*/
+.contenedor-bienvenida {
+    max-width: 1000px;
+
+    margin: auto;
+
+    padding: 50px 20px;
+
+    text-align: center;
+}
+
+
+.bienvenida {
+    background-color: rgb(253, 251, 251);
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 4px 15px rgba(18, 41, 212, 0.1);
+
+    margin-bottom: 35px;
+}
+
+
+.bienvenida h2 {
+    color: #1169a4;
+
+    font-size: 50px;
+
+    margin-bottom: 40px;
+}
+
+
+.bienvenida p {
+    max-width: 800px;
+
+    margin: 0 auto 20px auto;
+
+    font-size: 17px;
+}
+
+
+/* Nombre de la página debajo del logo (página de bienvenida) */
+
+.bienvenida .titulo-bienvenida {
+    font-size: 65px;
+    color: #075397;
+
+    margin-top: 5px;
+}
+
+.bienvenida .nombre-mtc {
+    font-size: 30px;
+
+    margin-bottom: 30px;
+}
+
+body.modo-oscuro .bienvenida .titulo-bienvenida {
+    color: #5eb5ed;
+}
+
+@media (max-width: 700px) {
+
+    .bienvenida .titulo-bienvenida {
+        font-size: 40px;
+    }
+
+    .bienvenida .nombre-mtc {
+        font-size: 22px;
+    }
+
+}
+
+
+.mensaje-final {
+    font-size: 21px !important;
+
+    font-weight: bold;
+
+    color: #087ec1;
+}
+
+
+/* =========================
+   ACERCA DE
+========================= */
+
+.acerca {
+    max-width: 1100px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.acerca h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.acerca p {
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   TARJETAS DE INTEGRANTES
+========================= */
+
+.tarjetas-integrantes {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+
+.tarjeta-integrante {
+    width: 220px;
+    padding: 15px;
+
+    background-color: #eef6fc;
+
+    border: 2px solid #8fd3ff;
+    border-radius: 10px;
+
+    text-align: center;
+}
+
+
+.foto-integrante img {
+    width: 180px;
+    height: 180px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+}
+
+
+.tarjeta-integrante h3 {
+    margin-top: 10px;
+
+    font-size: 17px;
+
+    color: #063b70;
+}
+
+
+/* =========================================
+   HEADER DEL PORTAL
+========================================= */
+
+.header-portal {
+    background: linear-gradient(
+        90deg,
+        #063b70,
+        #087ec1
+    );
+
+    color: rgb(250, 251, 251);
+
+    padding: 20px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    z-index: 1000;
+}
+
+
+.encabezado-contenido {
+    max-width: 1400px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+}
+
+
+.logo-portal {
+    width: 75px;
+    height: 75px;
+
+    object-fit: contain;
+}
+
+
+.informacion-mtc {
+    min-width: 230px;
+}
+
+
+.header-portal h1 {
+    font-size: 34px;
+
+    margin: 0;
+}
+
+
+.header-portal p {
+    font-size: 16px;
+
+    margin: 0;
+}
+
+
+/* =========================================
+   MENÚ PRINCIPAL
+========================================= */
+
+.menu {
+    background-color: #052e55;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+
+    padding: 12px;
+}
+
+
+.menu a {
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    padding: 10px 15px;
+
+    border-radius: 6px;
+
+    transition: 0.3s;
+}
+
+
+.menu a:hover {
+    background-color: #087ec1;
+}
+
+
+/* =========================================
+   CONTENEDOR
+========================================= */
+
+.contenedor {
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 35px 20px;
+}
+
+
+.seccion {
+    background-color: white;
+
+    padding: 30px;
+
+    margin-bottom: 30px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+
+
+.seccion h2 {
+    color: #075397;
+
+    font-size: 28px;
+
+    margin-bottom: 18px;
+
+    border-bottom: 3px solid #22a8e8;
+
+    padding-bottom: 8px;
+}
+
+
+/* =========================================
+   TRABAJOS
+========================================= */
+
+.botones-parciales {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+
+.botones-parciales a {
+    background-color: #063b70;
+    color: white;
+
+    text-decoration: none;
+
+    padding: 12px 25px;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+.botones-parciales a:hover {
+    background-color: #087ec1;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   SUBSECCIONES
+========================================= */
+
+.subseccion {
+    margin-top: 35px;
+    padding: 25px;
+
+    background-color: white;
+
+    border-radius: 12px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+
+.subseccion h3 {
+    color: #063b70;
+    margin-bottom: 10px;
+}
+
+
+/* =========================================
+   LISTA DE TRABAJOS
+========================================= */
+
+.lista-trabajos {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    margin-top: 20px;
+}
+
+
+.trabajo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 18px;
+
+    border: 1px solid #b9dff5;
+
+    border-radius: 10px;
+
+    background-color: #f7fbff;
+}
+
+
+.informacion-trabajo {
+    flex: 1;
+}
+
+
+.informacion-trabajo h4 {
+    margin-bottom: 5px;
+    color: #063b70;
+}
+
+
+.informacion-trabajo p {
+    margin: 0;
+}
+
+
+/* ==============================
+   RECURSOS DE LA UNIDAD 2
+============================== */
+
+.titulo-recursos {
+    color: #087ec1;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+/* Contenedor de los videos */
+.videos-unidad {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Tarjeta individual */
+.video-tarjeta {
+    min-width: 0;
+    padding: 20px;
+    background-color: #eef6fc;
+    border: 1px solid #c4e5f7;
+    border-radius: 10px;
+}
+
+/* Títulos de los videos */
+.video-tarjeta h4 {
+    color: #063b70;
+    margin: 0 0 12px;
+}
+
+/* Reproductor integrado */
+.video-tarjeta video {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 8px;
+    background-color: #000;
+}
+
+/* Descripción */
+.video-tarjeta p {
+    margin-top: 12px;
+    margin-bottom: 0;
+}
+
+/* Compatibilidad con el modo oscuro */
+body.modo-oscuro .titulo-recursos {
+    color: #5eb5ed;
+}
+
+body.modo-oscuro .video-tarjeta {
+    background-color: #252525;
+    border-color: #344b5c;
+}
+
+body.modo-oscuro .video-tarjeta h4 {
+    color: #8acaf0;
+}
+
+/* Adaptación para celulares */
+@media (max-width: 700px) {
+    .videos-unidad {
+        grid-template-columns: 1fr;
+    }
+
+    .video-tarjeta {
+        padding: 15px;
+    }
+
+    .trabajo {
+        flex-wrap: wrap;
+    }
+
+    .acciones-trabajo {
+        flex-wrap: wrap;
+    }
+}
+
+
+
+/* =========================================
+   BOTONES DE TRABAJO
+========================================= */
+
+.acciones-trabajo {
+    display: flex;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+
+.boton-ver,
+.boton-descargar {
+    display: inline-block;
+
+    padding: 9px 15px;
+
+    border-radius: 6px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+.boton-ver {
+    background-color: #087ec1;
+    color: white;
+}
+
+
+.boton-descargar {
+    background-color: #063b70;
+    color: white;
+}
+
+
+.boton-ver:hover,
+.boton-descargar:hover {
+    opacity: 0.85;
+}
+
+
+/* =========================================
+   MULTIMEDIA
+========================================= */
+
+.multimedia-opciones {
+    display: flex;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+
+    margin-top: 25px;
+}
+
+
+.multimedia-opciones > div {
+    flex: 1;
+
+    min-width: 200px;
+
+    background-color: #eef6fc;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+    border: 1px solid #c4e5f7;
+}
+
+
+.multimedia-opciones h3 {
+    color: #075397;
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================================
+   UNIDADES
+========================================= */
+
+.unidad {
+    background-color: #f4faff;
+
+    border-left: 5px solid #087ec1;
+
+    padding: 25px;
+
+    margin-top: 25px;
+
+    border-radius: 8px;
+}
+
+
+.unidad h3 {
+    color: #075397;
+
+    margin-bottom: 20px;
+}
+
+
+.unidad h4 {
+    color: #087ec1;
+
+    margin-top: 20px;
+
+    margin-bottom: 8px;
+}
+
+
+.unidad p {
+    margin-bottom: 12px;
+}
+
+
+.unidad ul {
+    margin-left: 25px;
+
+    margin-bottom: 15px;
+}
+
+
+.unidad li {
+    margin-bottom: 8px;
+}
+
+
+/* =========================================
+   HIMNO DEL IPN
+========================================= */
+
+.himno {
+    text-align: center;
+}
+
+
+.escudo-ipn {
+    width: 200px;
+
+    margin-bottom: 40px;
+}
+
+
+.audio-himno {
+    margin-top: 25px;
+
+    padding: 25px;
+
+    background-color: #eef6fc;
+
+    border-radius: 10px;
+}
+
+
+.audio-himno h3 {
+    color: #075397;
+
+    margin-bottom: 15px;
+}
+
+
+audio {
+    width: 100%;
+
+    max-width: 600px;
+}
+
+
+.letra-himno {
+    margin-top: 25px;
+
+    padding: 25px;
+
+    background-color: #f4faff;
+
+    border-radius: 10px;
+
+    text-align: left;
+
+    border-left: 5px solid #087ec1;
+}
+
+
+.letra-himno h3 {
+    color: #075397;
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================================
+   PIE DE PÁGINA
+========================================= */
+
+footer {
+    background-color: #052e55;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 30px;
+}
+
+
+.escudo-footer {
+    width: 300px;
+
+    margin-bottom: 40px;
+}
+
+
+footer p {
+    margin: 5px;
+}
+
+
+/* =========================================
+   ADAPTACIÓN PARA CELULAR
+========================================= */
+
+@media (max-width: 700px) {
+
+    .portada {
+        padding: 30px 20px;
+    }
+
+
+    .logo-portada {
+        width: 230px;
+    }
+
+
+    .portada h1 {
+        font-size: 40px;
+    }
+
+
+    .encabezado-contenido {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+
+    .menu {
+        flex-direction: column;
+    }
+
+
+    .menu a {
+        width: 100%;
+
+        text-align: center;
+    }
+
+
+    .bienvenida {
+        padding: 30px 20px;
+    }
+
+
+    .bienvenida h2 {
+        font-size: 32px;
+    }
+
+
+    .seccion {
+        padding: 22px;
+    }
+
+}
+
+
+
+/* =========================================
+   MODO OSCURO
+========================================= */
+
+/* =========================================
+   CONTROL DE MODO OSCURO 
+========================================= */
+
+.control-tema {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin-left: 12px;
+    flex-shrink: 0;
+}
+
+.etiqueta-tema {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.luna-etiqueta {
+    font-size: 23px;
+    line-height: 1;
+}
+
+.boton-tema {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100px;
+    height: 36px;
+    padding: 3px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 999px;
+    background: #292929;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.boton-tema::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+}
+
+.icono-ajustes,
+.icono-tema,
+.icono-sol {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 28px;
+    color: #a7a7a7;
+    font-size: 17px;
+    line-height: 1;
+    transition: color 0.3s ease;
+}
+
+.circulo-tema {
+    position: absolute;
+    z-index: 1;
+    width: 30px;
+    height: 28px;
+    left: 67px;
+    top: 3px;
+    border-radius: 999px;
+    background: #555555;
+    transition: left 0.3s ease, background 0.3s ease;
+}
+
+/* Modo claro: sol seleccionado */
+.boton-tema .icono-sol {
+    color: #ffffff;
+}
+
+/* Modo oscuro: luna seleccionada */
+body.modo-oscuro .circulo-tema {
+    left: 35px;
+    background: #555555;
+}
+
+body.modo-oscuro .icono-tema {
+    color: #ffffff;
+}
+
+body.modo-oscuro .icono-sol {
+    color: #a7a7a7;
+}
+
+.boton-tema:hover {
+    background: #333333;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.20);
+}
+
+.boton-tema:active {
+    transform: scale(0.97);
+}
+
+.boton-tema:focus-visible {
+    outline: 2px solid #5eb5ed;
+    outline-offset: 3px;
+}
+
+/* =========================================
+   CUANDO ESTÁ EN MODO OSCURO
+========================================= */
+
+body.modo-oscuro .boton-tema {
+    background: linear-gradient(135deg, #101827, #172b4d);
+    border-color: rgba(94, 181, 237, 0.35);
+    box-shadow:
+        inset 0 1px 2px rgba(255, 255, 255, 0.08),
+        0 4px 14px rgba(0, 0, 0, 0.38);
+}
+
+body.modo-oscuro .circulo-tema {
+    transform: translateX(32px);
+    background: #dceeff;
+}
+
+body.modo-oscuro .icono-tema {
+    left: 43px;
+    color: #123d59;
+    transform: rotate(-18deg);
+}
+
+body.modo-oscuro .boton-tema:hover {
+    background: linear-gradient(135deg, #15243a, #1c3c5b);
+}
+
+body.modo-oscuro {
+    background-color: #121212;
+    color: #e8e8e8;
+}
+
+
+/* =========================
+   PORTADA
+========================= */
+
+body.modo-oscuro .pagina-inicio {
+    background: linear-gradient(
+        135deg,
+        #050505,
+        #111827,
+        #172554
+    );
+}
+
+body.modo-oscuro .portada {
+    background-color: #1e1e1e;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+body.modo-oscuro .portada h1,
+body.modo-oscuro .nombre-mtc {
+    color: #5eb5ed;
+}
+
+body.modo-oscuro .boton-principal {
+    background-color: #eeeeee;
+    color: #111111;
+}
+
+
+/* =========================
+   ENCABEZADOS
+========================= */
+
+body.modo-oscuro .header-portal,
+body.modo-oscuro .encabezado-secundario {
+    background: linear-gradient(
+        90deg,
+        #07111f,
+        #102a43
+    );
+}
+
+
+/* =========================
+   MENÚ
+========================= */
+
+body.modo-oscuro .menu {
+    background-color: #080f18;
+}
+
+body.modo-oscuro .menu a {
+    color: #eeeeee;
+}
+
+body.modo-oscuro .menu a:hover {
+    background-color: #15527d;
+}
+
+
+/* =========================
+   CONTENIDO
+========================= */
+
+body.modo-oscuro .seccion {
+    background-color: #1e1e1e;
+    color: #e8e8e8;
+
+    box-shadow: 0 3px 12px rgba(0,0,0,0.35);
+}
+
+body.modo-oscuro .seccion h2 {
+    color: #5eb5ed;
+}
+
+
+/* =========================
+   BIENVENIDA
+========================= */
+
+body.modo-oscuro .bienvenida {
+    background-color: #1e1e1e;
+    color: #e8e8e8;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0.35);
+}
+
+body.modo-oscuro .bienvenida h2 {
+    color: #5eb5ed;
+}
+
+body.modo-oscuro .mensaje-final {
+    color: #5eb5ed;
+}
+
+
+/* =========================
+   ACERCA DE / INTEGRANTES
+========================= */
+
+body.modo-oscuro .tarjeta-integrante {
+    background-color: #252525;
+    border-color: #315f7d;
+}
+
+body.modo-oscuro .tarjeta-integrante h3 {
+    color: #8acaf0;
+}
+
+
+/* =========================
+   TRABAJOS
+========================= */
+
+body.modo-oscuro .subseccion {
+    background-color: #1e1e1e;
+
+    box-shadow: 0 3px 10px rgba(0,0,0,0.35);
+}
+
+body.modo-oscuro .subseccion h3 {
+    color: #8acaf0;
+}
+
+body.modo-oscuro .trabajo {
+    background-color: #252525;
+    border-color: #344b5c;
+}
+
+body.modo-oscuro .informacion-trabajo h4 {
+    color: #8acaf0;
+}
+
+
+/* =========================
+   BOTONES
+========================= */
+
+body.modo-oscuro .botones-parciales a {
+    background-color: #164d70;
+}
+
+body.modo-oscuro .botones-parciales a:hover {
+    background-color: #1d6b99;
+}
+
+body.modo-oscuro .boton-ver {
+    background-color: #176b9d;
+}
+
+body.modo-oscuro .boton-descargar {
+    background-color: #123d59;
+}
+
+
+/* =========================
+   MULTIMEDIA
+========================= */
+
+body.modo-oscuro .multimedia-opciones > div {
+    background-color: #252525;
+    border-color: #344b5c;
+}
+
+body.modo-oscuro .multimedia-opciones h3 {
+    color: #8acaf0;
+}
+
+
+/* =========================
+   UNIDADES
+========================= */
+
+body.modo-oscuro .unidad {
+    background-color: #252525;
+    border-left-color: #2385bd;
+}
+
+body.modo-oscuro .unidad h3 {
+    color: #6dbbea;
+}
+
+body.modo-oscuro .unidad h4 {
+    color: #5eb5ed;
+}
+
+
+/* =========================
+   HIMNO DEL IPN
+========================= */
+
+body.modo-oscuro .audio-himno {
+    background-color: #252525;
+}
+
+body.modo-oscuro .audio-himno h3 {
+    color: #8acaf0;
+}
+
+body.modo-oscuro .letra-himno {
+    background-color: #252525;
+    border-left-color: #2385bd;
+}
+
+body.modo-oscuro .letra-himno h3 {
+    color: #8acaf0;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+body.modo-oscuro footer {
+    background-color: #080f18;
+}
+
+/*=========================
+    Traduccion ingles
+========================== */
+
+.selector-idioma {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin-left: 10px;
+    color: #ffffff;
+    flex-shrink: 0;
+}
+
+.selector-idioma button {
+    padding: 7px 10px;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    background: transparent;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.selector-idioma button:hover,
+.selector-idioma button.idioma-activo {
+    background-color: #087ec1;
+    border-color: rgba(255, 255, 255, 0.25);
+}
+
+.selector-idioma button:focus-visible {
+    outline: 2px solid #8acaf0;
+    outline-offset: 2px;
+}
+
+@media (max-width: 700px) {
+    .selector-idioma {
+        margin: 8px auto;
+    }
+}
+
+
+/* =========================================
+   VISOR DE PDF
+========================================= */
+
+.visor-oculto {
+    display: none;
+}
+
+.visor-barra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 18px;
+}
+
+.visor-barra h2 {
+    margin-bottom: 0;
+    border-bottom: none;
+    padding-bottom: 0;
+    font-size: 22px;
+}
+
+.visor-marco {
+    width: 100%;
+    height: 80vh;
+    border: 1px solid #b9dff5;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+body.modo-oscuro .visor-marco {
+    border-color: #344b5c;
+}
+
+@media (max-width: 700px) {
+    .visor-marco {
+        height: 65vh;
+    }
+}
+
+
+/* =========================================
+   PÁGINA DE REALIDAD VIRTUAL Y AUMENTADA
+========================================= */
+
+.visor {
+    position: relative;
+    width: 100%;
+    height: 380px;
+    margin: 15px 0;
+    border: 1px solid #b9dff5;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.visor a-scene,
+.visor model-viewer {
+    width: 100%;
+    height: 100%;
+}
+
+.visor model-viewer {
+    background-color: #f4f4f4;
+}
+
+.pregunta {
+    margin-bottom: 18px;
+}
+
+.pregunta code {
+    background-color: #eef6fc;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+/* Al abrir un enlace a la actividad 6, que el encabezado fijo no la tape */
+#actividad-6 {
+    scroll-margin-top: 140px;
+}
+
+
+/* QR para abrir el ejemplo de RA desde el celular */
+
+.qr-ra {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin: 15px 0;
+    padding: 20px;
+    background-color: #eef6fc;
+    border: 1px solid #c4e5f7;
+    border-radius: 10px;
+}
+
+.qr-ra .qr-imagen {
+    flex-shrink: 0;
+    padding: 12px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    line-height: 0;
+}
+
+.qr-ra h4 {
+    color: #087ec1;
+    margin-bottom: 8px;
+}
+
+.qr-ra p {
+    margin-bottom: 8px;
+}
+
+.qr-ra .qr-enlace {
+    word-break: break-all;
+    font-size: 14px;
+}
+
+.qr-ra .qr-aviso {
+    display: none;
+    font-size: 14px;
+    font-weight: bold;
+    color: #b45309;
+}
+
+
+/* Marcador Hiro */
+
+.marcador-ra {
+    margin: 15px 0;
+    padding: 20px;
+    text-align: center;
+    background-color: #eef6fc;
+    border: 1px solid #c4e5f7;
+    border-radius: 10px;
+}
+
+.marcador-ra h4 {
+    color: #087ec1;
+    margin-bottom: 12px;
+}
+
+.marcador-ra img {
+    max-width: 100%;
+    height: auto;
+    padding: 12px;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+.marcador-ra p {
+    margin: 12px auto 0;
+    max-width: 500px;
+    font-size: 14px;
+}
+
+
+/* Modo oscuro de la página de RV y RA */
+
+body.modo-oscuro .visor {
+    border-color: #344b5c;
+}
+
+body.modo-oscuro .pregunta code {
+    background-color: #252525;
+}
+
+body.modo-oscuro .qr-ra,
+body.modo-oscuro .marcador-ra {
+    background-color: #252525;
+    border-color: #344b5c;
+}
+
+body.modo-oscuro .qr-ra h4,
+body.modo-oscuro .marcador-ra h4 {
+    color: #5eb5ed;
+}
+
+body.modo-oscuro .qr-ra .qr-enlace {
+    color: #8acaf0;
+}
+
+body.modo-oscuro .qr-ra .qr-aviso {
+    color: #fbbf24;
+}
+
+@media (max-width: 700px) {
+    .visor {
+        height: 300px;
+    }
+
+    .qr-ra {
+        flex-direction: column;
+        text-align: center;
+    }
+}

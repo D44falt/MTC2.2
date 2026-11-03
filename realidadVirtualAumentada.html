@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MTC - Realidad Virtual y Aumentada</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <!-- Realidad Virtual (A-Frame) y Realidad Aumentada (Model Viewer) -->
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"></script>
+
+    <!-- Generador de códigos QR -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         ENCABEZADO
+    ========================== -->
+
+    <header id="inicio" class="header-portal">
+
+        <div class="encabezado-contenido">
+
+            <img src="img/LogoActualizado.png"
+                 alt="Logo MTC"
+                 class="logo-portal">
+
+
+            <div class="informacion-mtc">
+
+                <h1>MTC</h1>
+
+                <p>
+                    Multimedia, Tecnología y Ciencia
+                </p>
+
+            </div>
+
+
+            <!-- MENÚ -->
+
+            <nav class="menu">
+
+                <a href="index.html">
+                    Inicio
+                </a>
+
+                <a href="index.html#trabajos">
+                    Trabajos
+                </a>
+
+
+                <a href="himnoIpn.html">
+                    Himno del IPN
+                </a>
+
+                <a href="AcercaDe.html">
+                    Acerca de
+                </a>
+
+
+                <button id="boton-tema" class="boton-tema" type="button"
+                aria-label="Cambiar tema">
+                <span class="icono-tema">☾</span>
+                <span class="icono-sol">☼</span>
+                <span class="circulo-tema"></span>
+                </button>
+
+                <div class="selector-idioma">
+                    <button type="button" data-idioma="es" class="idioma-activo">
+                        ES
+                    </button>
+
+                    <span>|</span>
+
+                    <button type="button" data-idioma="en">
+                        EN
+                    </button>
+                </div>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         CONTENIDO PRINCIPAL
+    ========================== -->
+
+    <main class="contenedor">
+
+        <section class="seccion">
+
+            <h2>Realidad Virtual y Realidad Aumentada</h2>
+
+            <p>
+                Desarrollos prácticos interactivos correspondientes a las
+                actividades 5 y 6 de la materia.
+            </p>
+
+            <!-- ACTIVIDAD 5: REALIDAD VIRTUAL -->
+            <div id="actividad-5" class="subseccion">
+                <h3>Actividad 5: Ejemplo de Realidad Virtual (VR)</h3>
+
+                <!-- EJEMPLO DE REALIDAD VIRTUAL (A-Frame) -->
+                <div class="visor">
+                    <a-scene embedded>
+
+                        <!-- Cielo y piso -->
+                        <a-sky color="#cfeaff"></a-sky>
+
+                        <a-plane position="0 0 -4"
+                                 rotation="-90 0 0"
+                                 width="12" height="12"
+                                 color="#7fb77e">
+                        </a-plane>
+
+                        <!-- Título en 3D -->
+                        <a-text value="MTC - Realidad Virtual"
+                                position="0 3.4 -4"
+                                align="center"
+                                color="#063b70"
+                                width="8">
+                        </a-text>
+
+                        <!-- Cubo azul que gira -->
+                        <a-box position="-2 1 -4"
+                               rotation="0 45 0"
+                               color="#087ec1"
+                               animation="property: rotation; to: 0 405 0; loop: true; dur: 8000; easing: linear">
+                        </a-box>
+
+                        <!-- Esfera amarilla que sube y baja -->
+                        <a-sphere position="0 1.5 -4"
+                                  radius="0.8"
+                                  color="#ffcc00"
+                                  animation="property: position; to: 0 2 -4; dir: alternate; loop: true; dur: 1500; easing: easeInOutSine">
+                        </a-sphere>
+
+                        <!-- Cilindro azul marino -->
+                        <a-cylinder position="2 0.75 -4"
+                                    radius="0.5" height="1.5"
+                                    color="#063b70">
+                        </a-cylinder>
+
+                    </a-scene>
+                </div>
+
+                <!-- DOCUMENTO PDF DE LA ACTIVIDAD 5 -->
+                <h4 class="titulo-recursos">Documentación</h4>
+
+                <div class="lista-trabajos">
+
+                    <div class="trabajo">
+                        <div class="informacion-trabajo">
+                            <h4>Documentación del ejemplo de Realidad Virtual</h4>
+                        </div>
+
+                        <div class="acciones-trabajo">
+                            <a href="trabajos\2doParcial\T2_05_2CV21_HM_Equipo_12.pdf"
+                               rel="noopener"
+                               class="boton-ver ver-pdf">
+                                Ver
+                            </a>
+
+                            <a href="trabajos\2doParcial\T2_05_2CV21_HM_Equipo_12.pdf"
+                               download
+                               class="boton-descargar">
+                                Descargar
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ACTIVIDAD 6: REALIDAD AUMENTADA -->
+            <div id="actividad-6" class="subseccion">
+                <h3>Actividad 6: Ejemplo de Realidad Aumentada (AR)</h3>
+
+                <!-- QR PARA ABRIR EL EJEMPLO DESDE EL CELULAR -->
+                <div class="qr-ra">
+
+                    <div id="qr-ra-codigo" class="qr-imagen"></div>
+
+                    <div>
+                        <h4>Pruébalo en tu celular</h4>
+
+                        <p>
+                            Escanea el código QR con la cámara de tu teléfono para
+                            abrir la página del ejemplo de realidad aumentada.
+                            Acepta el permiso de la cámara y apúntala al marcador
+                            que aparece abajo (en pantalla o impreso).
+                        </p>
+
+                        <p class="qr-enlace">
+                            <a id="qr-ra-enlace" href="ejemploAR.html"></a>
+                        </p>
+
+                        <p id="qr-ra-aviso" class="qr-aviso">
+                            Aviso: esta página se abrió de forma local.
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- MARCADOR HIRO (el que debe enfocar la cámara del celular) -->
+                <div class="marcador-ra">
+                    <h4>Marcador para el ejemplo</h4>
+
+                    <img src="img/hiro.png"
+                         onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/AR-js-org/AR.js/master/data/images/hiro.png';"
+                         alt="Marcador Hiro para realidad aumentada"
+                         width="220">
+
+                </div>
+
+                <div class="visor">
+                    <model-viewer
+                        src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
+                        alt="Modelo 3D de un Astronauta para AR"
+                        ar
+                        ar-modes="webxr scene-viewer quick-look"
+                        camera-controls
+                        auto-rotate>
+                    </model-viewer>
+                </div>
+
+                <!-- DOCUMENTO PDF DE LA ACTIVIDAD 6 -->
+                <h4 class="titulo-recursos">Documentación</h4>
+
+                <div class="lista-trabajos">
+
+                    <div class="trabajo">
+                        <div class="informacion-trabajo">
+                            <h4>Documentación del ejemplo de Realidad Aumentada</h4>
+                        </div>
+
+                        <div class="acciones-trabajo">
+                            <a href="trabajos\2doParcial\T2_06_2CV21_HM_Equipo_12.pdf"
+                               rel="noopener"
+                               class="boton-ver ver-pdf">
+                                Ver
+                            </a>
+
+                            <a href="trabajos\2doParcial\T2_06_2CV21_HM_Equipo_12.pdf"
+                               download
+                               class="boton-descargar">
+                                Descargar
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             VISOR DE PDF
+        ========================== -->
+
+        <section id="visor-pdf" class="seccion visor-oculto">
+
+            <div class="visor-barra">
+
+                <h2 id="visor-titulo">Visor de documentos</h2>
+
+                <button type="button"
+                        id="visor-cerrar"
+                        class="boton-descargar">
+                    Cerrar
+                </button>
+
+            </div>
+
+            <iframe id="visor-marco"
+                    class="visor-marco"
+                    title="Visor de PDF"></iframe>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         PIE DE PÁGINA
+    ========================== -->
+
+    <footer>
+
+        <img src="img/EscudoActualizado.png"
+             alt="IPN"
+             class="escudo-footer">
+
+        <p>
+            MTC - Multimedia, Tecnología y Ciencia
+        </p>
+
+        <p>
+            Proyecto de Herramientas Multimedia 2CV21
+        </p>
+
+        <p>
+            2026
+        </p>
+
+    </footer>
+
+    <!--JavaScript de modo obscuro y traduccion -->
+    <script src="js/tema.js"></script>
+    <script src="js/idioma.js"></script>
+
+    <!-- JavaScript del visor de PDF -->
+    <script src="js/visor.js"></script>
+
+    <!-- JavaScript del código QR de realidad aumentada -->
+    <script src="js/qrAR.js"></script>
+
+</body>
+
+</html>

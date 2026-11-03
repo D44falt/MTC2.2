@@ -1,0 +1,89 @@
+/* =========================================
+   EJEMPLO DE REALIDAD AUMENTADA CEL
+===========/============================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+
+/* Barra superior con instrucciones */
+
+.barra-ar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+
+    padding: 12px 15px;
+
+    background: linear-gradient(90deg, rgba(6, 59, 112, 0.92), rgba(8, 126, 193, 0.92));
+    color: #ffffff;
+}
+
+.barra-ar h1 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.barra-ar p {
+    margin: 2px 0 0;
+    font-size: 13px;
+}
+
+.barra-ar a {
+    flex-shrink: 0;
+    padding: 8px 14px;
+
+    background-color: #052e55;
+    color: #ffffff;
+
+    border-radius: 6px;
+
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+/* Mensaje inferior que desaparece al detectar el marcador */
+
+.mensaje-marcador {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+
+    width: 90%;
+    max-width: 420px;
+
+    padding: 12px 16px;
+
+    background-color: rgba(5, 46, 85, 0.92);
+    color: #ffffff;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+    text-align: center;
+
+    transition: opacity 0.3s;
+}
+
+.mensaje-marcador.oculto {
+    opacity: 0;
+    pointer-events: none;
+}

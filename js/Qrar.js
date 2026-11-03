@@ -3,7 +3,7 @@
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    var URL_PUBLICA = "";
+    var URL_PUBLICA = "https://d44falt.github.io/MTC2.2/Ejemploar.html";
 
     var destino = URL_PUBLICA || new URL("ejemploAR.html", window.location.href).href;
 

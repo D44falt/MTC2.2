@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Aplicaciones informáticas con el uso de herramientas multimedia</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/docs.css">
+</head>
+
+
+<body>
+
+    <script>
+        (() => {
+            try {
+                const tema = localStorage.getItem("tema");
+
+                if (tema === "claro") {
+                    document.body.classList.remove("modo-oscuro");
+                } else {
+                    document.body.classList.add("modo-oscuro");
+                }
+            } catch (error) {
+                document.body.classList.add("modo-oscuro");
+            }
+        })();
+    </script>
+
+    <!-- Fondo animado -->
+    <div id="fondo-vanta" aria-hidden="true"></div>
+
+
+    <!-- =========================
+         ENCABEZADO
+    ========================== -->
+
+    <header id="inicio" class="header-portal">
+
+        <div class="encabezado-contenido">
+
+            <a href="index.html" class="marca-mtc" aria-label="MTC - Inicio">
+                <img src="img/LogoActualizado.png"
+                     alt="Logo MTC"
+                     class="logo-portal">
+
+                <h1 class="solo-lectores">MTC</h1>
+
+                <span class="nombre-marca">Multimedia, tecnología y ciencia</span>
+            </a>
+
+
+            <!-- MENÚ -->
+
+            <nav class="menu" aria-label="Navegación principal">
+
+                <a href="index.html">
+                    Inicio
+                </a>
+
+                <details class="menu-desplegable">
+                    <summary>Trabajos</summary>
+                    <div class="submenu">
+                        <a href="primerUnidad.html">1er Unidad</a>
+                        <a href="segundaUnidad.html">2da Unidad</a>
+                        <a href="tercerUnidad.html">3er Unidad</a>
+                    </div>
+                </details>
+
+
+                <a href="himnoIpn.html">
+                    Himno del IPN
+                </a>
+
+                <a href="AcercaDe.html">
+                    Acerca de
+                </a>
+
+
+                <!-- INTERRUPTOR DE TEMA -->
+                <div class="toggle-switch">
+                    <label class="switch-label">
+                        <input type="checkbox"
+                               class="checkbox"
+                               id="boton-tema"
+                               aria-label="Cambiar a modo claro"
+                               role="switch">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <div class="selector-idioma">
+                    <button type="button" data-idioma="es" class="idioma-activo">
+                        ES
+                    </button>
+
+                    <span>|</span>
+
+                    <button type="button" data-idioma="en">
+                        EN
+                    </button>
+                </div>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         CONTENIDO PRINCIPAL
+    ========================== -->
+
+    <main class="contenedor">
+
+        <article class="documento">
+
+            <!-- PORTADA -->
+            <header class="documento-portada">
+                <p class="documento-etiqueta">Tercer Departamental · Tarea No. 3</p>
+                <h2>Aplicaciones informáticas con el uso de herramientas multimedia</h2>
+            </header>
+
+
+            <!-- ÍNDICE INTERACTIVO -->
+            <nav id="indice" class="documento-indice" aria-label="Índice del documento">
+                <h2>Índice</h2>
+                <ol>
+                    <li><a href="#introduccion">Introducción</a></li>
+                    <li><a href="#las-herramientas-con-las-que-se-construye-una-aplicacion-multimedia">Las herramientas con las que se construye una aplicación multimedia</a></li>
+                    <li><a href="#que-caracteriza-a-estas-aplicaciones">Qué caracteriza a estas aplicaciones</a></li>
+                    <li><a href="#ambitos-de-aplicacion">Ámbitos de aplicación</a></li>
+                    <li><a href="#ventajas-limites-y-accesibilidad">Ventajas, límites y accesibilidad</a></li>
+                    <li><a href="#conclusion">Conclusión</a></li>
+                    <li><a href="#fuentes">Bibliografía</a></li>
+                </ol>
+            </nav>
+
+            <section id="introduccion">
+                <h2>Introducción</h2>
+                <p>Hoy casi cualquier aplicación que usamos combina varios tipos de contenido: una plataforma de cursos mezcla texto, video y ejercicios interactivos, un videojuego integra imagen, sonido y animación, y una aplicación de telemedicina une video, audio y datos del paciente. Todas son aplicaciones informáticas que funcionan gracias a las herramientas multimedia. Para entender cómo se construyen y para qué sirven, conviene empezar por el concepto de multimedia.</p>
+                <p>Su origen etimológico es claro: viene de “multi” (numeroso) y “media” (medios), y se refiere a aquello que se expresa, transmite o percibe a través de varios medios. Sin embargo, el término ha generado confusión, y Salaverría (2001) señala que lo propio de lo multimedia es la integración simultánea y unitaria de contenidos en diversos códigos, principalmente texto, sonido e imagen. No basta con juntar un texto, un video y un audio por separado, sino que deben formar un mensaje coherente. El mismo autor explica que la tecnología digital es hoy una condición indispensable para combinar soportes textuales y audiovisuales. Así, las herramientas multimedia son los programas y equipos que permiten crear, editar e integrar esos elementos dentro de una aplicación.</p>
+                <p>Las aplicaciones informáticas que usan estas herramientas son muy variadas. El concepto de multimedia abarca productos digitales como videojuegos, sitios web y animación digital, y su rasgo distintivo es la interactividad (Pabón-Leal et al., 2024). Estos autores también señalan que las soluciones multimedia han tenido impacto en la educación, el periodismo, la salud y el entretenimiento, con ejemplos como plataformas de telemedicina, software educativo y realidad virtual para entrenamiento. Además, mencionan otras áreas de aplicación, como las presentaciones de negocios, la capacitación industrial, los kioscos de información y los programas de autoaprendizaje.</p>
+                <p>El uso de varios medios en una aplicación tiene respaldo desde la investigación sobre el aprendizaje. Mayer (2009) plantea el llamado principio multimedia, según el cual las personas aprenden mejor a partir de palabras e imágenes juntas que a partir de palabras solas. Esto ayuda a explicar por qué los medios se combinan en tantas aplicaciones, especialmente en las educativas. El presente trabajo tiene como propósito revisar qué son las aplicaciones informáticas que usan herramientas multimedia, en qué ámbitos se emplean, qué ejemplos existen y qué aporta la multimedia a cada uno.</p>
+            </section>
+
+            <section id="las-herramientas-con-las-que-se-construye-una-aplicacion-multimedia">
+                <h2>Las herramientas con las que se construye una aplicación multimedia</h2>
+                <p>Una aplicación multimedia depende de dos tipos de recursos: el equipo (hardware) y los programas (software). García Montoya (2001, p. 409) los distingue así. Del lado del equipo menciona una estación de trabajo con periféricos como tarjeta de sonido, tarjeta digitalizadora de video y escáner. Del lado de los programas enumera el sistema operativo, el diseño gráfico, las bases de datos, la fotografía, el video, el sonido, el hipertexto y la programación mediante lenguajes de autor (pp. 409-410). Estos últimos se ubican como herramientas pensadas para usuarios y no solo para programadores profesionales (p. 411). La misma autora advierte que estos requisitos caducan en cuanto aparecen equipos nuevos (p. 410), así que sus ejemplos concretos, de hace más de veinte años, sirven para entender las categorías y no como lista actual de herramientas.</p>
+                <p>Además, construir este tipo de aplicaciones no es tarea de una sola disciplina. Pabón-Leal et al. (2024) describen un campo que abarca el diseño y desarrollo de software multimedia, el diseño gráfico, la producción audiovisual, la animación, el desarrollo de videojuegos y la electrónica digital.</p>
+            </section>
+
+            <section id="que-caracteriza-a-estas-aplicaciones">
+                <h2>Qué caracteriza a estas aplicaciones</h2>
+                <p>García Montoya (2001, pp. 417-419) señala cuatro características de los programas multimedia. La interactividad es la reciprocidad entre una acción del usuario y una respuesta del sistema. La ramificación es la capacidad de encontrar datos precisos entre muchos disponibles, de modo que cada persona acceda a lo que necesita. La transparencia significa que el usuario se fije en el mensaje y no en la tecnología. La navegación es la posibilidad de moverse por la información sin perderse.</p>
+                <p>No todos los autores coinciden en el peso de la interactividad. Pabón-Leal et al. (2024) la destacan como rasgo distintivo de lo multimedia, mientras que Salaverría (2001) sostiene que no es esencial, porque una persona puede consumir un producto multimedia de forma pasiva. García Montoya (2001, p. 418) añade una advertencia útil: la interactividad no debe asumirse como sinónimo de mejor aprendizaje.</p>
+            </section>
+
+            <section id="ambitos-de-aplicacion">
+                <h2>Ámbitos de aplicación</h2>
+                <p><strong>Educación.</strong> Mayer (2009) plantea el principio multimedia: las personas aprenden mejor con palabras e imágenes juntas que con palabras solas. Según el capítulo, el resultado se observó en once de once pruebas, con un tamaño de efecto mediano de 1,39, y puede ser más fuerte en quienes saben menos del tema. Los videojuegos también se han estudiado como herramienta de aprendizaje. Una revisión sistemática de 64 artículos publicados entre 2016 y 2022 encontró resultados sobre todo en la adquisición de conocimientos y, en segundo lugar, en la motivación del alumnado, aunque señala que faltan estudios que expliquen dónde se producen las mejoras (Sierra-Daza et al., 2024). Otra aplicación son las simulaciones, que permiten estudiar situaciones que en la realidad serían demasiado costosas o peligrosas (García Montoya, 2001, p. 414).</p>
+                <p><strong>Salud.</strong> Pabón-Leal et al. (2024) mencionan las plataformas de telemedicina entre las soluciones multimedia del sector salud. A escala internacional, la Asamblea Mundial de la Salud respaldó en 2020 una estrategia mundial sobre salud digital para 2020-2025 (Organización Mundial de la Salud [OMS], 2021), que en 2025 se extendió hasta 2027 (OMS, 2025). En la formación del personal sanitario, una revisión de 31 estudios con 2407 participantes encontró que la realidad virtual mejora ligeramente los conocimientos frente a la enseñanza tradicional, aunque los resultados sobre actitudes y satisfacción fueron mixtos y ningún estudio midió efectos en pacientes (Kyaw et al., 2019).</p>
+                <p><strong>Entretenimiento y cultura.</strong> García Montoya (2001, p. 410) recuerda que los sistemas multimedia no se limitan a la formación: también sirven para comunicar, entretener (aventuras gráficas, simulaciones, juegos de estrategia), informar y hacer publicidad. Pabón-Leal et al. (2024) identificaron en su revisión 26 soluciones multimedia: 13 de entretenimiento, 10 de educación, 2 de salud y 1 de manejo de emergencias. Esto describe su muestra y no el mercado en general. Esos autores también destacan el uso de la multimedia para preservar y estudiar el patrimonio cultural.</p>
+                <p><strong>Negocios y capacitación.</strong> Entre las áreas de aplicación de la multimedia, Pabón-Leal et al. (2024) mencionan las presentaciones de negocios, la capacitación industrial, los kioscos de información y los programas de autoaprendizaje. García Montoya (2001, p. 439) explica por qué estas herramientas encajan con la formación de personas adultas en el trabajo: ofrecen adaptabilidad, facilidad de participación y aplicabilidad inmediata.</p>
+            </section>
+
+            <section id="ventajas-limites-y-accesibilidad">
+                <h2>Ventajas, límites y accesibilidad</h2>
+                <p>Entre sus ventajas, García Montoya (2001, pp. 429-435) enumera la flexibilidad de tiempo y lugar, la posibilidad de repetir contenidos al propio ritmo, el registro automático de resultados y el ahorro de costos por persona formada. Pero también reconoce limitaciones (pp. 435-437): los costos de producción son altos porque se requiere un equipo multidisciplinario, hace falta hardware y software especial, el usuario puede desorientarse si no hay buena navegación, y los trabajos mal diseñados resultan repetitivos o saturan con exceso de imágenes. Añade que estas aplicaciones no deberían sustituir por completo la formación presencial y que, si no están bien diseñadas, no pasan de ser una simple suma de medios (pp. 422-423).</p>
+                <p>Otro punto que debe cuidarse es la accesibilidad. Las Pautas de Accesibilidad para el Contenido Web (WCAG) 2.2 del W3C piden que el audio pregrabado en medios sincronizados tenga subtítulos (criterio 1.2.2, nivel A) y que el video pregrabado cuente con audiodescripción (criterio 1.2.5, nivel AA) (World Wide Web Consortium [W3C], 2023). Los subtítulos no solo recogen el diálogo, sino también quién habla y los sonidos relevantes, y su objetivo es que las personas sordas o con pérdida auditiva puedan acceder al contenido (W3C, s. f.).</p>
+            </section>
+
+            <section id="conclusion">
+                <h2>Conclusión</h2>
+                <p>Las aplicaciones informáticas que usan herramientas multimedia combinan texto, imagen, sonido, video y animación en un mensaje coherente, y su construcción requiere tanto equipo como programas, además del trabajo de varias disciplinas. Durante el trabajo se vio que su rasgo distintivo suele ser la interactividad, aunque no todos los autores coinciden en su peso, y que características como la ramificación, la transparencia y la navegación ayudan a que el usuario aproveche la información sin perderse.</p>
+                <p>También se revisó que estas aplicaciones se usan en educación, salud, entretenimiento y cultura, y negocios y capacitación. En la educación cuentan con el respaldo del principio multimedia de Mayer, y en la formación del personal sanitario la realidad virtual mejora ligeramente los conocimientos, aunque los resultados sobre actitudes fueron mixtos. Sin embargo, usar varios medios no garantiza por sí solo un buen resultado: los costos de producción son altos, el usuario puede desorientarse si la navegación es deficiente y una aplicación mal diseñada no pasa de ser una suma de medios. Por eso también es importante cuidar la accesibilidad, por ejemplo con subtítulos y audiodescripción, como piden las pautas WCAG 2.2.</p>
+            </section>
+
+            <section id="fuentes">
+                <h2>Bibliografía</h2>
+                <ul class="referencias">
+                    <li>García Montoya, E. (2001). Optimización, validación y modelización de un proceso de fabricación de comprimidos. Desarrollo de una aplicación interactiva multimedia [Tesis doctoral, Universitat de Barcelona]. Tesis Doctorals en Xarxa.
+                        <a href="http://hdl.handle.net/10803/1608" target="_blank" rel="noopener">http://hdl.handle.net/10803/1608</a>
+                    </li>
+                    <li>Kyaw, B. M., Saxena, N., Posadzki, P., Vseteckova, J., Nikolaou, C. K., George, P. P., Divakar, U., Masiello, I., Kononowicz, A. A., Zary, N., &amp; Tudor Car, L. (2019). Virtual reality for health professions education: Systematic review and meta-analysis by the Digital Health Education Collaboration. Journal of Medical Internet Research, 21(1), Artículo e12959.
+                        <a href="https://doi.org/10.2196/12959" target="_blank" rel="noopener">https://doi.org/10.2196/12959</a>
+                    </li>
+                    <li>Mayer, R. E. (2009). Multimedia principle. En Multimedia learning (2.ª ed., pp. 223-241). Cambridge University Press.
+                        <a href="https://doi.org/10.1017/CBO9780511811678.017" target="_blank" rel="noopener">https://doi.org/10.1017/CBO9780511811678.017</a>
+                    </li>
+                    <li>Organización Mundial de la Salud. (2021). Global strategy on digital health 2020-2025.
+                        <a href="https://www.who.int/publications/i/item/9789240020924" target="_blank" rel="noopener">https://www.who.int/publications/i/item/9789240020924</a>
+                    </li>
+                    <li>Organización Mundial de la Salud. (2025, 23 de mayo). World Health Assembly endorses extension of the global digital health strategy to 2027.
+                        <a href="https://www.who.int/news/item/23-05-2025-world-health-assembly-endorses-extension-of-the-global-digital-health-strategy-to-2027" target="_blank" rel="noopener">https://www.who.int/news/item/23-05-2025-world-health-assembly-endorses-extension-of-the-global-digital-health-strategy-to-2027</a>
+                    </li>
+                    <li>Pabón-Leal, J. L., Rodríguez-Ibáñez, R. E., &amp; Mendoza-Gafaro, R. E. (2024). Tendencias de la ingeniería multimedia: una mirada global desde el sector educativo. Aibi revista de investigación, administración e ingeniería, 12(2), 162-172.
+                        <a href="https://doi.org/10.15649/2346030X.3828" target="_blank" rel="noopener">https://doi.org/10.15649/2346030X.3828</a>
+                    </li>
+                    <li>Salaverría, R. (2001). Aproximación al concepto de multimedia desde los planos comunicativo e instrumental. Estudios sobre el Mensaje Periodístico, 7, 383-395.
+                        <a href="https://revistas.ucm.es/index.php/ESMP/article/download/ESMP0101110383A/12866" target="_blank" rel="noopener">https://revistas.ucm.es/index.php/ESMP/article/download/ESMP0101110383A/12866</a>
+                    </li>
+                    <li>Sierra-Daza, M. C., Martín-del-Pozo, M., &amp; Fernández-Sánchez, M. R. (2024). Videojuegos y aprendizaje en la etapa universitaria: una revisión sistemática. Revista de Educación, 405, 103-132.
+                        <a href="https://doi.org/10.4438/1988-592X-RE-2024-405-629" target="_blank" rel="noopener">https://doi.org/10.4438/1988-592X-RE-2024-405-629</a>
+                    </li>
+                    <li>World Wide Web Consortium. (s. f.). Understanding Success Criterion 1.2.2: Captions (Prerecorded). En WCAG 2.2 Understanding Docs.
+                        <a href="https://www.w3.org/WAI/WCAG22/Understanding/captions-prerecorded" target="_blank" rel="noopener">https://www.w3.org/WAI/WCAG22/Understanding/captions-prerecorded</a>
+                    </li>
+                    <li>World Wide Web Consortium. (2023). Web Content Accessibility Guidelines (WCAG) 2.2 (W3C Recommendation).
+                        <a href="https://www.w3.org/TR/WCAG22/" target="_blank" rel="noopener">https://www.w3.org/TR/WCAG22/</a>
+                    </li>
+                </ul>
+            </section>
+
+
+        </article>
+
+        <!-- BOTÓN FIJO PARA VOLVER AL ÍNDICE -->
+        <a class="boton-indice" href="#indice" aria-label="Volver al índice">↑ Índice</a>
+
+    </main>
+
+    <!-- =========================
+         PIE DE PÁGINA
+    ========================== -->
+
+    <footer class="footer-mtc">
+
+        <div class="footer-contenido">
+
+            <img src="img/EscudoActualizado.png"
+                 alt="IPN"
+                 class="escudo-footer">
+
+            <div class="footer-informacion">
+
+                <h3>MTC</h3>
+
+                <p>Multimedia, Tecnología y Ciencia</p>
+
+                <p>Proyecto de Herramientas Multimedia 2CV21</p>
+
+            </div>
+
+        </div>
+
+        <div class="footer-inferior">
+
+            <p>© 2026 MTC. Todos los derechos reservados.</p>
+
+        </div>
+
+    </footer>
+
+    <!-- Fondo animado Vanta -->
+    <script src="js/vanta/three.min.js"></script>
+    <script src="js/vanta/vanta.net.min.js"></script>
+    <script src="js/fondo-vanta.js"></script>
+
+    <!--JavaScript de modo obscuro y traduccion -->
+    <script src="js/tema.js"></script>
+    <script src="js/idioma.js"></script>
+
+    <!-- Menú desplegable de Trabajos -->
+    <script>
+        (() => {
+            const menu = document.querySelector(".menu-desplegable");
+            if (!menu) return;
+
+            document.addEventListener("click", (e) => {
+                if (!menu.contains(e.target) || e.target.closest(".submenu a")) {
+                    menu.open = false;
+                }
+            });
+
+            document.addEventListener("keydown", (e) => {
+                if (e.key === "Escape" && menu.open) {
+                    menu.open = false;
+                    menu.querySelector("summary").focus();
+                }
+            });
+        })();
+    </script>
+
+</body>
+
+</html>

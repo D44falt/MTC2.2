@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Segunda Unidad</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/docs.css">
+</head>
+
+
+<body>
+
+    <script>
+        (() => {
+            try {
+                const tema = localStorage.getItem("tema");
+
+                if (tema === "claro") {
+                    document.body.classList.remove("modo-oscuro");
+                } else {
+                    document.body.classList.add("modo-oscuro");
+                }
+            } catch (error) {
+                document.body.classList.add("modo-oscuro");
+            }
+        })();
+    </script>
+
+    <!-- Fondo animado -->
+    <div id="fondo-vanta" aria-hidden="true"></div>
+
+
+    <!-- =========================
+         ENCABEZADO
+    ========================== -->
+
+    <header id="inicio" class="header-portal">
+
+        <div class="encabezado-contenido">
+
+            <a href="index.html" class="marca-mtc" aria-label="MTC - Inicio">
+                <img src="img/LogoActualizado.png"
+                     alt="Logo MTC"
+                     class="logo-portal">
+
+                <h1 class="solo-lectores">MTC</h1>
+
+                <span class="nombre-marca">Multimedia, tecnología y ciencia</span>
+            </a>
+
+
+            <!-- MENÚ -->
+
+            <nav class="menu" aria-label="Navegación principal">
+
+                <a href="index.html">
+                    Inicio
+                </a>
+
+                <details class="menu-desplegable">
+                    <summary>Trabajos</summary>
+                    <div class="submenu">
+                        <a href="primerUnidad.html">1er Unidad</a>
+                        <a href="segundaUnidad.html">2da Unidad</a>
+                        <a href="segundaUnidad.html">3er Unidad</a>
+                    </div>
+                </details>
+
+
+                <a href="himnoIpn.html">
+                    Himno del IPN
+                </a>
+
+                <a href="AcercaDe.html">
+                    Acerca de
+                </a>
+
+
+                <!-- INTERRUPTOR DE TEMA -->
+                <div class="toggle-switch">
+                    <label class="switch-label">
+                        <input type="checkbox"
+                               class="checkbox"
+                               id="boton-tema"
+                               aria-label="Cambiar a modo claro"
+                               role="switch">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <div class="selector-idioma">
+                    <button type="button" data-idioma="es" class="idioma-activo">
+                        ES
+                    </button>
+
+                    <span>|</span>
+
+                    <button type="button" data-idioma="en">
+                        EN
+                    </button>
+                </div>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         CONTENIDO PRINCIPAL
+    ========================== -->
+
+    <main class="contenedor">
+
+        <article class="documento">
+
+            <!-- PORTADA -->
+            <header class="documento-portada">
+                <p class="documento-etiqueta">Tarea No. 2 · Unidad 1.3</p>
+                <h2>La animación en la multimedia</h2>
+            </header>
+
+            <!-- ÍNDICE INTERACTIVO -->
+            <nav id="indice" class="documento-indice" aria-label="Índice del documento">
+                <h2>Índice</h2>
+                <ol>
+                    <li><a href="#introduccion">Introducción</a></li>
+                    <li><a href="#unidad-1-3">Unidad 1.3. La animación en la multimedia</a>
+                        <ul>
+                            <li><a href="#tema-1">¿Para qué se utiliza?</a></li>
+                            <li><a href="#tema-2">Ejemplos de aplicación</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#conclusion">Conclusión</a></li>
+                    <li><a href="#fuentes">Fuentes bibliográficas</a></li>
+                </ol>
+            </nav>
+
+            <section id="introduccion">
+                <h2>Introducción</h2>
+                <p>El presente trabajo reúne dos temas relacionados con las herramientas multimedia: la animación y los antecedentes de la realidad virtual. La animación permite crear la sensación de movimiento mediante una sucesión de imágenes y se aplica en videojuegos, películas, publicidad, educación y plataformas digitales. Por su parte, la realidad virtual ha evolucionado a partir de distintos experimentos y dispositivos orientados a generar experiencias inmersivas. Revisar ambos temas permite reconocer sus usos y su importancia en los entornos multimedia actuales.</p>
+            </section>
+
+            <section id="unidad-1-3">
+                <p class="documento-etiqueta">Unidad 1.3</p>
+                <h2>La animación en la multimedia</h2>
+                <p>La animación es una técnica que permite crear la sensación de movimiento mediante una sucesión de imágenes. En la multimedia se utiliza para hacer que los contenidos sean más atractivos, dinámicos e interesantes para el usuario.</p>
+
+                <h3 id="tema-1">¿Para qué se utiliza?</h3>
+                <p>La animación puede utilizarse en diferentes áreas de la multimedia, como videojuegos, películas, publicidad, educación, páginas web y aplicaciones.</p>
+
+                <h3 id="tema-2">Ejemplos de aplicación</h3>
+                <ul>
+                    <li>Videojuegos</li>
+                    <li>Películas y series animadas</li>
+                    <li>Publicidad digital</li>
+                    <li>Material educativo</li>
+                    <li>Páginas web interactivas</li>
+                    <li>Aplicaciones multimedia</li>
+                </ul>
+            </section>
+
+            <section id="conclusion">
+                <h2>Conclusión</h2>
+                <p>En conclusión, la animación y la realidad virtual son recursos importantes dentro de la multimedia, ya que permiten presentar información de forma dinámica y crear experiencias digitales más atractivas. La animación se utiliza en distintos formatos, mientras que la realidad virtual ha avanzado desde los primeros experimentos de simulación hasta aplicaciones actuales en educación, medicina, arquitectura, entrenamiento y entretenimiento. Conocer estos conceptos ayuda a comprender la diversidad de herramientas que forman parte del desarrollo multimedia.</p>
+            </section>
+
+            <section id="fuentes">
+                <h2>Fuentes bibliográficas</h2>
+
+                <h3>Animación en la multimedia</h3>
+                <ul class="referencias">
+                    <li>AlegsaOnline. (2024). Animación: definición, historia, técnicas y tipos del cine animado.
+                        <a href="https://es.alegsaonline.com/art/animacion.php" target="_blank" rel="noopener">https://es.alegsaonline.com/art/animacion.php</a>
+                    </li>
+                    <li>Estudiando. (2023). ¿Qué es la Animación? Definición, tipos e historia.
+                        <a href="https://estudyando.com/que-es-la-animacion-definicion-tipos-e-historia/" target="_blank" rel="noopener">https://estudyando.com/que-es-la-animacion-definicion-tipos-e-historia/</a>
+                    </li>
+                    <li>ESDESIGN Barcelona. (2024). La animación digital: explora las últimas tendencias y técnicas.
+                        <a href="https://www.esdesignbarcelona.com/actualidad/diseno/la-animacion-digital" target="_blank" rel="noopener">https://www.esdesignbarcelona.com/actualidad/diseno/la-animacion-digital</a>
+                    </li>
+                </ul>
+            </section>
+
+        </article>
+
+        <!-- BOTÓN FIJO PARA VOLVER AL ÍNDICE -->
+        <a class="boton-indice" href="#indice" aria-label="Volver al índice">↑ Índice</a>
+
+    </main>
+
+    <!-- =========================
+         PIE DE PÁGINA
+    ========================== -->
+
+    <footer class="footer-mtc">
+
+        <div class="footer-contenido">
+
+            <img src="img/EscudoActualizado.png"
+                 alt="IPN"
+                 class="escudo-footer">
+
+            <div class="footer-informacion">
+
+                <h3>MTC</h3>
+
+                <p>Multimedia, Tecnología y Ciencia</p>
+
+                <p>Proyecto de Herramientas Multimedia 2CV21</p>
+
+            </div>
+
+        </div>
+
+        <div class="footer-inferior">
+
+            <p>© 2026 MTC. Todos los derechos reservados.</p>
+
+        </div>
+
+    </footer>
+
+    <!-- Fondo animado Vanta -->
+    <script src="js/vanta/three.min.js"></script>
+    <script src="js/vanta/vanta.net.min.js"></script>
+    <script src="js/fondo-vanta.js"></script>
+
+    <!--JavaScript de modo obscuro y traduccion -->
+    <script src="js/tema.js"></script>
+    <script src="js/idioma.js"></script>
+
+    <!-- Menú desplegable de Trabajos -->
+    <script>
+        (() => {
+            const menu = document.querySelector(".menu-desplegable");
+            if (!menu) return;
+
+            document.addEventListener("click", (e) => {
+                if (!menu.contains(e.target) || e.target.closest(".submenu a")) {
+                    menu.open = false;
+                }
+            });
+
+            document.addEventListener("keydown", (e) => {
+                if (e.key === "Escape" && menu.open) {
+                    menu.open = false;
+                    menu.querySelector("summary").focus();
+                }
+            });
+        })();
+    </script>
+
+</body>
+
+</html>

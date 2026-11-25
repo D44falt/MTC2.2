@@ -20,6 +20,25 @@
 
 <body>
 
+    <script>
+        (() => {
+            try {
+                const tema = localStorage.getItem("tema");
+
+                if (tema === "claro") {
+                    document.body.classList.remove("modo-oscuro");
+                } else {
+                    document.body.classList.add("modo-oscuro");
+                }
+            } catch (error) {
+                document.body.classList.add("modo-oscuro");
+            }
+        })();
+    </script>
+
+    <!-- Fondo animado -->
+    <div id="fondo-vanta" aria-hidden="true"></div>
+
 
     <!-- =========================
          ENCABEZADO
@@ -29,33 +48,33 @@
 
         <div class="encabezado-contenido">
 
-            <img src="img/LogoActualizado.png"
-                 alt="Logo MTC"
-                 class="logo-portal">
+            <a href="index.html" class="marca-mtc" aria-label="MTC - Inicio">
+                <img src="img/LogoActualizado.png"
+                     alt="Logo MTC"
+                     class="logo-portal">
 
+                <h1 class="solo-lectores">MTC</h1>
 
-            <div class="informacion-mtc">
-
-                <h1>MTC</h1>
-
-                <p>
-                    Multimedia, Tecnología y Ciencia
-                </p>
-
-            </div>
+                <span class="nombre-marca">Multimedia, tecnología y ciencia</span>
+            </a>
 
 
             <!-- MENÚ -->
 
-            <nav class="menu">
+            <nav class="menu" aria-label="Navegación principal">
 
                 <a href="index.html">
                     Inicio
                 </a>
 
-                <a href="index.html#trabajos">
-                    Trabajos
-                </a>
+                <details class="menu-desplegable">
+                    <summary>Trabajos</summary>
+                    <div class="submenu">
+                        <a href="primerUnidad.html">1er Parcial</a>
+                        <a href="segundaUnidad.html">2do Parcial</a>
+                        <a href="tercerUnidad.html">3er Parcial</a>
+                    </div>
+                </details>
 
 
                 <a href="himnoIpn.html">
@@ -67,12 +86,17 @@
                 </a>
 
 
-                <button id="boton-tema" class="boton-tema" type="button"
-                aria-label="Cambiar tema">
-                <span class="icono-tema">☾</span>
-                <span class="icono-sol">☼</span>
-                <span class="circulo-tema"></span>
-                </button>
+                <!-- INTERRUPTOR DE TEMA -->
+                <div class="toggle-switch">
+                    <label class="switch-label">
+                        <input type="checkbox"
+                               class="checkbox"
+                               id="boton-tema"
+                               aria-label="Cambiar a modo claro"
+                               role="switch">
+                        <span class="slider"></span>
+                    </label>
+                </div>
 
                 <div class="selector-idioma">
                     <button type="button" data-idioma="es" class="idioma-activo">
@@ -167,13 +191,13 @@
                         </div>
 
                         <div class="acciones-trabajo">
-                            <a href="trabajos\2doParcial\T2_05_2CV21_HM_Equipo_12.pdf"
+                            <a href="u2_ejemploRealidadVirtual.html"
                                rel="noopener"
                                class="boton-ver ver-pdf">
                                 Ver
                             </a>
 
-                            <a href="trabajos\2doParcial\T2_05_2CV21_HM_Equipo_12.pdf"
+                            <a href="trabajos/2doParcial/T2_05_2CV21_HM_Equipo_12.pdf"
                                download
                                class="boton-descargar">
                                 Descargar
@@ -236,13 +260,13 @@
                         </div>
 
                         <div class="acciones-trabajo">
-                            <a href="trabajos\2doParcial\T2_06_2CV21_HM_Equipo_12.pdf"
+                            <a href="u2_ejemploRealidadAumentada.html"
                                rel="noopener"
                                class="boton-ver ver-pdf">
                                 Ver
                             </a>
 
-                            <a href="trabajos\2doParcial\T2_06_2CV21_HM_Equipo_12.pdf"
+                            <a href="trabajos/2doParcial/T2_06_2CV21_HM_Equipo_12.pdf"
                                download
                                class="boton-descargar">
                                 Descargar
@@ -256,29 +280,7 @@
         </section>
 
 
-        <!-- =========================
-             VISOR DE PDF
-        ========================== -->
-
-        <section id="visor-pdf" class="seccion visor-oculto">
-
-            <div class="visor-barra">
-
-                <h2 id="visor-titulo">Visor de documentos</h2>
-
-                <button type="button"
-                        id="visor-cerrar"
-                        class="boton-descargar">
-                    Cerrar
-                </button>
-
-            </div>
-
-            <iframe id="visor-marco"
-                    class="visor-marco"
-                    title="Visor de PDF"></iframe>
-
-        </section>
+        
 
     </main>
 
@@ -287,35 +289,72 @@
          PIE DE PÁGINA
     ========================== -->
 
-    <footer>
+    <footer class="footer-mtc">
 
-        <img src="img/EscudoActualizado.png"
-             alt="IPN"
-             class="escudo-footer">
+        <div class="footer-contenido">
 
-        <p>
-            MTC - Multimedia, Tecnología y Ciencia
-        </p>
+            <img src="img/EscudoActualizado.png"
+                 alt="IPN"
+                 class="escudo-footer">
 
-        <p>
-            Proyecto de Herramientas Multimedia 2CV21
-        </p>
+            <div class="footer-informacion">
 
-        <p>
-            2026
-        </p>
+                <h3>MTC</h3>
+
+                <p>Multimedia, Tecnología y Ciencia</p>
+
+                <p>Proyecto de Herramientas Multimedia 2CV21</p>
+
+            </div>
+
+        </div>
+
+        <div class="footer-inferior">
+
+            <p>© 2026 MTC. Todos los derechos reservados.</p>
+
+        </div>
 
     </footer>
+
+    <!-- A-Frame trae su propia copia de Three.js: se guarda antes de cargar la de Vanta -->
+    <script>window.threeAframe = window.THREE;</script>
+
+    <!-- Fondo animado Vanta -->
+    <script src="js/vanta/three.min.js"></script>
+    <script src="js/vanta/vanta.net.min.js"></script>
+    <script src="js/fondo-vanta.js"></script>
+
+    <!-- Se devuelve Three.js a A-Frame -->
+    <script>if (window.threeAframe) { window.THREE = window.threeAframe; }</script>
 
     <!--JavaScript de modo obscuro y traduccion -->
     <script src="js/tema.js"></script>
     <script src="js/idioma.js"></script>
 
-    <!-- JavaScript del visor de PDF -->
-    <script src="js/visor.js"></script>
-
-    <!-- JavaScript del código QR de realidad aumentada -->
+    <!-- JavaScript del código qr de realidad aumentada -->
     <script src="js/Qrar.js"></script>
+
+    <!-- Menú desplegable de Trabajos -->
+    <script>
+        (() => {
+            const menu = document.querySelector(".menu-desplegable");
+            if (!menu) return;
+
+            document.addEventListener("click", (e) => {
+                if (!menu.contains(e.target) || e.target.closest(".submenu a")) {
+                    menu.open = false;
+                }
+            });
+
+            document.addEventListener("keydown", (e) => {
+                if (e.key === "Escape" && menu.open) {
+                    menu.open = false;
+                    menu.querySelector("summary").focus();
+                }
+            });
+        })();
+    </script>
 
 </body>
 

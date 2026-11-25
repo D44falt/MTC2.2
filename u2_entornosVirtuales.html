@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Entornos virtuales</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/docs.css">
+</head>
+
+
+<body>
+
+    <script>
+        (() => {
+            try {
+                const tema = localStorage.getItem("tema");
+
+                if (tema === "claro") {
+                    document.body.classList.remove("modo-oscuro");
+                } else {
+                    document.body.classList.add("modo-oscuro");
+                }
+            } catch (error) {
+                document.body.classList.add("modo-oscuro");
+            }
+        })();
+    </script>
+
+    <!-- Fondo animado -->
+    <div id="fondo-vanta" aria-hidden="true"></div>
+
+
+    <!-- =========================
+         ENCABEZADO
+    ========================== -->
+
+    <header id="inicio" class="header-portal">
+
+        <div class="encabezado-contenido">
+
+            <a href="index.html" class="marca-mtc" aria-label="MTC - Inicio">
+                <img src="img/LogoActualizado.png"
+                     alt="Logo MTC"
+                     class="logo-portal">
+
+                <h1 class="solo-lectores">MTC</h1>
+
+                <span class="nombre-marca">Multimedia, tecnología y ciencia</span>
+            </a>
+
+
+            <!-- MENÚ -->
+
+            <nav class="menu" aria-label="Navegación principal">
+
+                <a href="index.html">
+                    Inicio
+                </a>
+
+                <details class="menu-desplegable">
+                    <summary>Trabajos</summary>
+                    <div class="submenu">
+                        <a href="primerUnidad.html">1er Unidad</a>
+                        <a href="segundaUnidad.html">2da Unidad</a>
+                        <a href="tercerUnidad.html">3er Unidad</a>
+                    </div>
+                </details>
+
+
+                <a href="himnoIpn.html">
+                    Himno del IPN
+                </a>
+
+                <a href="AcercaDe.html">
+                    Acerca de
+                </a>
+
+
+                <!-- INTERRUPTOR DE TEMA -->
+                <div class="toggle-switch">
+                    <label class="switch-label">
+                        <input type="checkbox"
+                               class="checkbox"
+                               id="boton-tema"
+                               aria-label="Cambiar a modo claro"
+                               role="switch">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <div class="selector-idioma">
+                    <button type="button" data-idioma="es" class="idioma-activo">
+                        ES
+                    </button>
+
+                    <span>|</span>
+
+                    <button type="button" data-idioma="en">
+                        EN
+                    </button>
+                </div>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         CONTENIDO PRINCIPAL
+    ========================== -->
+
+    <main class="contenedor">
+
+        <article class="documento">
+
+            <!-- PORTADA -->
+            <header class="documento-portada">
+                <p class="documento-etiqueta">Tarea No. 10</p>
+                <h2>Entornos virtuales</h2>
+            </header>
+
+
+            <!-- ÍNDICE INTERACTIVO -->
+            <nav id="indice" class="documento-indice" aria-label="Índice del documento">
+                <h2>Índice</h2>
+                <ol>
+                    <li><a href="#introduccion">Introducción</a></li>
+                    <li><a href="#tecnologia-de-recorridos-virtuales">Tecnología de recorridos virtuales</a></li>
+                    <li><a href="#software-de-entornos-virtuales">Software de entornos virtuales</a></li>
+                    <li><a href="#herramientas-de-rv-y-ra">Herramientas de RV y RA</a></li>
+                    <li><a href="#aplicaciones-de-entornos-virtuales">Aplicaciones de entornos virtuales</a></li>
+                    <li><a href="#motores-de-videojuegos">Motores de videojuegos</a></li>
+                    <li><a href="#conclusion">Conclusión</a></li>
+                    <li><a href="#fuentes">Fuentes bibliográficas</a></li>
+                </ol>
+            </nav>
+
+            <section id="introduccion">
+                <h2>Introducción</h2>
+                <p>Los entornos virtuales son espacios digitales diseñados para que las personas exploren información, interactúen con objetos y participen en actividades mediante una computadora, un dispositivo móvil o equipos especializados. Pueden presentarse como aulas virtuales, simuladores, recorridos digitales, mundos tridimensionales y experiencias de realidad virtual (RV) o realidad aumentada (RA). Su desarrollo reúne distintas áreas de la informática, como gráficos por computadora, sensores, modelado 3D, interacción humano-computadora y procesamiento en tiempo real. La forma que adopta cada entorno depende del propósito: enseñar un procedimiento, representar un lugar, practicar una tarea o construir una experiencia interactiva.</p>
+            </section>
+
+            <section id="tecnologia-de-recorridos-virtuales">
+                <h2>Tecnología de recorridos virtuales</h2>
+                <p>Un recorrido virtual es una representación digital que permite desplazarse o mirar alrededor de un lugar sin encontrarse físicamente en él. Se utiliza para presentar museos, edificios, zonas turísticas, viviendas, campus universitarios y espacios industriales. La experiencia puede construirse mediante fotografías panorámicas de 360 grados, imágenes enlazadas entre sí, modelos tridimensionales o escenarios creados por computadora. En los recorridos panorámicos, el usuario suele cambiar la dirección de la mirada y avanzar entre puntos previamente capturados; en los entornos 3D puede explorar el espacio desde diferentes posiciones.</p>
+                <p>La producción de un recorrido virtual normalmente incluye la planificación del espacio, la captura de imágenes o el levantamiento de datos, el procesamiento del material, la unión de panorámicas o la creación de modelos, la incorporación de elementos de navegación y la publicación en una plataforma compatible. Según el proyecto, se pueden añadir etiquetas, narraciones, mapas, videos, enlaces, modelos interactivos y descripciones de objetos. Estas funciones permiten que el recorrido opere como recurso informativo y no solo como una vista visual.</p>
+                <p>En el ámbito educativo, los recorridos virtuales acercan al alumnado a lugares de difícil acceso y pueden servir como preparación antes de una visita presencial. En arquitectura e inmobiliaria permiten revisar la distribución de un inmueble; en turismo facilitan la exploración preliminar de destinos; y en patrimonio cultural ayudan a documentar y difundir espacios. Su calidad depende de la resolución de las imágenes, la precisión espacial, la facilidad de navegación y la accesibilidad de la interfaz. También es importante indicar cuándo una representación es una reconstrucción digital, especialmente si se presenta un sitio histórico o un espacio que ha cambiado.</p>
+            </section>
+
+            <section id="software-de-entornos-virtuales">
+                <h2>Software de entornos virtuales</h2>
+                <p>El software de entornos virtuales comprende las aplicaciones utilizadas para crear, organizar, ejecutar y compartir espacios digitales interactivos. Dentro de esta categoría se encuentran los motores gráficos, las herramientas de modelado 3D, los programas de captura y edición de panorámicas, las plataformas educativas y los sistemas de simulación. Cada herramienta cumple una función específica: el modelador produce objetos y escenarios; el motor gráfico administra la escena, la iluminación, las animaciones y las interacciones, y la plataforma de publicación distribuye el resultado a través de una computadora, un navegador o un dispositivo inmersivo.</p>
+                <p>Un entorno interactivo suele integrar modelos, materiales, fuentes de luz, cámaras, sonido, reglas de movimiento y componentes de interacción. La programación define cómo responde el sistema ante las acciones de la persona, por ejemplo, abrir una puerta virtual, seleccionar una pieza, cambiar una variable de una simulación o mostrar información contextual. Los motores modernos también incorporan herramientas para probar el proyecto, medir su rendimiento y adaptarlo a distintas plataformas. En proyectos de realidad extendida, las interfaces de desarrollo y estándares como OpenXR ayudan a conectar las aplicaciones con dispositivos compatibles.</p>
+                <p>La elección del software se relaciona con los objetivos, el nivel de detalle requerido, el equipo disponible, la experiencia del equipo de trabajo y el tipo de distribución. Un recorrido fotográfico puede resolverse con una herramienta panorámica, mientras que un simulador de maquinaria requiere lógica de interacción, modelos precisos y pruebas funcionales. Para proyectos educativos conviene considerar también la facilidad de actualización, la accesibilidad, la protección de los datos y la posibilidad de que el alumnado acceda desde dispositivos comunes.</p>
+            </section>
+
+            <section id="herramientas-de-rv-y-ra">
+                <h2>Herramientas de RV y RA</h2>
+                <p>La realidad virtual crea una experiencia digital inmersiva en la que el usuario observa un escenario generado o reconstruido por computadora. Suele utilizar visores montados en la cabeza, controladores y sensores que registran la orientación y, en algunos sistemas, la posición del cuerpo y de las manos. El seguimiento de la cabeza permite que la vista cambie cuando la persona mira en otra dirección; el seguimiento de manos o controladores facilita agarrar objetos, señalar elementos y activar funciones. La sensación de presencia depende de la combinación de seguimiento, respuesta visual, sonido, interacción y estabilidad del sistema.</p>
+                <p>La realidad aumentada incorpora contenido digital como texto, gráficos, modelos 3D o instrucciones a la visión del entorno físico. Puede funcionar con la cámara y los sensores de un teléfono o tableta, o mediante gafas especializadas. Para ubicar los elementos virtuales, el sistema puede reconocer imágenes, detectar superficies, estimar la posición del dispositivo y analizar características de la escena. IBM explica que los sistemas de RA combinan procesos de detección y seguimiento, procesamiento del entorno y representación del contenido digital.</p>
+                <p>Entre las herramientas de desarrollo se encuentran los kits de desarrollo de realidad aumentada para dispositivos móviles, los visores con sus respectivos entornos de programación, los controladores de movimiento, las cámaras de profundidad y las bibliotecas de seguimiento espacial. La realidad mixta amplía estas posibilidades al permitir que los objetos digitales se relacionen con el espacio físico y, en determinados sistemas, con superficies u objetos reales. Estas tecnologías se aplican en formación técnica, visualización de diseños, mantenimiento, educación, medicina y entretenimiento. La selección debe considerar la precisión del seguimiento, la comodidad, la seguridad del espacio físico, la privacidad de los datos capturados y la compatibilidad con los dispositivos del público.</p>
+            </section>
+
+            <section id="aplicaciones-de-entornos-virtuales">
+                <h2>Aplicaciones de entornos virtuales</h2>
+                <p>Los entornos virtuales se utilizan en actividades que requieren representar lugares, practicar procedimientos o comprender información espacial. En educación, permiten recorrer sitios históricos, observar modelos anatómicos, explorar estructuras moleculares y realizar simulaciones. En capacitación profesional, hacen posible ensayar tareas que requieren precisión, coordinación o conocimiento de protocolos. Una simulación bien diseñada permite repetir una actividad, modificar condiciones y recibir retroalimentación sobre las decisiones tomadas.</p>
+                <p>En arquitectura, ingeniería y construcción, los modelos virtuales ayudan a revisar diseños, visualizar espacios y detectar problemas antes de construir. En salud, se emplean para enseñar anatomía, practicar procedimientos y planificar intervenciones bajo condiciones controladas. En turismo y cultura, los recorridos digitales amplían el acceso a museos, monumentos y lugares remotos. En industria, la realidad aumentada puede mostrar instrucciones de mantenimiento o información asociada a una máquina, mientras que las simulaciones permiten capacitar al personal en procesos específicos.</p>
+                <p>La utilidad de estas aplicaciones depende de la relación entre la tecnología y el objetivo de aprendizaje o trabajo. Por ejemplo, una experiencia educativa debe incluir tareas concretas, indicaciones comprensibles y una forma de comprobar lo aprendido. En una simulación técnica, la fidelidad del comportamiento y la calidad de la retroalimentación son fundamentales. También deben evaluarse la accesibilidad, el costo de los equipos, el mantenimiento del contenido y los posibles efectos de una sesión prolongada, como fatiga visual o mareo en ciertos usuarios. La tecnología aporta valor cuando se integra a una actividad planificada y evaluable.</p>
+            </section>
+
+            <section id="motores-de-videojuegos">
+                <h2>Motores de videojuegos</h2>
+                <p>Un motor de videojuegos es un conjunto de herramientas de software que facilita la creación de aplicaciones interactivas en tiempo real. Habitualmente integra un sistema de renderizado gráfico, gestión de escenas, animación, audio, físicas, detección de colisiones, entrada de usuario, programación y exportación a distintas plataformas. Aunque se utiliza ampliamente en videojuegos, también permite desarrollar simuladores, visualizaciones arquitectónicas, experiencias museísticas y aplicaciones de realidad virtual, aumentada o mixta.</p>
+                <p>Unity es un motor multiplataforma que se utiliza para proyectos 2D y 3D y ofrece herramientas para desarrollar experiencias de realidad virtual y mixta. Su flujo de trabajo incorpora el lenguaje C# y un ecosistema de paquetes que ayudan a integrar dispositivos y funciones de interacción. La documentación oficial presenta recursos para configurar proyectos de RV y realidad mixta, además de orientar sobre la compatibilidad con diferentes dispositivos. Esto lo convierte en una opción frecuente para experiencias educativas, prototipos y aplicaciones que necesitan distribuirse en varias plataformas.</p>
+                <p>Unreal Engine, desarrollado por Epic Games, es otro motor ampliamente utilizado para crear entornos tridimensionales en tiempo real. Ofrece herramientas de renderizado, iluminación, animación y programación visual mediante Blueprints, además de programación con C++. Su documentación incluye rutas para desarrollar aplicaciones de realidad extendida y trabajar con OpenXR en dispositivos compatibles. Puede resultar adecuado para proyectos que requieren escenarios detallados, visualización de alta calidad o simulaciones con una presentación gráfica avanzada.</p>
+                <p>Existen otros motores y entornos de creación, como Godot, además de herramientas especializadas para experiencias web inmersivas. La decisión debe basarse en los requisitos del proyecto, la plataforma de destino, el rendimiento esperado, las habilidades del equipo, la documentación disponible y las condiciones de licencia. En todos los casos, el motor es una parte de la solución: también se necesitan modelos, sonido, diseño de interacción, pruebas con usuarios y optimización para que la experiencia funcione con fluidez.</p>
+            </section>
+
+            <section id="conclusion">
+                <h2>Conclusión</h2>
+                <p>La realidad virtual, la realidad aumentada y los entornos virtuales permiten representar información y practicar interacciones de formas distintas. Unity y Unreal Engine son herramientas para desarrollar estas experiencias, mientras que un motor de videojuegos aporta funciones técnicas reutilizables. En UPIICSA, un recorrido virtual podría facilitar la orientación dentro del plantel, y una actividad de RA en educación superior podría ayudar a comprender modelos y procesos técnicos mediante una combinación de visualización, interacción y comprobación del aprendizaje.</p>
+            </section>
+
+            <section id="fuentes">
+                <h2>Fuentes bibliográficas</h2>
+                <ul class="referencias">
+                    <li>Epic Games. (s. f.). Developing for XR Experiences in Unreal Engine. Epic Developer Community.
+                        <a href="https://dev.epicgames.com/documentation/unreal-engine/developing-for-xr-experiences-in-unreal-engine" target="_blank" rel="noopener">https://dev.epicgames.com/documentation/unreal-engine/developing-for-xr-experiences-in-unreal-engine</a>
+                    </li>
+                    <li>IBM. (s. f.). ¿Qué es la realidad aumentada? IBM Think.
+                        <a href="https://www.ibm.com/mx-es/think/topics/augmented-reality" target="_blank" rel="noopener">https://www.ibm.com/mx-es/think/topics/augmented-reality</a>
+                    </li>
+                    <li>Organización para la Cooperación y el Desarrollo Económicos (OCDE). (2024). Virtual reality and its opportunities and risks. En OECD Digital Economy Outlook 2024 (Volume 1).
+                        <a href="https://www.oecd.org/en/publications/oecd-digital-economy-outlook-2024-volume-1_a1689dc5-en/full-report/component-8.html" target="_blank" rel="noopener">https://www.oecd.org/en/publications/oecd-digital-economy-outlook-2024-volume-1_a1689dc5-en/full-report/component-8.html</a>
+                    </li>
+                    <li>Unity. (s. f.). VR and MR development in Unity. Unity Documentation.
+                        <a href="https://docs.unity.com/en-us/engine/6000.0/manual/xr/support/vroverview" target="_blank" rel="noopener">https://docs.unity.com/en-us/engine/6000.0/manual/xr/support/vroverview</a>
+                    </li>
+                    <li>Microsoft. (s. f.). What is mixed reality? Microsoft Learn.
+                        <a href="https://learn.microsoft.com/en-us/windows/mixed-reality/discover/mixed-reality" target="_blank" rel="noopener">https://learn.microsoft.com/en-us/windows/mixed-reality/discover/mixed-reality</a>
+                    </li>
+                    <li>Meta. (s. f.). Meta Horizon OS Developers: Develop.
+                        <a href="https://developers.meta.com/vr/develop/" target="_blank" rel="noopener">https://developers.meta.com/vr/develop/</a>
+                    </li>
+                </ul>
+            </section>
+
+
+        </article>
+
+        <!-- BOTÓN FIJO PARA VOLVER AL ÍNDICE -->
+        <a class="boton-indice" href="#indice" aria-label="Volver al índice">↑ Índice</a>
+
+    </main>
+
+    <!-- =========================
+         PIE DE PÁGINA
+    ========================== -->
+
+    <footer class="footer-mtc">
+
+        <div class="footer-contenido">
+
+            <img src="img/EscudoActualizado.png"
+                 alt="IPN"
+                 class="escudo-footer">
+
+            <div class="footer-informacion">
+
+                <h3>MTC</h3>
+
+                <p>Multimedia, Tecnología y Ciencia</p>
+
+                <p>Proyecto de Herramientas Multimedia 2CV21</p>
+
+            </div>
+
+        </div>
+
+        <div class="footer-inferior">
+
+            <p>© 2026 MTC. Todos los derechos reservados.</p>
+
+        </div>
+
+    </footer>
+
+    <!-- Fondo animado Vanta -->
+    <script src="js/vanta/three.min.js"></script>
+    <script src="js/vanta/vanta.net.min.js"></script>
+    <script src="js/fondo-vanta.js"></script>
+
+    <!--JavaScript de modo obscuro y traduccion -->
+    <script src="js/tema.js"></script>
+    <script src="js/idioma.js"></script>
+
+    <!-- Menú desplegable de Trabajos -->
+    <script>
+        (() => {
+            const menu = document.querySelector(".menu-desplegable");
+            if (!menu) return;
+
+            document.addEventListener("click", (e) => {
+                if (!menu.contains(e.target) || e.target.closest(".submenu a")) {
+                    menu.open = false;
+                }
+            });
+
+            document.addEventListener("keydown", (e) => {
+                if (e.key === "Escape" && menu.open) {
+                    menu.open = false;
+                    menu.querySelector("summary").focus();
+                }
+            });
+        })();
+    </script>
+
+</body>
+
+</html>

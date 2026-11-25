@@ -1,0 +1,238 @@
+/* =========================================
+   DOCUMENTOS (trabajos en HTML)
+   Cargar después de estilos.css
+========================================= */
+
+/* El encabezado se desplaza con la página para no tapar el texto */
+:root body:has(.documento) .header-portal { position: absolute; }
+
+/* Evita que el pie de página tape el botón fijo */
+:root body:has(.documento) > main { z-index: 2; }
+
+/* ---------- Contenedor del texto ---------- */
+.documento {
+    max-width: 880px;
+    margin: 0 auto 60px;
+    padding: clamp(18px, 5vw, 60px);
+    background: #18191b;
+    color: #d9dcdf;
+    border: 1px solid #2d3034;
+    border-radius: 18px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.30);
+    overflow-wrap: break-word;
+}
+
+/* ---------- Portada ---------- */
+.documento-portada { text-align: center; margin-bottom: 38px; }
+
+.documento-portada h2 {
+    font-size: clamp(26px, 5vw, 40px);
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+    color: #ffffff;
+}
+
+.documento-portada::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 4px;
+    margin: 20px auto 0;
+    border-radius: 4px;
+    background: #23c483;
+}
+
+.documento-etiqueta {
+    color: #48c995;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+/* ---------- Índice ---------- */
+.documento-indice {
+    padding: clamp(16px, 3vw, 28px);
+    background: #111214;
+    border: 1px solid #2d3034;
+    border-radius: 14px;
+    scroll-margin-top: 20px;
+}
+
+.documento-indice h2 {
+    margin-bottom: 16px;
+    color: #ffffff;
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.documento-indice ol {
+    list-style: none;
+    padding: 0;
+    counter-reset: indice;
+}
+
+.documento-indice ol > li {
+    counter-increment: indice;
+    margin-bottom: 10px;
+}
+
+.documento-indice ol > li:last-child { margin-bottom: 0; }
+
+.documento-indice a {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 14px;
+    background: #1d1f22;
+    border: 1px solid #2d3034;
+    border-radius: 10px;
+    color: #eef0f2;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.25s;
+}
+
+/* Número de cada apartado: 01, 02... */
+.documento-indice ol > li > a::before {
+    content: counter(indice, decimal-leading-zero);
+    color: #48c995;
+    font-size: 13px;
+    font-variant-numeric: tabular-nums;
+}
+
+.documento-indice ol > li > a::after {
+    content: "→";
+    margin-left: auto;
+    color: #6f757b;
+    transition: 0.25s;
+}
+
+.documento-indice a:hover {
+    border-color: #23c483;
+    background: #20262a;
+    transform: translateX(4px);
+}
+
+.documento-indice ol > li > a:hover::after { color: #23c483; }
+
+/* Subtemas */
+.documento .documento-indice ul {
+    list-style: none;
+    margin: 8px 0 0 28px;
+    padding-left: 14px;
+    border-left: 2px solid #2d3034;
+}
+
+.documento-indice ul li { margin-bottom: 2px; }
+
+.documento-indice ul a {
+    padding: 7px 10px;
+    background: transparent;
+    border-color: transparent;
+    color: #b5babf;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/* ---------- Texto ---------- */
+.documento section {
+    padding-top: 38px;
+    margin-top: 38px;
+    border-top: 1px solid #2d3034;
+    scroll-margin-top: 10px;
+}
+
+.documento section h2 {
+    margin-bottom: 18px;
+    color: #ffffff;
+    font-size: clamp(22px, 3.5vw, 28px);
+    line-height: 1.3;
+}
+
+.documento section h3 {
+    margin: 30px 0 12px;
+    padding-left: 12px;
+    border-left: 4px solid #23c483;
+    color: #ffffff;
+    font-size: 19px;
+    line-height: 1.35;
+    scroll-margin-top: 20px;
+}
+
+.documento section > p:not(.documento-etiqueta) {
+    margin-bottom: 16px;
+    font-size: 16.5px;
+    line-height: 1.85;
+    text-align: justify;
+    hyphens: auto;
+}
+
+.documento section ul { padding-left: 24px; margin-bottom: 16px; }
+.documento section li { margin-bottom: 10px; line-height: 1.7; text-align: justify; }
+.documento section li::marker { color: #23c483; }
+
+/* ---------- Fuentes ---------- */
+.documento section ul.referencias { list-style: none; padding: 0; }
+
+.documento section .referencias li {
+    margin-bottom: 12px;
+    padding: 14px 16px;
+    background: #111214;
+    border: 1px solid #2d3034;
+    border-radius: 10px;
+    font-size: 15px;
+    text-align: left;
+}
+
+.referencias a {
+    display: block;
+    margin-top: 4px;
+    color: #48c995;
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+.documento a:focus-visible,
+.boton-indice:focus-visible { outline: 2px solid #23c483; outline-offset: 3px; }
+
+/* ---------- Botón fijo "Volver al índice" ---------- */
+.boton-indice {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 1100;
+    padding: 13px 20px;
+    background: #000000;
+    border: 1px solid #23c483;
+    border-radius: 45px;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+    transition: 0.3s;
+}
+
+.boton-indice:hover {
+    background: #23c483;
+    color: #000000;
+    transform: translateY(-4px);
+}
+
+@media (max-width: 520px) {
+    .boton-indice { right: 12px; bottom: 12px; padding: 11px 16px; }
+}
+
+/* Dentro del carrusel (iframe) se ocultan encabezado, pie y fondo */
+html.en-visor body { padding-top: 0 !important; }
+html.en-visor .header-portal,
+html.en-visor .footer-mtc,
+html.en-visor #fondo-vanta { display: none !important; }
+html.en-visor .contenedor { padding: 12px; }
+
+@media print {
+    .header-portal, .footer-mtc, #fondo-vanta, .boton-indice { display: none !important; }
+}

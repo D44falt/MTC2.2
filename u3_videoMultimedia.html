@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Los videos en las Herramientas Multimedia</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/docs.css">
+</head>
+
+
+<body>
+
+    <script>
+        (() => {
+            try {
+                const tema = localStorage.getItem("tema");
+
+                if (tema === "claro") {
+                    document.body.classList.remove("modo-oscuro");
+                } else {
+                    document.body.classList.add("modo-oscuro");
+                }
+            } catch (error) {
+                document.body.classList.add("modo-oscuro");
+            }
+        })();
+    </script>
+
+    <!-- Fondo animado -->
+    <div id="fondo-vanta" aria-hidden="true"></div>
+
+
+    <!-- =========================
+         ENCABEZADO
+    ========================== -->
+
+    <header id="inicio" class="header-portal">
+
+        <div class="encabezado-contenido">
+
+            <a href="index.html" class="marca-mtc" aria-label="MTC - Inicio">
+                <img src="img/LogoActualizado.png"
+                     alt="Logo MTC"
+                     class="logo-portal">
+
+                <h1 class="solo-lectores">MTC</h1>
+
+                <span class="nombre-marca">Multimedia, tecnología y ciencia</span>
+            </a>
+
+
+            <!-- MENÚ -->
+
+            <nav class="menu" aria-label="Navegación principal">
+
+                <a href="index.html">
+                    Inicio
+                </a>
+
+                <details class="menu-desplegable">
+                    <summary>Trabajos</summary>
+                    <div class="submenu">
+                        <a href="primerUnidad.html">1er Unidad</a>
+                        <a href="segundaUnidad.html">2da Unidad</a>
+                        <a href="tercerUnidad.html">3er Unidad</a>
+                    </div>
+                </details>
+
+
+                <a href="himnoIpn.html">
+                    Himno del IPN
+                </a>
+
+                <a href="AcercaDe.html">
+                    Acerca de
+                </a>
+
+
+                <!-- INTERRUPTOR DE TEMA -->
+                <div class="toggle-switch">
+                    <label class="switch-label">
+                        <input type="checkbox"
+                               class="checkbox"
+                               id="boton-tema"
+                               aria-label="Cambiar a modo claro"
+                               role="switch">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <div class="selector-idioma">
+                    <button type="button" data-idioma="es" class="idioma-activo">
+                        ES
+                    </button>
+
+                    <span>|</span>
+
+                    <button type="button" data-idioma="en">
+                        EN
+                    </button>
+                </div>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         CONTENIDO PRINCIPAL
+    ========================== -->
+
+    <main class="contenedor">
+
+        <article class="documento">
+
+            <!-- PORTADA -->
+            <header class="documento-portada">
+                <p class="documento-etiqueta">Tercer Departamental · Tarea No. 1</p>
+                <h2>Los videos en las Herramientas Multimedia</h2>
+            </header>
+
+
+            <!-- ÍNDICE INTERACTIVO -->
+            <nav id="indice" class="documento-indice" aria-label="Índice del documento">
+                <h2>Índice</h2>
+                <ol>
+                    <li><a href="#introduccion">Introducción</a></li>
+                    <li><a href="#antecedentes-del-video">Antecedentes del video</a></li>
+                    <li><a href="#video-analogo-y-video-digital">Video análogo y video digital</a></li>
+                    <li><a href="#edicion-de-video">Edición de video</a></li>
+                    <li><a href="#formatos-de-video">Formatos de video</a></li>
+                    <li><a href="#creacion-de-un-archivo-de-video-y-su-uso-en-la-multimedia">Creación de un archivo de video y su uso en la multimedia</a></li>
+                    <li><a href="#conclusion">Conclusión</a></li>
+                    <li><a href="#fuentes">Bibliografía</a></li>
+                </ol>
+            </nav>
+
+            <section id="introduccion">
+                <h2>Introducción</h2>
+                <p>El video digital se ha convertido en uno de los recursos más importantes dentro de las herramientas multimedia. Su capacidad de combinar imagen en movimiento, sonido y texto lo hace un medio con gran impacto audiovisual, útil para comunicar ideas de manera clara y atractiva. Sin embargo, su empleo en una aplicación multimedia interactiva no debe ser arbitrario: debe estar justificado y tener la intención de reafirmar y hacer más objetiva la información que se presenta al usuario. Para que un video cumpla su objetivo en términos técnicos, es necesario conocer las herramientas digitales con las que se trabajará, utilizar secuencias cortas durante la edición, proponer un ritmo de lectura adecuado y evitar el uso repetitivo o sin intención del material. Todo esto se facilita mediante un guion o storyboard, en el que se decide con anticipación el contenido y el orden de producción.</p>
+                <p>El origen del video está estrechamente ligado a la historia del cine y la televisión. Desde el siglo XIX, descubrimientos de la física y la química sentaron las bases de estos medios, y a lo largo del siglo XX se dieron avances como las retransmisiones en directo, el magnetoscopio de Ampex en 1952 y la popularización del video doméstico con formatos como Betamax y VHS (Martínez, 2005). De ahí se pasó del video analógico, regido por normas como NTSC, PAL y SECAM, al video digital, que consiste en una sucesión de imágenes digitales que puede manejarse directamente en una computadora. Este cambio también transformó la edición de video, que pasó de la edición lineal sobre cintas a la edición no lineal, más ágil y flexible.</p>
+            </section>
+
+            <section id="antecedentes-del-video">
+                <h2>Antecedentes del video</h2>
+                <p>La reproducción de imágenes en formato de video está estrechamente relacionada con la historia del cine y la televisión. Desde el siglo XIX se sentaron las bases de varios inventos gracias a los experimentos de físicos y químicos con el selenio, los rayos catódicos, la conductividad de los materiales y las ondas electromagnéticas, hasta llegar a la invención de la radio por Guglielmo Marconi en 1895. El primer antecedente del video se ubica en 1911, cuando M. Stille planteó la posibilidad de almacenar imágenes televisivas en un alambre de acero. A partir de entonces, grandes industrias como la RCA formaron equipos de científicos para continuar la experimentación con mayor facilidad (Martínez, 2005).</p>
+                <p>Desde 1930 las transmisiones se realizaban en directo, como ocurrió con las Olimpiadas de Berlín de 1936. En 1952, la casa Ampex creó el magnetoscopio VTR, que hizo posible emitir programas grabados. Más tarde llegaron los satélites y, con ellos, la cobertura internacional en directo. La grabación en cinta entró a los hogares y dio origen al video doméstico, gracias a la popularidad de formatos como el Betamax, de Sony, y el VHS, de Matsushita (Martínez, 2005).</p>
+            </section>
+
+            <section id="video-analogo-y-video-digital">
+                <h2>Video análogo y video digital</h2>
+                <p>El video análogo consiste en la captura de imágenes secuenciales y temporales de la realidad mediante señales electromagnéticas registradas en una cinta. Este soporte permite borrar el contenido para volver a grabar, y el flujo de datos análogos suele reproducirse en una pantalla de televisión. Este tipo de video se rige por tres normas principales. La primera es NTSC, desarrollada por el National Television System Committee entre 1941 y 1953 y utilizada en gran parte de América; como la corriente alterna de Estados Unidos es de 60 hercios, se reproducen 30 fotogramas entrelazados por segundo, que en rigor son 29,97 fotogramas por segundo (fps). La segunda es PAL, desarrollada en Alemania para mejorar el NTSC y la más utilizada en el mundo; como la corriente alterna de Europa es de 50 hercios, reproduce 25 fps. La tercera es SECAM, desarrollada en Francia y adoptada por los países comunistas. Con la llegada de la alta definición (HDTV), los sistemas PAL y NTSC pasaron a llamarse de definición estándar (SDTV) (Martínez, 2005). Cuando se definió el estándar DVD, que produce imagen digital, se adoptaron PAL a 25 fps y NTSC a 30 fps, lo que lo hizo compatible con los televisores de todo el mundo.</p>
+                <p>El video digital, por su parte, consiste en mostrar una sucesión de imágenes digitales. Al procedimiento técnico que convierte el video análogo a lenguaje binario se le conoce como digitalización del video, y el resultado puede ser manejado por un usuario en una computadora. Esto abrió la puerta a editarlo, almacenarlo y distribuirlo con mucha mayor facilidad que el video en cinta.</p>
+            </section>
+
+            <section id="edicion-de-video">
+                <h2>Edición de video</h2>
+                <p>La edición de video es el proceso en el que se modifica una grabación y sus condiciones dependen del objetivo del trabajo. Se conocen dos tipos: la edición lineal y la no lineal.</p>
+                <p>La edición lineal se realiza directamente sobre cintas. Es un proceso lento y delicado, porque exige un control muy preciso de tiempos y secuencias. Se basa en hardware y obliga a trabajar en orden; por ejemplo, primero la cuenta regresiva, luego la primera escena, después la segunda, y así sucesivamente. Es comparable a escribir un artículo en una máquina de escribir: una vez entintado el papel, hacer cambios es muy complicado, por lo que el material debe estar bien organizado desde el inicio. El concepto es sencillo: se transfiere el material de una o más cintas originales, segmento por segmento, a otra cinta en otro grabador. En el proceso se pueden acortar o reacomodar los segmentos, eliminar malas tomas y agregar efectos de audio y video. El resultado es un producto en cinta llamado master, que se utiliza para reproducir copias destinadas a su distribución (Whitaker y Benson, 2003).</p>
+                <p>La edición no lineal, o de acceso aleatorio, es el procedimiento digital de la misma edición, con la ventaja de que resulta mucho más sencillo cambiar de posición un segmento completo o un solo fotograma y ver el resultado al instante. Se parece más a escribir con un procesador de palabras. Además, los programas de edición ofrecen gran variedad de efectos y correcciones tonales. En este tipo de edición, el proceso más importante es la comprobación o visualización segmento a segmento del tratamiento realizado; por ello, las características del equipo son fundamentales y se recomienda trabajar en una computadora de características superiores.</p>
+            </section>
+
+            <section id="formatos-de-video">
+                <h2>Formatos de video</h2>
+                <p>Existen diversos formatos digitales para almacenar video, y cada uno tiene características propias de compresión, calidad y compatibilidad. El AVI (Audio Video Interleave) es un formato contenedor creado por Microsoft que almacena audio y video de forma intercalada; es muy compatible con Windows, aunque suele generar archivos pesados. El DV (Digital Video) es el formato empleado por las cámaras de video digitales; comprime cada fotograma de manera individual y conserva buena calidad para la edición. DivX y Xvid son códecs basados en la compresión MPEG-4 que reducen mucho el tamaño del archivo sin perder demasiada calidad, y Xvid es de código abierto. El MJPEG (MotionJPEG) comprime cada fotograma como una imagen JPEG independiente, lo que facilita la edición cuadro por cuadro pero genera archivos más grandes. MPEG (Moving Picture Experts Group) es una familia de estándares de compresión de audio y video, como MPEG-1, MPEG-2 y MPEG-4; el estándar DVD, por ejemplo, utiliza MPEG-2. El WMV (Windows Media Video) fue desarrollado por Microsoft y está orientado a la reproducción y el streaming. El MOV pertenece a la tecnología QuickTime, de Apple, y es muy utilizado en edición profesional. Por último, el OGG es un formato libre y de código abierto; sus archivos con extensión .ogg pueden contener audio o video, por lo que se recomienda usar .oga para audio y .ogv para video. Su ventaja es que no requiere el pago de una licencia y es adecuado para video en streaming por Internet.</p>
+                <p>La elección del formato depende del uso final: la calidad que se necesita, el peso del archivo, la compatibilidad con las plataformas y la posibilidad de editarlo después.</p>
+            </section>
+
+            <section id="creacion-de-un-archivo-de-video-y-su-uso-en-la-multimedia">
+                <h2>Creación de un archivo de video y su uso en la multimedia</h2>
+                <p>Un video puede grabarse para editarlo posteriormente en la computadora o crearse a partir de imágenes distintas que se importan a un programa y se guardan con formato de video. Como con los demás medios de una aplicación multimedia interactiva, es importante definir la función del video respecto al resto de los elementos y tener claro su contenido mediante un storyboard. Si el video se captura con una cámara, normalmente basta con trasladarlo a la computadora para tener un archivo con la calidad y el peso que especifica la cámara. Al editarlo en un software de video se depuran las escenas: se quitan partes innecesarias, se segmenta el material o se modifican el formato de salida y el peso en disco duro.</p>
+                <p>Dentro de una aplicación multimedia, el video aporta un alto impacto audiovisual, pero su uso debe estar justificado. Su función es reafirmar y hacer más objetiva la información, no servir de adorno. Para lograrlo conviene usar secuencias cortas, mantener un ritmo de lectura adecuado, evitar repeticiones sin intención y planear los contenidos y su orden de producción mediante un guion o storyboard. También hay que equilibrar la calidad con el peso del archivo, porque un video demasiado pesado puede afectar el desempeño de toda la aplicación.</p>
+            </section>
+
+            <section id="conclusion">
+                <h2>Conclusión</h2>
+                <p>Después de revisar el tema, se puede decir que el video es una de las herramientas más completas dentro de la multimedia, ya que junta imagen, sonido y texto en un mismo medio y logra un impacto que otros recursos no alcanzan. Su historia va de la mano con el cine y la televisión, y el paso del video análogo al digital fue lo que permitió trabajarlo directamente en una computadora. Con esto cambió también la forma de editarlo: antes había que pasar el material de una cinta a otra en orden, y cualquier error era difícil de corregir, mientras que ahora, con la edición no lineal, se pueden mover las partes y ver el resultado al momento.</p>
+                <p>Otro punto importante es que no todos los formatos sirven para lo mismo. Algunos, como el AVI o el MJPEG, mantienen buena calidad pero generan archivos pesados, y otros, como el OGG, son libres y funcionan bien para transmitir por Internet. Por eso, antes de elegir uno hay que pensar en el peso del archivo, en dónde se va a reproducir y en si se va a seguir editando. Lo mismo pasa con la creación del video: conviene definir desde el principio para qué va a servir dentro de la aplicación y planear su contenido con un guion o storyboard, para no grabar ni editar a ciegas.</p>
+                <p>Lo que más me queda de este tema es que el video no se debe poner solo para que la aplicación se vea mejor. Tiene sentido cuando ayuda a explicar o a reforzar la información, y para eso es necesario usar secuencias cortas, cuidar el ritmo y no repetir material sin una razón. Conocer sus características técnicas ayuda a tomar mejores decisiones al momento de desarrollar un proyecto multimedia.</p>
+            </section>
+
+            <!-- AVISO: el texto cita "Martínez, 2005" y esa fuente no está en la bibliografía. Agregarla aquí. -->
+            <section id="fuentes">
+                <h2>Bibliografía</h2>
+                <ul class="referencias">
+                    <li>Trujillo Viveros, M. A. (2017). Introducción a la edición de video digital para aplicaciones multimedia interactivas [Unidad de Apoyo para el Aprendizaje]. Coordinación de Universidad Abierta y Educación a Distancia, Universidad Nacional Autónoma de México.
+                        <a href="https://repositorio-uapa.cuaed.unam.mx/repositorio/moodle/pluginfile.php/1280/mod_resource/content/1/contenido/index.html" target="_blank" rel="noopener">https://repositorio-uapa.cuaed.unam.mx/repositorio/moodle/pluginfile.php/1280/mod_resource/content/1/contenido/index.html</a>
+                    </li>
+                    <li>Goncalves, I., Pfeiffer, S., &amp; Montgomery, C. (2008). Ogg media types (RFC 5334). Internet Engineering Task Force.
+                        <a href="https://doi.org/10.17487/RFC5334" target="_blank" rel="noopener">https://doi.org/10.17487/RFC5334</a>
+                    </li>
+                    <li>Whitaker, J. C., &amp; Benson, B. K. (2003). Standard handbook of video and television engineering (4.ª ed.). McGraw-Hill.</li>
+                </ul>
+            </section>
+
+
+        </article>
+
+        <!-- BOTÓN FIJO PARA VOLVER AL ÍNDICE -->
+        <a class="boton-indice" href="#indice" aria-label="Volver al índice">↑ Índice</a>
+
+    </main>
+
+    <!-- =========================
+         PIE DE PÁGINA
+    ========================== -->
+
+    <footer class="footer-mtc">
+
+        <div class="footer-contenido">
+
+            <img src="img/EscudoActualizado.png"
+                 alt="IPN"
+                 class="escudo-footer">
+
+            <div class="footer-informacion">
+
+                <h3>MTC</h3>
+
+                <p>Multimedia, Tecnología y Ciencia</p>
+
+                <p>Proyecto de Herramientas Multimedia 2CV21</p>
+
+            </div>
+
+        </div>
+
+        <div class="footer-inferior">
+
+            <p>© 2026 MTC. Todos los derechos reservados.</p>
+
+        </div>
+
+    </footer>
+
+    <!-- Fondo animado Vanta -->
+    <script src="js/vanta/three.min.js"></script>
+    <script src="js/vanta/vanta.net.min.js"></script>
+    <script src="js/fondo-vanta.js"></script>
+
+    <!--JavaScript de modo obscuro y traduccion -->
+    <script src="js/tema.js"></script>
+    <script src="js/idioma.js"></script>
+
+    <!-- Menú desplegable de Trabajos -->
+    <script>
+        (() => {
+            const menu = document.querySelector(".menu-desplegable");
+            if (!menu) return;
+
+            document.addEventListener("click", (e) => {
+                if (!menu.contains(e.target) || e.target.closest(".submenu a")) {
+                    menu.open = false;
+                }
+            });
+
+            document.addEventListener("keydown", (e) => {
+                if (e.key === "Escape" && menu.open) {
+                    menu.open = false;
+                    menu.querySelector("summary").focus();
+                }
+            });
+        })();
+    </script>
+
+</body>
+
+</html>

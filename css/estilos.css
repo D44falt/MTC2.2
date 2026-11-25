@@ -1,171 +1,109 @@
 /* =========================================
    CONFIGURACIÓN GENERAL
 ========================================= */
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 html {
     scroll-behavior: smooth;
 }
-
 body {
     font-family: Arial, sans-serif;
     background-color: #eef6fc;
     color: #172b4d;
     line-height: 1.6;
-
     padding-top: 100px;
 }
-
-
 /* =========================================
-   PÁGINA 1 - PORTADA
+   PÁGINA DE INICIO
 ========================================= */
-
 .pagina-inicio {
     min-height: 100vh;
-    background: linear-gradient(
-        135deg,
-        #063b70,
-        #006eb7,
-        #0d9de0
-    );
-
+    background: linear-gradient(135deg, #063b70, #006eb7, #0d9de0);
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
-
 .portada {
     text-align: center;
     background-color: rgb(180, 212, 250);
-
     width: 90%;
     max-width: 600px;
-
     padding: 45px 30px;
-
     border-radius: 25px;
-
     box-shadow: 0 10px 30px rgba(0,0,0,0.25);
 }
-
-
 .logo-portada {
     width: 500px;
     max-width: 80%;
-
     display: block;
-
-    margin: 0 auto 15px auto;
+    margin: 0 auto 15px;
 }
-
-
 .portada h1 {
     font-size: 65px;
     color: #075397;
-
     margin-top: 5px;
 }
-
-
 .nombre-mtc {
     color: #1769aa;
     font-size: 30px;
-
     margin-bottom: 30px;
 }
-
-
 .boton-principal {
     display: inline-block;
-
     background-color: #fdfdfd;
     color: rgb(17, 0, 0);
-
     padding: 13px 35px;
-
     border-radius: 30px;
-
     text-decoration: none;
     font-weight: bold;
-
     transition: 0.3s;
 }
-
-
 .boton-principal:hover {
     background-color: #064b82;
-
     transform: translateY(-2px);
 }
-
-
 /* =========================================
    ENCABEZADO SECUNDARIO
 ========================================= */
-
 .encabezado-secundario {
-    background: linear-gradient(
-        90deg,
-        #063b70,
-        #087ec1
-    );
-
+    background: linear-gradient(90deg, #063b70, #087ec1);
     color: white;
-
     padding: 20px 40px;
-
     display: flex;
     align-items: center;
     gap: 20px;
 }
-
-
 .logo-pequeno {
     width: 100px;
     height: 80px;
-
     object-fit: contain;
 }
-
-
 .encabezado-secundario h1 {
     font-size: 10px;
 }
-
-
 .encabezado-secundario p {
     font-size: 15px;
 }
-
-
 /* =========================================
    PÁGINA DE BIENVENIDA
 ========================================= */
-
 .pagina-bienvenida {
     padding-top: 0;
 }
-
 .pagina-bienvenida .contenedor-bienvenida {
     width: 100%;
     max-width: 1100px;
     margin: 0 auto;
     padding: 40px 20px;
 }
-
 .pagina-bienvenida .bienvenida {
     max-width: 900px;
     margin: 0 auto;
     text-align: center;
 }
-
 .pagina-bienvenida .tarjetas-integrantes {
     display: flex;
     justify-content: center;
@@ -174,115 +112,62 @@ body {
     flex-wrap: wrap;
     margin: 30px auto 0;
 }
-/*??*/
 .contenedor-bienvenida {
     max-width: 1000px;
-
     margin: auto;
-
     padding: 50px 20px;
-
     text-align: center;
 }
-
-
 .bienvenida {
     background-color: rgb(253, 251, 251);
-
     padding: 25px;
-
     border-radius: 15px;
-
     box-shadow: 0 4px 15px rgba(18, 41, 212, 0.1);
-
     margin-bottom: 35px;
 }
-
-
 .bienvenida h2 {
     color: #1169a4;
-
     font-size: 50px;
-
     margin-bottom: 40px;
 }
-
-
 .bienvenida p {
     max-width: 800px;
-
-    margin: 0 auto 20px auto;
-
+    margin: 0 auto 20px;
     font-size: 17px;
 }
-
-
-/* Nombre de la página debajo del logo (página de bienvenida) */
-
 .bienvenida .titulo-bienvenida {
     font-size: 65px;
     color: #075397;
-
     margin-top: 5px;
 }
-
 .bienvenida .nombre-mtc {
     font-size: 30px;
-
     margin-bottom: 30px;
 }
-
-body.modo-oscuro .bienvenida .titulo-bienvenida {
-    color: #5eb5ed;
-}
-
-@media (max-width: 700px) {
-
-    .bienvenida .titulo-bienvenida {
-        font-size: 40px;
-    }
-
-    .bienvenida .nombre-mtc {
-        font-size: 22px;
-    }
-
-}
-
-
 .mensaje-final {
     font-size: 21px !important;
-
     font-weight: bold;
-
     color: #087ec1;
 }
-
-
-/* =========================
+/* =========================================
    ACERCA DE
-========================= */
-
+========================================= */
 .acerca {
     max-width: 1100px;
     margin: 40px auto;
     text-align: center;
 }
-
 .acerca h2 {
     font-size: 28px;
     margin-bottom: 15px;
 }
-
 .acerca p {
     font-size: 17px;
     margin-bottom: 10px;
 }
-
-
-/* =========================
+/* =========================================
    TARJETAS DE INTEGRANTES
-========================= */
-
+========================================= */
 .tarjetas-integrantes {
     display: flex;
     justify-content: center;
@@ -291,188 +176,112 @@ body.modo-oscuro .bienvenida .titulo-bienvenida {
     flex-wrap: wrap;
     margin-top: 30px;
 }
-
-
 .tarjeta-integrante {
     width: 220px;
     padding: 15px;
-
     background-color: #eef6fc;
-
     border: 2px solid #8fd3ff;
     border-radius: 10px;
-
     text-align: center;
 }
-
-
 .foto-integrante img {
     width: 180px;
     height: 180px;
-
     object-fit: cover;
-
     border-radius: 10px;
 }
-
-
 .tarjeta-integrante h3 {
     margin-top: 10px;
-
     font-size: 17px;
-
     color: #063b70;
 }
-
-
-/* =========================================
-   HEADER DEL PORTAL
-========================================= */
-
-.header-portal {
-    background: linear-gradient(
-        90deg,
-        #063b70,
-        #087ec1
-    );
-
-    color: rgb(250, 251, 251);
-
-    padding: 20px;
-
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-
-    z-index: 1000;
+/* HEADER DEL PORTAL */
+:root body .header-portal {
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
 }
-
-
-.encabezado-contenido {
-    max-width: 1400px;
-
-    margin: auto;
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 18px;
+/* Contenedor del header */
+:root body .encabezado-contenido {
+    background: transparent !important;
 }
-
-
+/* Navegación */
+:root body .menu {
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+/* Evitar fondos individuales en los enlaces */
+:root body .menu a {
+    background: transparent;
+}
 .logo-portal {
     width: 75px;
     height: 75px;
-
     object-fit: contain;
 }
-
-
 .informacion-mtc {
     min-width: 230px;
 }
-
-
 .header-portal h1 {
     font-size: 34px;
-
     margin: 0;
 }
-
-
 .header-portal p {
     font-size: 16px;
-
     margin: 0;
 }
-
-
 /* =========================================
    MENÚ PRINCIPAL
 ========================================= */
-
 .menu {
     background-color: #052e55;
-
     display: flex;
-
     justify-content: center;
-
     align-items: center;
-
     gap: 10px;
-
     flex-wrap: wrap;
-
     padding: 12px;
 }
-
-
 .menu a {
     color: white;
-
     text-decoration: none;
-
     font-weight: bold;
-
     padding: 10px 15px;
-
     border-radius: 6px;
-
     transition: 0.3s;
 }
-
-
 .menu a:hover {
     background-color: #087ec1;
 }
-
-
 /* =========================================
-   CONTENEDOR
+   CONTENEDORES Y SECCIONES
 ========================================= */
-
 .contenedor {
     max-width: 1100px;
-
     margin: auto;
-
     padding: 35px 20px;
 }
-
-
 .seccion {
     background-color: white;
-
     padding: 30px;
-
     margin-bottom: 30px;
-
     border-radius: 12px;
-
     box-shadow: 0 3px 12px rgba(0,0,0,0.08);
 }
-
-
 .seccion h2 {
     color: #075397;
-
     font-size: 28px;
-
     margin-bottom: 18px;
-
     border-bottom: 3px solid #22a8e8;
-
     padding-bottom: 8px;
 }
-
-
 /* =========================================
    TRABAJOS
 ========================================= */
-
 .botones-parciales {
     display: flex;
     justify-content: center;
@@ -480,118 +289,71 @@ body.modo-oscuro .bienvenida .titulo-bienvenida {
     margin: 30px 0;
     flex-wrap: wrap;
 }
-
-
 .botones-parciales a {
     background-color: #063b70;
     color: white;
-
     text-decoration: none;
-
     padding: 12px 25px;
-
     border-radius: 8px;
-
     font-weight: bold;
-
     transition: 0.3s;
 }
-
-
 .botones-parciales a:hover {
     background-color: #087ec1;
     transform: translateY(-2px);
 }
-
-
-/* =========================================
-   SUBSECCIONES
-========================================= */
-
 .subseccion {
     margin-top: 35px;
     padding: 25px;
-
     background-color: white;
-
     border-radius: 12px;
-
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
 }
-
-
 .subseccion h3 {
     color: #063b70;
     margin-bottom: 10px;
 }
-
-
-/* =========================================
-   LISTA DE TRABAJOS
-========================================= */
-
 .lista-trabajos {
     display: flex;
     flex-direction: column;
     gap: 15px;
-
     margin-top: 20px;
 }
-
-
 .trabajo {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     gap: 20px;
-
     padding: 18px;
-
     border: 1px solid #b9dff5;
-
     border-radius: 10px;
-
     background-color: #f7fbff;
 }
-
-
 .informacion-trabajo {
     flex: 1;
 }
-
-
 .informacion-trabajo h4 {
     margin-bottom: 5px;
     color: #063b70;
 }
-
-
 .informacion-trabajo p {
     margin: 0;
 }
-
-
-/* ==============================
+/* =========================================
    RECURSOS DE LA UNIDAD 2
-============================== */
-
+========================================= */
 .titulo-recursos {
     color: #087ec1;
     margin-top: 30px;
     margin-bottom: 15px;
     font-size: 20px;
 }
-
-/* Contenedor de los videos */
 .videos-unidad {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 20px;
     margin-top: 20px;
 }
-
-/* Tarjeta individual */
 .video-tarjeta {
     min-width: 0;
     padding: 20px;
@@ -599,14 +361,10 @@ body.modo-oscuro .bienvenida .titulo-bienvenida {
     border: 1px solid #c4e5f7;
     border-radius: 10px;
 }
-
-/* Títulos de los videos */
 .video-tarjeta h4 {
     color: #063b70;
     margin: 0 0 12px;
 }
-
-/* Reproductor integrado */
 .video-tarjeta video {
     display: block;
     width: 100%;
@@ -614,451 +372,206 @@ body.modo-oscuro .bienvenida .titulo-bienvenida {
     border-radius: 8px;
     background-color: #000;
 }
-
-/* Descripción */
 .video-tarjeta p {
     margin-top: 12px;
     margin-bottom: 0;
 }
-
-/* Compatibilidad con el modo oscuro */
-body.modo-oscuro .titulo-recursos {
-    color: #5eb5ed;
-}
-
-body.modo-oscuro .video-tarjeta {
-    background-color: #252525;
-    border-color: #344b5c;
-}
-
-body.modo-oscuro .video-tarjeta h4 {
-    color: #8acaf0;
-}
-
-/* Adaptación para celulares */
-@media (max-width: 700px) {
-    .videos-unidad {
-        grid-template-columns: 1fr;
-    }
-
-    .video-tarjeta {
-        padding: 15px;
-    }
-
-    .trabajo {
-        flex-wrap: wrap;
-    }
-
-    .acciones-trabajo {
-        flex-wrap: wrap;
-    }
-}
-
-
-
 /* =========================================
    BOTONES DE TRABAJO
 ========================================= */
-
 .acciones-trabajo {
     display: flex;
     gap: 10px;
     flex-shrink: 0;
 }
-
-
 .boton-ver,
 .boton-descargar {
     display: inline-block;
-
     padding: 9px 15px;
-
     border-radius: 6px;
-
     text-decoration: none;
-
     font-weight: bold;
-
     transition: 0.3s;
 }
-
-
 .boton-ver {
     background-color: #087ec1;
     color: white;
 }
-
-
 .boton-descargar {
     background-color: #063b70;
     color: white;
 }
-
-
 .boton-ver:hover,
 .boton-descargar:hover {
     opacity: 0.85;
 }
-
-
 /* =========================================
    MULTIMEDIA
 ========================================= */
-
 .multimedia-opciones {
     display: flex;
-
     gap: 20px;
-
     flex-wrap: wrap;
-
     margin-top: 25px;
 }
-
-
 .multimedia-opciones > div {
     flex: 1;
-
     min-width: 200px;
-
     background-color: #eef6fc;
-
     padding: 25px;
-
     border-radius: 10px;
-
     text-align: center;
-
     border: 1px solid #c4e5f7;
 }
-
-
 .multimedia-opciones h3 {
     color: #075397;
-
     margin-bottom: 10px;
 }
-
-
 /* =========================================
    UNIDADES
 ========================================= */
-
 .unidad {
     background-color: #f4faff;
-
     border-left: 5px solid #087ec1;
-
     padding: 25px;
-
     margin-top: 25px;
-
     border-radius: 8px;
 }
-
-
 .unidad h3 {
     color: #075397;
-
     margin-bottom: 20px;
 }
-
-
 .unidad h4 {
     color: #087ec1;
-
     margin-top: 20px;
-
     margin-bottom: 8px;
 }
-
-
 .unidad p {
     margin-bottom: 12px;
 }
-
-
 .unidad ul {
     margin-left: 25px;
-
     margin-bottom: 15px;
 }
-
-
 .unidad li {
     margin-bottom: 8px;
 }
-
-
 /* =========================================
    HIMNO DEL IPN
 ========================================= */
-
 .himno {
     text-align: center;
 }
-
-
 .escudo-ipn {
     width: 200px;
-
     margin-bottom: 40px;
 }
-
-
 .audio-himno {
     margin-top: 25px;
-
     padding: 25px;
-
     background-color: #eef6fc;
-
     border-radius: 10px;
 }
-
-
 .audio-himno h3 {
     color: #075397;
-
     margin-bottom: 15px;
 }
-
-
 audio {
     width: 100%;
-
     max-width: 600px;
 }
-
-
 .letra-himno {
     margin-top: 25px;
-
     padding: 25px;
-
     background-color: #f4faff;
-
     border-radius: 10px;
-
     text-align: left;
-
     border-left: 5px solid #087ec1;
 }
-
-
 .letra-himno h3 {
     color: #075397;
-
     margin-bottom: 10px;
 }
-
-
 /* =========================================
    PIE DE PÁGINA
 ========================================= */
-
 footer {
     background-color: #052e55;
-
     color: white;
-
     text-align: center;
-
     padding: 30px;
 }
-
-
 .escudo-footer {
     width: 300px;
-
     margin-bottom: 40px;
 }
-
-
 footer p {
     margin: 5px;
 }
-
-
 /* =========================================
-   ADAPTACIÓN PARA CELULAR
+   INTERRUPTOR DE TEMA - HEADER
 ========================================= */
-
-@media (max-width: 700px) {
-
-    .portada {
-        padding: 30px 20px;
-    }
-
-
-    .logo-portada {
-        width: 230px;
-    }
-
-
-    .portada h1 {
-        font-size: 40px;
-    }
-
-
-    .encabezado-contenido {
-        flex-direction: column;
-
-        text-align: center;
-    }
-
-
-    .menu {
-        flex-direction: column;
-    }
-
-
-    .menu a {
-        width: 100%;
-
-        text-align: center;
-    }
-
-
-    .bienvenida {
-        padding: 30px 20px;
-    }
-
-
-    .bienvenida h2 {
-        font-size: 32px;
-    }
-
-
-    .seccion {
-        padding: 22px;
-    }
-
-}
-
-
-
-/* =========================================
-   MODO OSCURO
-========================================= */
-
-/* =========================================
-   CONTROL DE MODO OSCURO 
-========================================= */
-
-.control-tema {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 14px;
-    margin-left: 12px;
-    flex-shrink: 0;
-}
-
-.etiqueta-tema {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: white;
-    font-size: 14px;
-    font-weight: bold;
-    white-space: nowrap;
-}
-
-.luna-etiqueta {
-    font-size: 23px;
-    line-height: 1;
-}
-
-.boton-tema {
+.toggle-switch {
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100px;
-    height: 36px;
-    padding: 3px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 999px;
-    background: #292929;
-    cursor: pointer;
+    width: 64px;
+    height: 34px;
+    --light: #d8dbe0;
+    --dark: #28292c;
     flex-shrink: 0;
-    transition: background 0.3s ease, box-shadow 0.3s ease;
 }
-
-.boton-tema::before {
-    content: "";
+.toggle-switch .switch-label {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--dark);
+    border: 2px solid var(--dark);
+    border-radius: 25px;
+    cursor: pointer;
+}
+.toggle-switch .checkbox {
+    position: absolute;
+    display: none;
+}
+.toggle-switch .slider {
     position: absolute;
     inset: 0;
-    border-radius: inherit;
-    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    transition: 0.3s;
 }
-
-.icono-ajustes,
-.icono-tema,
-.icono-sol {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 30px;
-    height: 28px;
-    color: #a7a7a7;
-    font-size: 17px;
-    line-height: 1;
-    transition: color 0.3s ease;
+.toggle-switch .checkbox:checked ~ .slider {
+    background-color: var(--light);
 }
-
-.circulo-tema {
+.toggle-switch .slider::before {
+    content: "";
     position: absolute;
-    z-index: 1;
-    width: 30px;
-    height: 28px;
-    left: 67px;
-    top: 3px;
-    border-radius: 999px;
-    background: #555555;
-    transition: left 0.3s ease, background 0.3s ease;
+    top: 5px;
+    left: 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--dark);
+    box-shadow: inset 10px -3px 0 0 var(--light);
+    transition: 0.3s;
 }
-
-/* Modo claro: sol seleccionado */
-.boton-tema .icono-sol {
-    color: #ffffff;
+.toggle-switch .checkbox:checked ~ .slider::before {
+    transform: translateX(28px);
+    background-color: var(--dark);
+    box-shadow: none;
 }
-
-/* Modo oscuro: luna seleccionada */
-body.modo-oscuro .circulo-tema {
-    left: 35px;
-    background: #555555;
+/* Accesibilidad */
+.toggle-switch .checkbox:focus-visible ~ .slider {
+    outline: 2px solid #23c483;
+    outline-offset: 4px;
 }
-
-body.modo-oscuro .icono-tema {
-    color: #ffffff;
-}
-
-body.modo-oscuro .icono-sol {
-    color: #a7a7a7;
-}
-
-.boton-tema:hover {
-    background: #333333;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.20);
-}
-
-.boton-tema:active {
-    transform: scale(0.97);
-}
-
-.boton-tema:focus-visible {
-    outline: 2px solid #5eb5ed;
-    outline-offset: 3px;
-}
-
 /* =========================================
-   CUANDO ESTÁ EN MODO OSCURO
+   MODO OSCURO GENERAL
 ========================================= */
-
+body.modo-oscuro {
+    background-color: #121212;
+    color: #e8e8e8;
+}
 body.modo-oscuro .boton-tema {
     background: linear-gradient(135deg, #101827, #172b4d);
     border-color: rgba(94, 181, 237, 0.35);
@@ -1066,249 +579,147 @@ body.modo-oscuro .boton-tema {
         inset 0 1px 2px rgba(255, 255, 255, 0.08),
         0 4px 14px rgba(0, 0, 0, 0.38);
 }
-
 body.modo-oscuro .circulo-tema {
     transform: translateX(32px);
     background: #dceeff;
 }
-
 body.modo-oscuro .icono-tema {
     left: 43px;
     color: #123d59;
     transform: rotate(-18deg);
 }
-
 body.modo-oscuro .boton-tema:hover {
     background: linear-gradient(135deg, #15243a, #1c3c5b);
 }
-
-body.modo-oscuro {
-    background-color: #121212;
-    color: #e8e8e8;
-}
-
-
-/* =========================
-   PORTADA
-========================= */
-
+/* Portada */
 body.modo-oscuro .pagina-inicio {
-    background: linear-gradient(
-        135deg,
-        #050505,
-        #111827,
-        #172554
-    );
+    background: linear-gradient(135deg, #050505, #111827, #172554);
 }
-
 body.modo-oscuro .portada {
     background-color: #1e1e1e;
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
-
 body.modo-oscuro .portada h1,
 body.modo-oscuro .nombre-mtc {
     color: #5eb5ed;
 }
-
 body.modo-oscuro .boton-principal {
     background-color: #eeeeee;
     color: #111111;
 }
-
-
-/* =========================
-   ENCABEZADOS
-========================= */
-
+/* Encabezados */
 body.modo-oscuro .header-portal,
 body.modo-oscuro .encabezado-secundario {
-    background: linear-gradient(
-        90deg,
-        #07111f,
-        #102a43
-    );
+    background: linear-gradient(90deg, #07111f, #102a43);
 }
-
-
-/* =========================
-   MENÚ
-========================= */
-
+/* Menú */
 body.modo-oscuro .menu {
     background-color: #080f18;
 }
-
 body.modo-oscuro .menu a {
     color: #eeeeee;
 }
-
 body.modo-oscuro .menu a:hover {
     background-color: #15527d;
 }
-
-
-/* =========================
-   CONTENIDO
-========================= */
-
+/* Contenido */
 body.modo-oscuro .seccion {
     background-color: #1e1e1e;
     color: #e8e8e8;
-
     box-shadow: 0 3px 12px rgba(0,0,0,0.35);
 }
-
 body.modo-oscuro .seccion h2 {
     color: #5eb5ed;
 }
-
-
-/* =========================
-   BIENVENIDA
-========================= */
-
+/* Bienvenida */
 body.modo-oscuro .bienvenida {
     background-color: #1e1e1e;
     color: #e8e8e8;
-
     box-shadow: 0 4px 15px rgba(0,0,0,0.35);
 }
-
-body.modo-oscuro .bienvenida h2 {
+body.modo-oscuro .bienvenida h2,
+body.modo-oscuro .bienvenida .titulo-bienvenida {
     color: #5eb5ed;
 }
-
 body.modo-oscuro .mensaje-final {
     color: #5eb5ed;
 }
-
-
-/* =========================
-   ACERCA DE / INTEGRANTES
-========================= */
-
+/* Integrantes */
 body.modo-oscuro .tarjeta-integrante {
     background-color: #252525;
     border-color: #315f7d;
 }
-
 body.modo-oscuro .tarjeta-integrante h3 {
     color: #8acaf0;
 }
-
-
-/* =========================
-   TRABAJOS
-========================= */
-
+/* Trabajos */
 body.modo-oscuro .subseccion {
     background-color: #1e1e1e;
-
     box-shadow: 0 3px 10px rgba(0,0,0,0.35);
 }
-
 body.modo-oscuro .subseccion h3 {
     color: #8acaf0;
 }
-
 body.modo-oscuro .trabajo {
     background-color: #252525;
     border-color: #344b5c;
 }
-
 body.modo-oscuro .informacion-trabajo h4 {
     color: #8acaf0;
 }
-
-
-/* =========================
-   BOTONES
-========================= */
-
+/* Botones */
 body.modo-oscuro .botones-parciales a {
     background-color: #164d70;
 }
-
 body.modo-oscuro .botones-parciales a:hover {
     background-color: #1d6b99;
 }
-
 body.modo-oscuro .boton-ver {
     background-color: #176b9d;
 }
-
 body.modo-oscuro .boton-descargar {
     background-color: #123d59;
 }
-
-
-/* =========================
-   MULTIMEDIA
-========================= */
-
+/* Multimedia */
 body.modo-oscuro .multimedia-opciones > div {
     background-color: #252525;
     border-color: #344b5c;
 }
-
 body.modo-oscuro .multimedia-opciones h3 {
     color: #8acaf0;
 }
-
-
-/* =========================
-   UNIDADES
-========================= */
-
+/* Unidades */
 body.modo-oscuro .unidad {
     background-color: #252525;
     border-left-color: #2385bd;
 }
-
 body.modo-oscuro .unidad h3 {
     color: #6dbbea;
 }
-
 body.modo-oscuro .unidad h4 {
     color: #5eb5ed;
 }
-
-
-/* =========================
-   HIMNO DEL IPN
-========================= */
-
+/* Himno */
 body.modo-oscuro .audio-himno {
     background-color: #252525;
 }
-
 body.modo-oscuro .audio-himno h3 {
     color: #8acaf0;
 }
-
 body.modo-oscuro .letra-himno {
     background-color: #252525;
     border-left-color: #2385bd;
 }
-
 body.modo-oscuro .letra-himno h3 {
     color: #8acaf0;
 }
-
-
-/* =========================
-   FOOTER
-========================= */
-
+/* Footer */
 body.modo-oscuro footer {
     background-color: #080f18;
 }
-
-/*=========================
-    Traduccion ingles
-========================== */
-
+/* =========================================
+   SELECTOR DE IDIOMA
+========================================= */
 .selector-idioma {
     display: flex;
     align-items: center;
@@ -1318,7 +729,6 @@ body.modo-oscuro footer {
     color: #ffffff;
     flex-shrink: 0;
 }
-
 .selector-idioma button {
     padding: 7px 10px;
     border: 1px solid transparent;
@@ -1329,33 +739,22 @@ body.modo-oscuro footer {
     cursor: pointer;
     transition: 0.3s;
 }
-
 .selector-idioma button:hover,
 .selector-idioma button.idioma-activo {
     background-color: #087ec1;
     border-color: rgba(255, 255, 255, 0.25);
 }
-
 .selector-idioma button:focus-visible {
     outline: 2px solid #8acaf0;
     outline-offset: 2px;
 }
 
-@media (max-width: 700px) {
-    .selector-idioma {
-        margin: 8px auto;
-    }
-}
-
-
 /* =========================================
    VISOR DE PDF
 ========================================= */
-
 .visor-oculto {
     display: none;
 }
-
 .visor-barra {
     display: flex;
     justify-content: space-between;
@@ -1363,14 +762,12 @@ body.modo-oscuro footer {
     gap: 15px;
     margin-bottom: 18px;
 }
-
 .visor-barra h2 {
     margin-bottom: 0;
     border-bottom: none;
     padding-bottom: 0;
     font-size: 22px;
 }
-
 .visor-marco {
     width: 100%;
     height: 80vh;
@@ -1378,22 +775,12 @@ body.modo-oscuro footer {
     border-radius: 8px;
     background-color: #fff;
 }
-
 body.modo-oscuro .visor-marco {
     border-color: #344b5c;
 }
-
-@media (max-width: 700px) {
-    .visor-marco {
-        height: 65vh;
-    }
-}
-
-
 /* =========================================
-   PÁGINA DE REALIDAD VIRTUAL Y AUMENTADA
+   REALIDAD VIRTUAL Y AUMENTADA
 ========================================= */
-
 .visor {
     position: relative;
     width: 100%;
@@ -1403,35 +790,26 @@ body.modo-oscuro .visor-marco {
     border-radius: 10px;
     overflow: hidden;
 }
-
 .visor a-scene,
 .visor model-viewer {
     width: 100%;
     height: 100%;
 }
-
 .visor model-viewer {
     background-color: #f4f4f4;
 }
-
 .pregunta {
     margin-bottom: 18px;
 }
-
 .pregunta code {
     background-color: #eef6fc;
     padding: 2px 6px;
     border-radius: 4px;
 }
-
-/* Al abrir un enlace a la actividad 6, que el encabezado fijo no la tape */
 #actividad-6 {
     scroll-margin-top: 140px;
 }
-
-
-/* QR para abrir el ejemplo de RA desde el celular */
-
+/* QR */
 .qr-ra {
     display: flex;
     align-items: center;
@@ -1442,7 +820,6 @@ body.modo-oscuro .visor-marco {
     border: 1px solid #c4e5f7;
     border-radius: 10px;
 }
-
 .qr-ra .qr-imagen {
     flex-shrink: 0;
     padding: 12px;
@@ -1450,31 +827,24 @@ body.modo-oscuro .visor-marco {
     border-radius: 8px;
     line-height: 0;
 }
-
 .qr-ra h4 {
     color: #087ec1;
     margin-bottom: 8px;
 }
-
 .qr-ra p {
     margin-bottom: 8px;
 }
-
 .qr-ra .qr-enlace {
     word-break: break-all;
     font-size: 14px;
 }
-
 .qr-ra .qr-aviso {
     display: none;
     font-size: 14px;
     font-weight: bold;
     color: #b45309;
 }
-
-
-/* Marcador Hiro */
-
+/* Marcador */
 .marcador-ra {
     margin: 15px 0;
     padding: 20px;
@@ -1483,12 +853,10 @@ body.modo-oscuro .visor-marco {
     border: 1px solid #c4e5f7;
     border-radius: 10px;
 }
-
 .marcador-ra h4 {
     color: #087ec1;
     margin-bottom: 12px;
 }
-
 .marcador-ra img {
     max-width: 100%;
     height: auto;
@@ -1496,50 +864,2520 @@ body.modo-oscuro .visor-marco {
     background-color: #ffffff;
     border-radius: 8px;
 }
-
 .marcador-ra p {
     margin: 12px auto 0;
     max-width: 500px;
     font-size: 14px;
 }
-
-
-/* Modo oscuro de la página de RV y RA */
-
 body.modo-oscuro .visor {
     border-color: #344b5c;
 }
-
 body.modo-oscuro .pregunta code {
     background-color: #252525;
 }
-
 body.modo-oscuro .qr-ra,
 body.modo-oscuro .marcador-ra {
     background-color: #252525;
     border-color: #344b5c;
 }
-
 body.modo-oscuro .qr-ra h4,
 body.modo-oscuro .marcador-ra h4 {
     color: #5eb5ed;
 }
-
 body.modo-oscuro .qr-ra .qr-enlace {
     color: #8acaf0;
 }
-
 body.modo-oscuro .qr-ra .qr-aviso {
     color: #fbbf24;
 }
-
-@media (max-width: 700px) {
+/* ======================================================================
+   REDISEÑO MTC - GENERAL
+====================================================================== */
+/* Variables del tema claro */
+:root body {
+    --mtc-fondo: #FAFAF8;
+    --mtc-superficie: rgba(255, 255, 255, 0.91);
+    --mtc-superficie-secundaria: rgba(247, 249, 246, 0.94);
+    --mtc-texto: #191D1B;
+    --mtc-texto-secundario: #747B76;
+    --mtc-borde: #E5E9E5;
+    /* El acento se conserva para detalles gráficos.
+       Los botones se fuerzan a negro más abajo. */
+    --mtc-acento: #138A63;
+    --mtc-acento-hover: #0F7252;
+    --mtc-lineas: #5CA984;
+    --mtc-lineas-secundarias: #8AA99A;
+    --mtc-sombra: 0 8px 28px rgba(25, 40, 31, 0.055);
+    position: relative;
+    isolation: isolate;
+    padding-top: 95px;
+    background: var(--mtc-fondo);
+    color: var(--mtc-texto);
+    font-family: Inter, "Segoe UI", Arial, sans-serif;
+    transition: background-color 400ms ease, color 400ms ease;
+}
+/* Variables del tema oscuro */
+:root body.modo-oscuro {
+    --mtc-fondo: #101311;
+    --mtc-superficie: rgba(25, 30, 27, 0.94);
+    --mtc-superficie-secundaria: rgba(31, 38, 33, 0.96);
+    --mtc-texto: #E9EEE9;
+    --mtc-texto-secundario: #9BA59E;
+    --mtc-borde: #303A33;
+    --mtc-acento: #48C995;
+    --mtc-acento-hover: #65D9A8;
+    --mtc-lineas: #278B65;
+    --mtc-lineas-secundarias: #356D56;
+    --mtc-sombra: 0 10px 30px rgba(0, 0, 0, 0.20);
+    background: var(--mtc-fondo);
+    color: var(--mtc-texto);
+}
+/* =========================================
+   FONDO GENERATIVO ANIMADO
+========================================= */
+.fondo-generativo {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+    background: var(--mtc-fondo);
+    transition: background-color 400ms ease;
+}
+.lineas-generativas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.62;
+}
+.lineas-generativas path {
+    fill: none;
+    stroke: var(--mtc-lineas);
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-dasharray: none;
+    animation: recorrido-lineas 34s linear infinite;
+    vector-effect: non-scaling-stroke;
+}
+.lineas-generativas .grupo-lineas-secundario path {
+    stroke: var(--mtc-lineas-secundarias);
+    stroke-width: 1.25;
+    animation-duration: 46s;
+    animation-direction: reverse;
+    opacity: 0.8;
+}
+@keyframes recorrido-lineas {
+    from {
+        stroke-dashoffset: 0;
+        transform: translateX(0) translateY(0);
+    }
+    50% {
+        transform: translateX(12px) translateY(-8px);
+    }
+    to {
+        stroke-dashoffset: -420;
+        transform: translateX(0) translateY(0);
+    }
+}
+:root body.modo-oscuro .lineas-generativas {
+    opacity: 0.52;
+}
+/* El contenido queda por encima del fondo animado */
+:root body > header,
+:root body > main,
+:root body > footer {
+    position: relative;
+    z-index: 1;
+}
+/* HEADER */
+:root body .header-portal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    min-height: 95px;
+    padding: 9px 28px;
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.94);
+    color: #191D1B;
+    border-bottom: 1px solid rgba(25, 29, 27, 0.09);
+    box-shadow: 0 2px 14px rgba(20, 30, 24, 0.025);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    z-index: 1000;
+    transition: background-color 400ms ease, border-color 400ms ease;
+}
+:root body .encabezado-contenido {
+    width: 100%;
+    max-width: 1400px;
+    min-height: 75px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 28px;
+}
+/* Marca MTC: logotipo original y nombre */
+:root body .marca-mtc {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    flex: 0 0 auto;
+    color: #111111;
+    text-decoration: none;
+}
+:root body .logo-portal {
+    display: block;
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+:root body .nombre-marca {
+    display: inline-block;
+    color: #111111;
+    font-size: 27px;
+    line-height: 1;
+    letter-spacing: -1.15px;
+    font-weight: 750;
+}
+/* Menú integrado al header */
+:root body .menu {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 7px;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+}
+:root body .menu a {
+    padding: 9px 13px;
+    border-radius: 7px;
+    color: #272D29;
+    font-size: 14px;
+    font-weight: 550;
+    text-decoration: none;
+    transition: color 180ms ease, background-color 180ms ease;
+}
+:root body .menu a:hover {
+    color: #111111;
+    background: rgba(0, 0, 0, 0.07);
+}
+/* Selector de idioma */
+:root body .selector-idioma {
+    margin: 0 0 0 7px;
+    color: #777E79;
+}
+:root body .selector-idioma button {
+    color: #111111;
+    padding: 6px 8px;
+    border-radius: 5px;
+}
+:root body .selector-idioma button:hover,
+:root body .selector-idioma button.idioma-activo {
+    color: #FFFFFF;
+    background: #111111;
+    border-color: #111111;
+}
+/* Botón de tema */
+:root body .boton-tema {
+    width: 76px;
+    height: 34px;
+    margin-left: 8px;
+    background: #111111;
+    border: 1px solid #111111;
+}
+:root body .boton-tema .icono-tema,
+:root body .boton-tema .icono-sol {
+    color: #FFFFFF;
+}
+:root body .boton-tema .circulo-tema {
+    left: 42px;
+    top: 3px;
+    width: 27px;
+    height: 26px;
+    background: #555555;
+}
+/* Header en modo oscuro */
+:root body.modo-oscuro .header-portal {
+    background: rgba(16, 19, 17, 0.94);
+    color: #E9EEE9;
+    border-bottom-color: rgba(233, 238, 233, 0.10);
+}
+:root body.modo-oscuro .marca-mtc,
+:root body.modo-oscuro .nombre-marca {
+    color: #F3F5F3;
+}
+:root body.modo-oscuro .menu a {
+    color: #DCE3DD;
+}
+:root body.modo-oscuro .menu a:hover {
+    color: #FFFFFF;
+    background: rgba(255, 255, 255, 0.10);
+}
+:root body.modo-oscuro .selector-idioma,
+:root body.modo-oscuro .selector-idioma button {
+    color: #E9EEE9;
+}
+:root body.modo-oscuro .selector-idioma button:hover,
+:root body.modo-oscuro .selector-idioma button.idioma-activo {
+    color: #111111;
+    background: #FFFFFF;
+    border-color: #FFFFFF;
+}
+:root body.modo-oscuro .boton-tema {
+    background: #111111;
+    border-color: #444444;
+}
+:root body.modo-oscuro .boton-tema .icono-tema,
+:root body.modo-oscuro .boton-tema .icono-sol {
+    color: #FFFFFF;
+}
+:root body.modo-oscuro .boton-tema .circulo-tema {
+    left: 7px;
+    background: #555555;
+}
+/* CONTENIDO DE TRABAJOS */
+:root body .contenido-trabajos {
+    max-width: 1200px;
+    padding-top: 34px;
+    padding-bottom: 55px;
+}
+:root body .seccion,
+:root body .subseccion {
+    color: var(--mtc-texto);
+    background: var(--mtc-superficie);
+    border: 1px solid var(--mtc-borde);
+    border-radius: 14px;
+    box-shadow: var(--mtc-sombra);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    transition: background-color 400ms ease, border-color 400ms ease, color 400ms ease;
+}
+:root body .seccion h2 {
+    color: var(--mtc-texto);
+    border-bottom: 1px solid var(--mtc-borde);
+    padding-bottom: 12px;
+}
+:root body .seccion > p,
+:root body .subseccion > p {
+    color: var(--mtc-texto-secundario);
+}
+:root body .subseccion {
+    background: var(--mtc-superficie-secundaria);
+    box-shadow: none;
+}
+:root body .subseccion h3,
+:root body .informacion-trabajo h4,
+:root body .titulo-recursos,
+:root body .video-tarjeta h4 {
+    color: var(--mtc-texto);
+}
+:root body .trabajo,
+:root body .video-tarjeta {
+    background: var(--mtc-superficie-secundaria);
+    border: 1px solid var(--mtc-borde);
+    border-radius: 10px;
+    transition: transform 180ms ease, border-color 180ms ease, background-color 400ms ease;
+}
+:root body .trabajo:hover {
+    transform: translateY(-2px);
+    border-color: rgba(0, 0, 0, 0.30);
+}
+/* =========================================
+   BOTONES NEGROS
+========================================= */
+:root body .botones-parciales a,
+:root body .boton-ver,
+:root body .boton-descargar {
+    border: 1px solid #111111;
+    border-radius: 7px;
+    background: #111111;
+    color: #FFFFFF;
+    transition: background-color 180ms ease, transform 180ms ease;
+}
+:root body .botones-parciales a:hover,
+:root body .boton-ver:hover,
+:root body .boton-descargar:hover {
+    background: #333333;
+    color: #FFFFFF;
+    transform: translateY(-1px);
+}
+:root body .video-tarjeta iframe {
+    border-radius: 8px;
+}
+/* =========================================
+   FOOTER
+========================================= */
+:root body footer {
+    background: #191E1B;
+    color: #E9EEE9;
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+:root body .escudo-footer {
+    max-width: min(300px, 70%);
+}
+/* =========================================
+   MODO OSCURO
+========================================= */
+:root body.modo-oscuro .seccion,
+:root body.modo-oscuro .subseccion,
+:root body.modo-oscuro .trabajo,
+:root body.modo-oscuro .video-tarjeta {
+    color: var(--mtc-texto);
+    background: var(--mtc-superficie);
+    border-color: var(--mtc-borde);
+}
+:root body.modo-oscuro .subseccion {
+    background: var(--mtc-superficie-secundaria);
+}
+:root body.modo-oscuro .seccion h2,
+:root body.modo-oscuro .subseccion h3,
+:root body.modo-oscuro .informacion-trabajo h4,
+:root body.modo-oscuro .titulo-recursos,
+:root body.modo-oscuro .video-tarjeta h4 {
+    color: var(--mtc-acento);
+}
+:root body.modo-oscuro .seccion > p,
+:root body.modo-oscuro .subseccion > p {
+    color: var(--mtc-texto-secundario);
+}
+:root body.modo-oscuro footer {
+    background: #090D0B;
+}
+/* =========================================
+   RESPONSIVE
+========================================= */
+@media (max-width: 800px) {
+    :root body {
+        padding-top: 145px;
+    }
+    :root body .header-portal {
+        padding: 8px 16px;
+    }
+    :root body .encabezado-contenido {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px 16px;
+    }
+    :root body .marca-mtc {
+        margin-right: auto;
+    }
+    :root body .menu {
+        flex: 1 0 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 3px;
+    }
+    :root body .menu a {
+        padding: 7px 9px;
+        font-size: 13px;
+    }
+    :root body .selector-idioma {
+        margin-left: 3px;
+    }
+    :root body .boton-tema {
+        margin-left: 3px;
+    }
+    .encabezado-contenido {
+        flex-direction: column;
+        text-align: center;
+    }
+    .menu {
+        flex-direction: column;
+    }
+    .menu a {
+        width: 100%;
+        text-align: center;
+    }
+    .bienvenida {
+        padding: 30px 20px;
+    }
+    .bienvenida h2 {
+        font-size: 32px;
+    }
+    .seccion {
+        padding: 22px;
+    }
+    .videos-unidad {
+        grid-template-columns: 1fr;
+    }
+    .video-tarjeta {
+        padding: 15px;
+    }
+    .trabajo {
+        flex-wrap: wrap;
+    }
+    .acciones-trabajo {
+        flex-wrap: wrap;
+    }
+    .visor-marco {
+        height: 65vh;
+    }
     .visor {
         height: 300px;
     }
-
     .qr-ra {
         flex-direction: column;
         text-align: center;
     }
+    .selector-idioma {
+        margin: 8px auto;
+    }
+}
+@media (max-width: 700px) {
+    .portada {
+        padding: 30px 20px;
+    }
+    .logo-portada {
+        width: 230px;
+    }
+    .portada h1 {
+        font-size: 40px;
+    }
+    .bienvenida .titulo-bienvenida {
+        font-size: 40px;
+    }
+    .bienvenida .nombre-mtc {
+        font-size: 22px;
+    }
+}
+@media (max-width: 520px) {
+    :root body {
+        padding-top: 175px;
+    }
+    :root body .header-portal {
+        padding: 7px 12px;
+    }
+    :root body .logo-portal {
+        width: 60px;
+        height: 60px;
+    }
+    :root body .encabezado-contenido {
+        gap: 6px 10px;
+    }
+    :root body .menu {
+        gap: 2px;
+    }
+    :root body .menu a {
+        padding: 6px 7px;
+        font-size: 12px;
+    }
+    :root body .contenido-trabajos {
+        padding: 22px 12px 40px;
+    }
+    :root body .seccion,
+    :root body .subseccion {
+        padding: 20px 16px;
+    }
+    :root body .nombre-marca {
+        font-size: 25px;
+    }
+}
+/* =========================================
+   ACCESIBILIDAD: MOVIMIENTO REDUCIDO
+========================================= */
+@media (prefers-reduced-motion: reduce) {
+    .lineas-generativas path {
+        animation: none !important;
+    }
+    :root body,
+    :root body * {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+/* FONDO VANTA */
+html {
+    background-color: #ffffff;
+}
+body {
+    background: transparent !important;
+    position: relative;
+    isolation: isolate;
+    min-height: 100vh;
+}
+/* Contenedor del fondo */
+#fondo-vanta {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+}
+/* Canvas generado por Vanta */
+#fondo-vanta canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+/* =========================================
+   TRABAJOS - DISEÑO Y TRANSPARENCIAS
+========================================= */
+/* Contenedor general de trabajos */
+:root body .contenido-trabajos {
+    background: transparent;
+}
+/* Sección principal */
+:root body #trabajos.seccion {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+/* Títulos y textos generales */
+:root body #trabajos > h2,
+:root body #trabajos > p {
+    background: transparent;
+}
+/* Bloques de cada parcial */
+:root body .subseccion {
+    background: #111111 !important;
+    border: 1px solid #111111 !important;
+    border-radius: 10px;
+    padding: 24px;
+    box-shadow: none !important;
+    color: #ffffff;
+}
+/* Títulos y descripciones de los parciales */
+:root body .subseccion h3,
+:root body .subseccion > p,
+:root body .titulo-recursos {
+    color: #ffffff !important;
+}
+/* Barras individuales de trabajos */
+:root body .trabajo {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.13) !important;
+    border-radius: 7px;
+    box-shadow: none !important;
+    transition: background 200ms ease, transform 200ms ease;
+}
+/* Nombre de los trabajos */
+:root body .informacion-trabajo h4 {
+    color: #ffffff !important;
+}
+/* Interacción de las barras */
+:root body .trabajo:hover {
+    background: rgba(255, 255, 255, 0.13) !important;
+    transform: translateY(-2px);
+}
+/* Bloques de videos */
+:root body .video-tarjeta {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.13) !important;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: none !important;
+}
+:root body .video-tarjeta h4 {
+    color: #ffffff !important;
+}
+/* Visor PDF */
+:root body #visor-pdf {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+/* Footer */
+:root body footer {
+    background: transparent !important;
+    border-top: none !important;
+    box-shadow: none !important;
+}
+/* Botones */
+:root body .botones-parciales a,
+:root body .boton-ver,
+:root body .boton-descargar {
+    background: #111111 !important;
+    color: #ffffff !important;
+    border: 1px solid #111111 !important;
+    border-radius: 7px;
+}
+:root body .botones-parciales a:hover,
+:root body .boton-ver:hover,
+:root body .boton-descargar:hover {
+    background: #333333 !important;
+    border-color: #333333 !important;
+    color: #ffffff !important;
+}
+/* Adaptación para dispositivos móviles */
+@media (max-width: 800px) {
+    :root body .subseccion {
+        padding: 18px;
+    }
+    :root body .trabajo {
+        flex-wrap: wrap;
+    }
+}
+@media (max-width: 520px) {
+    :root body .subseccion {
+        padding: 14px;
+    }
+    :root body .video-tarjeta {
+        padding: 12px;
+    }
+}
+/* =========================================
+   FOOTER - MTC
+========================================= */
+:root body .footer-mtc {
+    width: 100%;
+    padding: 25px 6% 16px;
+    background: transparent !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+    box-shadow: none !important;
+}
+/* Distribución principal */
+:root body .footer-contenido {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    min-height: 65px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+/* Escudo a la izquierda */
+:root body .escudo-footer {
+    position: absolute;
+    left: 0;
+    width: 125px;
+    height: 125px;
+    object-fit: contain;
+}
+/* Texto centrado */
+:root body .footer-informacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    text-align: center;
+}
+:root body .footer-informacion h3 {
+    margin: 0;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--mtc-texto);
+}
+:root body .footer-informacion p {
+    margin: 0;
+    font-size: 13px;
+    color: var(--mtc-texto-secundario);
+}
+/* Línea y derechos reservados */
+:root body .footer-inferior {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 13px;
+    border-top: 1px solid rgba(0, 0, 0, 0.10);
+    text-align: center;
+}
+:root body .footer-inferior p {
+    margin: 0;
+    font-size: 12px;
+    color: var(--mtc-texto-secundario);
+}
+/* Modo oscuro */
+:root body.modo-oscuro .footer-mtc {
+    border-top-color: rgba(255, 255, 255, 0.13);
+}
+:root body.modo-oscuro .footer-inferior {
+    border-top-color: rgba(255, 255, 255, 0.10);
+}
+/* Móviles */
+@media (max-width: 520px) {
+    :root body .footer-mtc {
+        padding: 22px 5% 14px;
+    }
+    :root body .footer-contenido {
+        min-height: 80px;
+        padding-top: 48px;
+    }
+    :root body .escudo-footer {
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 55px;
+        height: 55px;
+    }
+}
+/* =========================================
+   BOTONES DE NAVEGACIÓN ENTRE PARCIALES
+========================================= */
+:root body .botones-parciales a {
+    display: inline-block;
+    padding: 1.3em 2.5em;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff !important;
+    background-color: #000000 !important;
+    border: none !important;
+    border-radius: 45px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.10);
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+/* Hover */
+:root body .botones-parciales a:hover {
+    background-color: #23c483 !important;
+    box-shadow: 0 15px 20px rgba(46, 229, 157, 0.30);
+    color: #000000 !important;
+    transform: translateY(-5px);
+}
+/* Clic */
+:root body .botones-parciales a:active {
+    transform: translateY(-1px);
+}
+/* Accesibilidad */
+:root body .botones-parciales a:focus-visible {
+    outline: 2px solid #23c483;
+    outline-offset: 4px;
+}
+/* =========================================
+   AJUSTES FINALES - BLOQUES Y BOTONES
+========================================= */
+/* Bloques de los parciales: negro sólido */
+:root body .subseccion {
+    background: #000000 !important;
+    background-color: #000000 !important;
+    border-color: #000000 !important;
+    color: #ffffff !important;
+}
+/* Mantener el texto de cada parcial en blanco */
+:root body .subseccion h3,
+:root body .subseccion h4,
+:root body .subseccion > p,
+:root body .subseccion .titulo-recursos {
+    color: #ffffff !important;
+}
+/* Botones Ver y Descargar: mismo estilo que los botones de parciales */
+:root body .boton-ver,
+:root body .boton-descargar {
+    display: inline-block;
+    padding: 1.3em 2.5em;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ffffff !important;
+    background-color: #000000 !important;
+    border: none !important;
+    border-radius: 45px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.10);
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+/* Hover: acento verde igual al de navegación entre parciales */
+:root body .boton-ver:hover,
+:root body .boton-descargar:hover {
+    background-color: #23c483 !important;
+    box-shadow: 0 15px 20px rgba(46, 229, 157, 0.30);
+    color: #000000 !important;
+    transform: translateY(-5px);
+}
+/* Estado activo */
+:root body .boton-ver:active,
+:root body .boton-descargar:active {
+    transform: translateY(-1px);
+}
+/* Accesibilidad */
+:root body .boton-ver:focus-visible,
+:root body .boton-descargar:focus-visible {
+    outline: 2px solid #23c483;
+    outline-offset: 4px;
+}
+/* Mayor contraste para el texto introductorio */
+:root body #trabajos > p {
+    color: #ffffff !important;
+    font-size: 17px;
+    font-weight: 600;
+    opacity: 1;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.75);
+}
+/* Reafirmar el bloque negro también en modo oscuro */
+:root body.modo-oscuro .subseccion {
+    background: #000000 !important;
+    background-color: #000000 !important;
+    border-color: #000000 !important;
+}
+/* =========================================
+   ADAPTACIÓN A TODAS LAS PÁGINAS
+========================================= */
+/* Texto disponible para lectores de pantalla, sin ocupar espacio */
+.solo-lectores {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+/* Fondo oscuro de respaldo si Vanta no llega a cargar */
+html:has(body.modo-oscuro) {
+    background-color: #101311;
+}
+/* El interruptor siempre ocupa su propia caja */
+.toggle-switch .switch-label {
+    top: 0;
+    left: 0;
+}
+/* Enfoque accesible en navegación */
+:root body .marca-mtc:focus-visible,
+:root body .menu a:focus-visible,
+:root body .selector-idioma button:focus-visible {
+    outline: 2px solid #23c483;
+    outline-offset: 3px;
+}
+/* Los anclajes no quedan ocultos bajo el encabezado fijo */
+:root body .subseccion {
+    scroll-margin-top: 115px;
+}
+/* Acerca de */
+:root body .acerca h2:not(:first-child) {
+    margin-top: 35px;
+}
+:root body .tarjeta-integrante {
+    background: #000000;
+    border: 1px solid #000000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+:root body .tarjeta-integrante h3 {
+    color: #ffffff;
+}
+:root body .tarjeta-integrante:hover {
+    border-color: #23c483;
+    box-shadow: 0 15px 20px rgba(46, 229, 157, 0.20);
+    transform: translateY(-5px);
+}
+:root body .foto-integrante img {
+    max-width: 100%;
+}
+/* Realidad Virtual y Aumentada */
+:root body .qr-ra,
+:root body .marcador-ra {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.13);
+    color: #ffffff;
+}
+:root body .qr-ra .qr-enlace a {
+    color: #65d9a8;
+}
+:root body .qr-ra .qr-enlace a:focus-visible {
+    outline: 2px solid #23c483;
+    outline-offset: 3px;
+}
+:root body .qr-ra .qr-aviso {
+    color: #fbbf24;
+}
+:root body .qr-ra > div:last-child {
+    min-width: 0;
+}
+/* Encabezado en pantallas medianas */
+@media (max-width: 1150px) and (min-width: 801px) {
+    :root body .nombre-marca {
+        font-size: 19px;
+        letter-spacing: -0.5px;
+    }
+    :root body .encabezado-contenido {
+        gap: 14px;
+    }
+    :root body .menu {
+        flex-wrap: wrap;
+        gap: 3px;
+    }
+    :root body .menu a {
+        padding: 8px 9px;
+    }
+}
+
+:root body .escudo-ipn {
+    max-width: 60%;
+}
+:root body .audio-himno,
+:root body .letra-himno {
+    background: #000000;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    color: #ffffff;
+}
+:root body .letra-himno {
+    border-left: 5px solid #23c483;
+}
+:root body .audio-himno h3,
+:root body .letra-himno h3 {
+    color: #ffffff;
+}
+/* Respeta los saltos de línea de la letra */
+:root body .letra-himno p {
+    white-space: pre-line;
+    overflow-wrap: anywhere;
+}
+:root body audio:focus-visible {
+    outline: 2px solid #23c483;
+    outline-offset: 4px;
+}
+/* =========================================
+   MENÚ DESPLEGABLE - TRABAJOS
+========================================= */
+.menu-desplegable {
+    position: relative;
+}
+:root body .menu-desplegable summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 9px 13px;
+    border-radius: 7px;
+    color: #272D29;
+    font-size: 14px;
+    font-weight: 550;
+    user-select: none;
+}
+.menu-desplegable summary::-webkit-details-marker {
+    display: none;
+}
+.menu-desplegable summary::after {
+    content: " ▾";
+}
+:root body .menu-desplegable summary:hover {
+    background: rgba(128, 128, 128, 0.15);
+}
+:root body .menu-desplegable summary:focus-visible {
+    outline: 2px solid #23c483;
+    outline-offset: 3px;
+}
+:root body.modo-oscuro .menu-desplegable summary {
+    color: #DCE3DD;
+}
+:root body .submenu {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    min-width: 150px;
+    padding: 6px;
+    background: #000000;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    z-index: 10;
+}
+:root body .menu .submenu a {
+    color: #ffffff;
+    white-space: nowrap;
+    text-align: center;
+}
+:root body .menu .submenu a:hover {
+    background: #23c483;
+    color: #000000;
+}
+@media (max-width: 800px) {
+    :root body .menu-desplegable summary {
+        padding: 7px 9px;
+        font-size: 13px;
+    }
+}
+@media (max-width: 520px) {
+    :root body .menu-desplegable summary {
+        padding: 6px 7px;
+        font-size: 12px;
+    }
+}
+/* =========================================
+   INDEX - HOVER DE EXPLORA NUESTRO CONTENIDO
+========================================= */
+
+:root body .seccion-explorar .tarjeta-explorar {
+    transition:
+        background-color 0.25s ease,
+        border-color 0.25s ease,
+        color 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.25s ease;
+}
+
+:root body .seccion-explorar .tarjeta-explorar:hover {
+    background: #23c483 !important;
+    background-color: #23c483 !important;
+    border-color: #23c483 !important;
+    color: #000000 !important;
+    box-shadow: 0 0 18px rgba(35, 196, 131, 0.45) !important;
+    transform: translateY(-4px);
+}
+
+:root body .seccion-explorar .tarjeta-explorar:hover h3,
+:root body .seccion-explorar .tarjeta-explorar:hover p,
+:root body .seccion-explorar .tarjeta-explorar:hover span {
+    color: #000000 !important;
+    -webkit-text-fill-color: #000000 !important;
+}
+
+:root body .seccion-explorar .tarjeta-explorar:hover svg {
+    stroke: #000000 !important;
+}
+/* =========================================
+   INICIO - SECCIÓN EXPLORA
+========================================= */
+:root body .seccion-explorar {
+    margin-top: 40px;
+}
+:root body .encabezado-bloque-inicio {
+    margin-bottom: 22px;
+}
+:root body .encabezado-bloque-inicio h2 {
+    color: inherit;
+}
+:root body .rejilla-explorar {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+:root body .tarjeta-explorar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    min-height: 190px;
+    padding: 28px;
+    background: #000000 !important;
+    border: 1px solid #000000 !important;
+    border-radius: 10px;
+    color: #ffffff !important;
+    text-decoration: none;
+    transition:
+        background-color 250ms ease,
+        border-color 250ms ease,
+        color 250ms ease,
+        transform 250ms ease,
+        box-shadow 250ms ease;
+}
+:root body .tarjeta-explorar svg {
+    width: 32px;
+    height: 32px;
+    fill: none;
+    stroke: #ffffff;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    margin-bottom: 22px;
+    transition: stroke 250ms ease;
+}
+:root body .tarjeta-explorar h3 {
+    color: #ffffff !important;
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+:root body .tarjeta-explorar span {
+    color: #ffffff !important;
+    font-size: 14px;
+    margin-top: 18px;
+    transition: color 250ms ease;
+}
+:root body .tarjeta-explorar:hover {
+    background: #23c483 !important;
+    border-color: #23c483 !important;
+    color: #000000 !important;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 20px rgba(46, 229, 157, 0.30);
+}
+:root body .tarjeta-explorar:hover h3,
+:root body .tarjeta-explorar:hover span {
+    color: #000000 !important;
+}
+:root body .tarjeta-explorar:hover svg {
+    stroke: #000000;
+}
+:root body .tarjeta-explorar:focus-visible {
+    outline: 2px solid #23c483;
+    outline-offset: 4px;
+}
+@media (max-width: 650px) {
+    :root body .rejilla-explorar {
+        grid-template-columns: 1fr;
+    }
+    :root body .tarjeta-explorar {
+        min-height: 160px;
+        padding: 22px;
+    }
+}
+/* =========================================
+   INICIO - INFORMACIÓN DEL PROYECTO
+========================================= */
+:root body .seccion-informacion {
+    margin-top: 45px;
+    width: 100%;
+}
+:root body .seccion-informacion .encabezado-bloque-inicio {
+    margin-bottom: 22px;
+}
+:root body .rejilla-informacion {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    width: 100%;
+    align-items: stretch;
+}
+:root body .dato-proyecto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-width: 0;
+    min-height: 150px;
+    padding: 25px 18px;
+    background: #000000 !important;
+    border: 1px solid #000000 !important;
+    border-radius: 10px;
+    color: #ffffff !important;
+}
+:root body .dato-proyecto .numero-proyecto {
+    display: block;
+    color: #ffffff !important;
+    font-size: 38px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+:root body .dato-proyecto svg {
+    width: 35px;
+    height: 35px;
+    margin-bottom: 12px;
+    fill: none;
+    stroke: #ffffff;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+:root body .dato-proyecto span {
+    color: #ffffff !important;
+    font-size: 15px;
+    line-height: 1.5;
+}
+@media (max-width: 650px) {
+    :root body .rejilla-informacion {
+        grid-template-columns: 1fr;
+    }
+    :root body .dato-proyecto {
+        min-height: 120px;
+    }
+}
+/* =========================================
+   INICIO - TARJETAS Y ENCABEZADOS
+========================================= */
+/* Las tres secciones de inicio comparten el mismo tono oscuro. */
+:root body .seccion-inicio,
+:root body .tarjeta-explorar,
+:root body .dato-proyecto {
+    background: #222824 !important;
+    background-color: #222824 !important;
+    border: 1px solid #354139 !important;
+    color: #E9EEE9 !important;
+    box-shadow: none !important;
+}
+/* La tarjeta de bienvenida conserva su forma y separación. */
+:root body .seccion-inicio {
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18) !important;
+}
+/* Encabezados principales en verde. */
+:root body .seccion-inicio h1,
+:root body .seccion-inicio h2,
+:root body .seccion-explorar .encabezado-bloque-inicio h1,
+:root body .seccion-explorar .encabezado-bloque-inicio h2,
+:root body .seccion-informacion .encabezado-bloque-inicio h1,
+:root body .seccion-informacion .encabezado-bloque-inicio h2 {
+    color: #23c483 !important;
+    -webkit-text-fill-color: #23c483 !important;
+    background: none !important;
+}
+/* Texto normal en blanco suave. */
+:root body .seccion-inicio p,
+:root body .seccion-inicio span,
+:root body .tarjeta-explorar h3,
+:root body .tarjeta-explorar span,
+:root body .dato-proyecto .numero-proyecto,
+:root body .dato-proyecto span {
+    color: #E9EEE9 !important;
+    -webkit-text-fill-color: #E9EEE9 !important;
+}
+/* El hover de Explora conserva el acento verde. */
+:root body .tarjeta-explorar:hover {
+    background: #23c483 !important;
+    background-color: #23c483 !important;
+    border-color: #23c483 !important;
+    color: #000000 !important;
+}
+:root body .tarjeta-explorar:hover h3,
+:root body .tarjeta-explorar:hover span {
+    color: #000000 !important;
+    -webkit-text-fill-color: #000000 !important;
+}
+:root body .tarjeta-explorar:hover svg {
+    stroke: #000000;
+}
+/* Mantener el mismo diseño en modo oscuro. */
+:root body.modo-oscuro .seccion-inicio,
+:root body.modo-oscuro .tarjeta-explorar,
+:root body.modo-oscuro .dato-proyecto {
+    background: #222824 !important;
+    background-color: #222824 !important;
+    border-color: #354139 !important;
+}
+:root body.modo-oscuro .seccion-inicio h1,
+:root body.modo-oscuro .seccion-inicio h2,
+:root body.modo-oscuro .seccion-explorar .encabezado-bloque-inicio h1,
+:root body.modo-oscuro .seccion-explorar .encabezado-bloque-inicio h2,
+:root body.modo-oscuro .seccion-informacion .encabezado-bloque-inicio h1,
+:root body.modo-oscuro .seccion-informacion .encabezado-bloque-inicio h2 {
+    color: #23c483 !important;
+    -webkit-text-fill-color: #23c483 !important;
+}
+/* =========================================
+   CARRUSEL DE TRABAJOS
+========================================= */
+.carrusel {
+    margin-top: 20px;
+    text-align: center;
+}
+.carrusel-barra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+.carrusel-marco {
+    display: block;
+    width: 100%;
+    height: 70vh;
+    min-height: 320px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    background: #ffffff;
+}
+.carrusel-lista {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 16px 0;
+}
+.carrusel-lista a {
+    padding: 7px 14px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    color: #ffffff;
+    font-size: 13px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.carrusel-lista a:hover,
+.carrusel-lista a[aria-current="true"] {
+    background: #23c483;
+    border-color: #23c483;
+    color: #000000;
+}
+.carrusel-lista a:focus-visible {
+    outline: 2px solid #23c483;
+    outline-offset: 3px;
+}
+@media (max-width: 520px) {
+    .carrusel-barra {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .carrusel-titulo {
+        order: -1;
+        width: 100%;
+    }
+}
+
+
+/* =========================================
+   HIMNO DEL IPN - ENCABEZADO
+   Solo afecta a la página del himno0
+========================================= */
+
+:root body .himno .encabezado-himno {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto 24px;
+    text-align: center;
+    position: relative;
+}
+
+:root body .himno .encabezado-himno .escudo-ipn {
+    display: block;
+    flex: 0 0 150px;
+    width: 150px;
+    max-width: 150px;
+    height: 150px;
+    object-fit: contain;
+    margin: 0;
+    transform: translateX(-25px);
+}
+
+:root body .himno .encabezado-himno h2 {
+    flex: 1;
+    margin: 0;
+    padding: 0 0 10px;
+    border-bottom: 3px solid #23c483;
+    color: #23c483;
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    line-height: 1.25;
+    text-align: center;
+    transform: translateX(-65px);
+}
+
+/* Adaptación para celulares */
+@media (max-width: 600px) {
+
+    :root body .himno .encabezado-himno {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+    }
+
+    :root body .himno .encabezado-himno .escudo-ipn {
+        flex-basis: auto;
+        width: 125px;
+        max-width: 125px;
+        height: 125px;
+        transform: none;
+    }
+
+    :root body .himno .encabezado-himno h2 {
+        width: 100%;
+        text-align: center;
+        transform: none;
+    }
+}
+
+
+
+/* =========================================
+   CARRUSEL 3D - DISEÑO MTC
+========================================= */
+
+/* =========================================================
+   1. CONTENEDOR GENERAL
+========================================================= */
+
+:root body .carrusel {
+
+    width: 100%;
+    margin: 35px auto 15px;
+
+    text-align: center;
+
+    --carrusel-acento: #23c483;
+    --carrusel-fondo: #171d19;
+    --carrusel-borde: #344139;
+
+}
+
+
+/* =========================================================
+   2. BARRA DE NAVEGACIÓN
+========================================================= */
+
+:root body .carrusel-barra {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    width: 100%;
+
+    margin-bottom: 25px;
+
+}
+
+
+/* Título de la tarjeta seleccionada */
+
+:root body .carrusel-titulo {
+
+    flex: 1;
+
+    margin: 0;
+
+    color: var(--carrusel-acento);
+
+    font-size: clamp(16px, 2vw, 21px);
+
+    font-weight: 700;
+
+    text-align: center;
+
+}
+
+
+/* Botones anterior y siguiente */
+
+:root body .carrusel-barra .carrusel-anterior,
+:root body .carrusel-barra .carrusel-siguiente {
+
+    min-width: 105px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+}
+
+
+/* =========================================================
+   3. ESCENARIO 3D
+========================================================= */
+
+:root body .carrusel-escenario {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 430px;
+
+    margin: 0 auto;
+
+    perspective: 1200px;
+
+    perspective-origin: center center;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+
+}
+
+
+/* =========================================================
+   4. CONTENEDOR DE LAS TARJETAS
+========================================================= */
+
+:root body .carrusel-lista {
+
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    transform-style: preserve-3d;
+
+}
+
+
+/* =========================================================
+   5. TARJETAS INDIVIDUALES
+========================================================= */
+
+:root body .carrusel-tarjeta {
+
+    position: absolute;
+
+    display: flex;
+
+    flex-direction: column;
+
+    width: 290px;
+    height: 365px;
+
+    overflow: hidden;
+
+    border: 1px solid var(--carrusel-borde);
+
+    border-radius: 16px;
+
+    background: var(--carrusel-fondo);
+
+    color: #eeeeee;
+
+    text-decoration: none;
+
+    text-align: left;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.35);
+
+    transform-style: preserve-3d;
+
+    transition:
+        transform 650ms cubic-bezier(0.2, 0.75, 0.25, 1),
+        opacity 500ms ease,
+        filter 500ms ease,
+        border-color 500ms ease,
+        box-shadow 500ms ease;
+
+    cursor: pointer;
+
+    /*
+        Evita que las tarjetas laterales
+        interfieran con elementos externos.
+    */
+
+    -webkit-tap-highlight-color: transparent;
+
+}
+
+
+/* =========================================================
+   6. TARJETA CENTRAL
+========================================================= */
+
+:root body .carrusel-tarjeta.tarjeta-activa {
+
+    z-index: 5;
+
+    opacity: 1;
+
+    filter: none;
+
+    border-color: var(--carrusel-acento);
+
+    box-shadow:
+        0 20px 55px rgba(0, 0, 0, 0.50),
+        0 0 22px rgba(35, 196, 131, 0.13);
+
+    transform:
+        translateX(0)
+        translateZ(100px)
+        rotateY(0deg)
+        scale(1);
+
+}
+
+
+/* Efecto al pasar el cursor sobre la tarjeta central */
+
+:root body .carrusel-tarjeta.tarjeta-activa:hover {
+
+    border-color: #54e0a6;
+
+    box-shadow:
+        0 25px 65px rgba(0, 0, 0, 0.55),
+        0 0 28px rgba(35, 196, 131, 0.25);
+
+    transform:
+        translateX(0)
+        translateZ(120px)
+        rotateY(0deg)
+        scale(1.025);
+
+}
+
+
+/* =========================================================
+   7. TARJETA IZQUIERDA
+========================================================= */
+
+:root body .carrusel-tarjeta.tarjeta-izquierda {
+
+    z-index: 3;
+
+    opacity: 0.78;
+
+    filter: brightness(0.65);
+
+    transform:
+        translateX(-245px)
+        translateZ(-100px)
+        rotateY(25deg)
+        scale(0.82);
+
+}
+
+
+/* Efecto al pasar el cursor por la tarjeta izquierda */
+
+:root body .carrusel-tarjeta.tarjeta-izquierda:hover {
+
+    opacity: 0.95;
+
+    filter: brightness(0.9);
+
+    border-color: var(--carrusel-acento);
+
+    transform:
+        translateX(-245px)
+        translateZ(-60px)
+        rotateY(20deg)
+        scale(0.86);
+
+}
+
+
+/* =========================================================
+   8. TARJETA DERECHA
+========================================================= */
+
+:root body .carrusel-tarjeta.tarjeta-derecha {
+
+    z-index: 3;
+
+    opacity: 0.78;
+
+    filter: brightness(0.65);
+
+    transform:
+        translateX(245px)
+        translateZ(-100px)
+        rotateY(-25deg)
+        scale(0.82);
+
+}
+
+
+/* Efecto al pasar el cursor por la tarjeta derecha */
+
+:root body .carrusel-tarjeta.tarjeta-derecha:hover {
+
+    opacity: 0.95;
+
+    filter: brightness(0.9);
+
+    border-color: var(--carrusel-acento);
+
+    transform:
+        translateX(245px)
+        translateZ(-60px)
+        rotateY(-20deg)
+        scale(0.86);
+
+}
+
+
+/* =========================================================
+   9. TARJETAS FUERA DE VISTA
+========================================================= */
+
+:root body .carrusel-tarjeta.tarjeta-oculta {
+
+    z-index: 0;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transform:
+        translateZ(-300px)
+        scale(0.5);
+
+}
+
+
+/* =========================================================
+   10. ESPACIO PARA LAS IMÁGENES
+========================================================= */
+
+:root body .carrusel-imagen {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 215px;
+
+    flex-shrink: 0;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #202a24,
+            #101511
+        );
+
+}
+
+
+/*
+    Imagen de cada tarjeta.
+
+    object-fit: cover hace que la imagen ocupe
+    el espacio disponible sin deformarse.
+
+    Si la imagen es más grande o más pequeña,
+    se recorta lo necesario para conservar
+    las proporciones.
+*/
+
+:root body .carrusel-imagen img {
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 600ms ease,
+        filter 600ms ease;
+
+}
+
+
+/* Zoom suave en la tarjeta central */
+
+:root body .tarjeta-activa .carrusel-imagen img {
+
+    transform: scale(1);
+
+}
+
+
+:root body .tarjeta-activa:hover .carrusel-imagen img {
+
+    transform: scale(1.07);
+
+}
+
+
+/* =========================================================
+   11. INFORMACIÓN DE LAS TARJETAS
+========================================================= */
+
+:root body .carrusel-informacion {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    flex: 1;
+
+    padding: 17px 19px 18px;
+
+    background: #171d19;
+
+}
+
+
+/* Número de identificación */
+
+:root body .carrusel-numero {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: var(--carrusel-acento);
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+}
+
+
+/* Nombre del trabajo */
+
+:root body .carrusel-informacion h4 {
+
+    margin: 0;
+
+    color: #f0f4f1;
+
+    font-size: 17px;
+
+    font-weight: 700;
+
+    line-height: 1.35;
+
+}
+
+
+/* =========================================================
+   12. INDICACIÓN DE INTERACCIÓN
+========================================================= */
+
+:root body .carrusel-indicacion {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: 13px;
+
+    padding-top: 10px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+
+    color: var(--carrusel-acento);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.3px;
+
+    transition:
+        color 250ms ease,
+        padding 250ms ease;
+
+}
+
+
+/* Flecha de la indicación */
+
+:root body .carrusel-indicacion span {
+
+    font-size: 19px;
+
+    transition: transform 250ms ease;
+
+}
+
+
+/* Movimiento de la flecha al pasar el cursor */
+
+:root body .carrusel-tarjeta:hover .carrusel-indicacion span {
+
+    transform: translateX(5px);
+
+}
+
+
+/* =========================================================
+   13. INDICADOR DE FOCO
+========================================================= */
+
+:root body .carrusel-tarjeta:focus-visible {
+
+    outline: 3px solid var(--carrusel-acento);
+
+    outline-offset: 5px;
+
+}
+
+
+/* =========================================================
+   14. TEXTO DE AYUDA
+========================================================= */
+
+:root body .carrusel-ayuda {
+
+    margin: 15px auto 12px;
+
+    color: #a2aaa4;
+
+    font-size: 13px;
+
+    text-align: center;
+
+}
+
+
+/* =========================================================
+   15. BARRA DE PROGRESO
+========================================================= */
+
+:root body .carrusel-progreso {
+
+    width: 100%;
+
+    max-width: 260px;
+
+    height: 4px;
+
+    margin: 0 auto;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    background: #303a33;
+
+}
+
+
+/* Parte verde que representa la posición actual */
+
+:root body .carrusel-progreso-activo {
+
+    display: block;
+
+    width: 0%;
+
+    height: 100%;
+
+    border-radius: inherit;
+
+    background: var(--carrusel-acento);
+
+    transition: width 450ms ease;
+
+}
+
+
+/* =========================================================
+   16. RESPONSIVE - TABLETAS
+========================================================= */
+
+@media (max-width: 800px) {
+
+    :root body .carrusel-escenario {
+
+        height: 390px;
+
+    }
+
+    :root body .carrusel-tarjeta {
+
+        width: 260px;
+
+        height: 340px;
+
+    }
+
+    :root body .carrusel-imagen {
+
+        height: 195px;
+
+    }
+
+    :root body .carrusel-tarjeta.tarjeta-izquierda {
+
+        transform:
+            translateX(-190px)
+            translateZ(-100px)
+            rotateY(23deg)
+            scale(0.78);
+
+    }
+
+    :root body .carrusel-tarjeta.tarjeta-derecha {
+
+        transform:
+            translateX(190px)
+            translateZ(-100px)
+            rotateY(-23deg)
+            scale(0.78);
+
+    }
+
+}
+
+
+/* =========================================================
+   17. RESPONSIVE - CELULARES
+========================================================= */
+
+@media (max-width: 560px) {
+
+    :root body .carrusel-barra {
+
+        gap: 8px;
+
+    }
+
+    :root body .carrusel-barra .carrusel-anterior,
+    :root body .carrusel-barra .carrusel-siguiente {
+
+        min-width: 42px;
+
+        padding: 9px 11px;
+
+    }
+
+    :root body .carrusel-titulo {
+
+        font-size: 14px;
+
+    }
+
+    :root body .carrusel-escenario {
+
+        height: 365px;
+
+    }
+
+    :root body .carrusel-tarjeta {
+
+        width: 235px;
+
+        height: 320px;
+
+    }
+
+    :root body .carrusel-imagen {
+
+        height: 180px;
+
+    }
+
+    :root body .carrusel-informacion {
+
+        padding: 14px;
+
+    }
+
+    :root body .carrusel-informacion h4 {
+
+        font-size: 15px;
+
+    }
+
+    :root body .carrusel-tarjeta.tarjeta-izquierda {
+
+        transform:
+            translateX(-145px)
+            translateZ(-120px)
+            rotateY(22deg)
+            scale(0.68);
+
+    }
+
+    :root body .carrusel-tarjeta.tarjeta-derecha {
+
+        transform:
+            translateX(145px)
+            translateZ(-120px)
+            rotateY(-22deg)
+            scale(0.68);
+
+    }
+
+    :root body .carrusel-ayuda {
+
+        max-width: 300px;
+
+        font-size: 12px;
+
+    }
+
+}
+
+
+/* =========================================================
+   18. PREFERENCIA DE MOVIMIENTO REDUCIDO
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    :root body .carrusel-tarjeta,
+    :root body .carrusel-imagen img,
+    :root body .carrusel-progreso-activo {
+
+        transition: none !important;
+
+    }
+
+}
+
+
+
+/* =========================================
+   CARRUSEL 3D MTC - COVERFLOW
+   Rediseño de las tarjetas de la 3ra unidad
+========================================= */
+
+/* Contenedor general */
+:root body .carrusel {
+    width: 100%;
+    margin-top: 25px;
+    text-align: center;
+    perspective: 1200px;
+}
+
+/* Barra de navegación */
+:root body .carrusel-barra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+/* Título del trabajo seleccionado */
+:root body .carrusel-titulo {
+    flex: 1;
+    color: #23c483 !important;
+    font-size: 17px;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* Escenario donde giran las tarjetas */
+:root body .carrusel-escenario {
+    position: relative;
+    width: 100%;
+    height: 460px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    perspective: 1200px;
+}
+
+/* Lista de tarjetas */
+:root body .carrusel-lista {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    transform-style: preserve-3d;
+}
+
+/* =========================================
+   TARJETAS INDIVIDUALES
+========================================= */
+
+:root body .carrusel-tarjeta {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 290px;
+    height: 390px;
+    padding: 12px;
+    overflow: hidden;
+
+    background: #000000 !important;
+    border: 1px solid #303832 !important;
+    border-radius: 14px;
+
+    color: #ffffff !important;
+    text-decoration: none;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45);
+
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+
+    transition:
+        transform 650ms cubic-bezier(0.2, 0.75, 0.25, 1),
+        opacity 450ms ease,
+        filter 450ms ease,
+        box-shadow 450ms ease;
+
+    cursor: pointer;
+}
+
+/* =========================================
+   TARJETA CENTRAL
+========================================= */
+
+:root body .carrusel-tarjeta.tarjeta-activa {
+    z-index: 5;
+    opacity: 1;
+    filter: brightness(1);
+
+    transform:
+        translateX(0)
+        translateZ(100px)
+        rotateY(0deg)
+        scale(1);
+
+    border-color: #23c483 !important;
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.55),
+        0 0 18px rgba(35, 196, 131, 0.12);
+}
+
+/* =========================================
+   TARJETA IZQUIERDA
+========================================= */
+
+:root body .carrusel-tarjeta.tarjeta-izquierda {
+    z-index: 3;
+    opacity: 0.78;
+    filter: brightness(0.65);
+
+    transform:
+        translateX(-235px)
+        translateZ(-100px)
+        rotateY(28deg)
+        scale(0.82);
+}
+
+/* =========================================
+   TARJETA DERECHA
+========================================= */
+
+:root body .carrusel-tarjeta.tarjeta-derecha {
+    z-index: 3;
+    opacity: 0.78;
+    filter: brightness(0.65);
+
+    transform:
+        translateX(235px)
+        translateZ(-100px)
+        rotateY(-28deg)
+        scale(0.82);
+}
+
+/* Tarjetas que no están a los lados */
+:root body .carrusel-tarjeta.tarjeta-oculta {
+    z-index: 1;
+    opacity: 0;
+    pointer-events: none;
+    transform:
+        translateZ(-300px)
+        scale(0.5);
+}
+
+/* =========================================
+   ESPACIO PARA LAS IMÁGENES
+========================================= */
+
+:root body .carrusel-imagen {
+    width: 100%;
+    height: 230px;
+    flex-shrink: 0;
+    overflow: hidden;
+
+    background: #171d19;
+    border: 1px solid #303832;
+    border-radius: 9px;
+}
+
+/* Imagen */
+:root body .carrusel-imagen img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    transition: transform 500ms ease;
+}
+
+/* Zoom discreto en la tarjeta central */
+:root body .tarjeta-activa .carrusel-imagen img {
+    transform: scale(1.035);
+}
+
+/* =========================================
+   INFORMACIÓN DE LAS TARJETAS
+========================================= */
+
+:root body .carrusel-informacion {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+
+    padding: 17px 8px 8px;
+    text-align: left;
+}
+
+/* Número de tarjeta */
+:root body .carrusel-numero {
+    margin-bottom: 8px;
+
+    color: #23c483 !important;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+/* Nombre del trabajo */
+:root body .carrusel-informacion h4 {
+    margin: 0;
+    color: #ffffff !important;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+/* Indicación de interacción */
+:root body .carrusel-indicacion {
+    margin-top: auto;
+    padding-top: 15px;
+
+    color: #23c483 !important;
+    font-size: 12px;
+    font-weight: 600;
+
+    transition:
+        color 250ms ease,
+        transform 250ms ease;
+}
+
+/* La indicación se desplaza ligeramente al pasar el cursor */
+:root body .tarjeta-activa:hover .carrusel-indicacion {
+    transform: translateX(5px);
+}
+
+/* Hover de la tarjeta central */
+:root body .carrusel-tarjeta.tarjeta-activa:hover {
+    box-shadow:
+        0 22px 50px rgba(0, 0, 0, 0.6),
+        0 0 22px rgba(35, 196, 131, 0.2);
+}
+
+/* Las tarjetas laterales indican que son seleccionables */
+:root body .carrusel-tarjeta.tarjeta-izquierda:hover,
+:root body .carrusel-tarjeta.tarjeta-derecha:hover {
+    opacity: 0.95;
+    filter: brightness(0.85);
+}
+
+/* Accesibilidad */
+:root body .carrusel-tarjeta:focus-visible {
+    outline: 2px solid #23c483;
+    outline-offset: 5px;
+}
+
+/* =========================================
+   BOTONES ANTERIOR Y SIGUIENTE
+========================================= */
+
+:root body .carrusel-barra .boton-ver {
+    flex-shrink: 0;
+}
+
+/* =========================================
+   RESPONSIVE - TABLET
+========================================= */
+
+@media (max-width: 800px) {
+
+    :root body .carrusel-escenario {
+        height: 420px;
+    }
+
+    :root body .carrusel-tarjeta {
+        width: 260px;
+        height: 365px;
+    }
+
+    :root body .carrusel-imagen {
+        height: 210px;
+    }
+
+    :root body .carrusel-tarjeta.tarjeta-izquierda {
+        transform:
+            translateX(-180px)
+            translateZ(-100px)
+            rotateY(25deg)
+            scale(0.78);
+    }
+
+    :root body .carrusel-tarjeta.tarjeta-derecha {
+        transform:
+            translateX(180px)
+            translateZ(-100px)
+            rotateY(-25deg)
+            scale(0.78);
+    }
+
+}
+
+/* =========================================
+   RESPONSIVE - CELULARES
+========================================= */
+
+@media (max-width: 520px) {
+
+    :root body .carrusel-barra {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    :root body .carrusel-titulo {
+        order: -1;
+        flex: 0 0 100%;
+        width: 100%;
+        margin-bottom: 8px;
+    }
+
+    :root body .carrusel-escenario {
+        height: 390px;
+    }
+
+    :root body .carrusel-tarjeta {
+        width: 230px;
+        height: 335px;
+        padding: 10px;
+    }
+
+    :root body .carrusel-imagen {
+        height: 185px;
+    }
+
+    :root body .carrusel-informacion {
+        padding: 12px 6px 6px;
+    }
+
+    :root body .carrusel-informacion h4 {
+        font-size: 15px;
+    }
+
+    :root body .carrusel-tarjeta.tarjeta-izquierda {
+        transform:
+            translateX(-125px)
+            translateZ(-100px)
+            rotateY(22deg)
+            scale(0.72);
+    }
+
+    :root body .carrusel-tarjeta.tarjeta-derecha {
+        transform:
+            translateX(125px)
+            translateZ(-100px)
+            rotateY(-22deg)
+            scale(0.72);
+    }
+
+    :root body .carrusel-barra .boton-ver {
+        padding: 12px 17px;
+        font-size: 10px;
+    }
+
+}
+
+/* =========================================
+   MOVIMIENTO REDUCIDO
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    :root body .carrusel-tarjeta,
+    :root body .carrusel-imagen img,
+    :root body .carrusel-indicacion {
+        transition: none !important;
+    }
+
 }

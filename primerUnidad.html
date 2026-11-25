@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Segunda Unidad</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+
+<body>
+
+    <script>
+        (() => {
+            try {
+                const tema = localStorage.getItem("tema");
+
+                if (tema === "claro") {
+                    document.body.classList.remove("modo-oscuro");
+                } else {
+                    document.body.classList.add("modo-oscuro");
+                }
+            } catch (error) {
+                document.body.classList.add("modo-oscuro");
+            }
+        })();
+    </script>
+
+    <!-- Fondo animado -->
+    <div id="fondo-vanta" aria-hidden="true"></div>
+
+
+    <!-- =========================
+         ENCABEZADO
+    ========================== -->
+
+    <header id="inicio" class="header-portal">
+
+        <div class="encabezado-contenido">
+
+            <a href="index.html" class="marca-mtc" aria-label="MTC - Inicio">
+                <img src="img/LogoActualizado.png"
+                     alt="Logo MTC"
+                     class="logo-portal">
+
+                <h1 class="solo-lectores">MTC</h1>
+
+                <span class="nombre-marca">Multimedia, tecnología y ciencia</span>
+            </a>
+
+
+            <!-- MENÚ -->
+
+            <nav class="menu" aria-label="Navegación principal">
+
+                <a href="index.html">
+                    Inicio
+                </a>
+
+                <details class="menu-desplegable">
+                    <summary>Trabajos</summary>
+                    <div class="submenu">
+                        <a href="primerUnidad.html">1er Unidad</a>
+                        <a href="segundaUnidad.html">2da Unidad</a>
+                        <a href="segundaUnidad.html">3er Unidad</a>
+                    </div>
+                </details>
+
+
+                <a href="himnoIpn.html">
+                    Himno del IPN
+                </a>
+
+                <a href="AcercaDe.html">
+                    Acerca de
+                </a>
+
+
+                <!-- INTERRUPTOR DE TEMA -->
+                <div class="toggle-switch">
+                    <label class="switch-label">
+                        <input type="checkbox"
+                               class="checkbox"
+                               id="boton-tema"
+                               aria-label="Cambiar a modo claro"
+                               role="switch">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <div class="selector-idioma">
+                    <button type="button" data-idioma="es" class="idioma-activo">
+                        ES
+                    </button>
+
+                    <span>|</span>
+
+                    <button type="button" data-idioma="en">
+                        EN
+                    </button>
+                </div>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         CONTENIDO PRINCIPAL
+    ========================== -->
+
+    <main class="contenedor">
+
+        <!-- =========================
+             TRABAJOS
+        ========================== -->
+
+        <section id="trabajos" class="seccion">
+
+            <h2>Trabajos</h2>
+
+            <p>
+                Selecciona la Unidad correspondiente.
+            </p>
+
+
+            <div class="botones-parciales">
+
+                <a href="primerUnidad.html">
+                    1er Unidad
+                </a>
+
+                <a href="segundaUnidad.html">
+                    2da Unidad
+                </a>
+
+                <a href="tercerUnidad.html">
+                    3er Unidad
+                </a>
+
+            </div>
+
+
+            <!-- 1ER PARCIAL -->
+
+            <div id="primer-parcial" class="subseccion">
+
+    <h3>1er Unidad</h3>
+
+    <p>
+        Trabajos correspondientes a primer Unidad
+    </p>
+
+
+    <div class="lista-trabajos">
+
+        <div class="trabajo">
+
+            <div class="informacion-trabajo">
+
+                <h4>Antecedentes y fundamentos de la multimedia</h4>
+
+
+            </div>
+
+
+            <div class="acciones-trabajo">
+
+                <a href="u1_antecedentesHM.html"
+                   class="boton-ver ver-pdf">
+
+                    Ver
+
+                </a>
+
+
+                <a href="trabajos/1erParcial/T2_01_2CV21_HM_Equipo_12.pdf"
+                   download
+                   class="boton-descargar">
+
+                    Descargar
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="trabajo">
+
+            <div class="informacion-trabajo">
+
+                <h4>Proceso de producción multimedia</h4>
+
+
+            </div>
+
+
+            <div class="acciones-trabajo">
+
+                <a href="u2_antecedentesRealidadVirtual.html"
+                   class="boton-ver ver-pdf">
+
+                    Ver
+
+                </a>
+
+
+                <a href="trabajos/1erParcial/T2_02_2CV21_HM_Equipo_12.pdf"
+                   download
+                   class="boton-descargar">
+
+                    Descargar
+
+                </a>
+
+            </div>
+
+            
+
+        </div>
+
+        
+
+</div>
+
+
+</div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         PIE DE PÁGINA
+    ========================== -->
+
+    <footer class="footer-mtc">
+
+        <div class="footer-contenido">
+
+            <img src="img/EscudoActualizado.png"
+                 alt="IPN"
+                 class="escudo-footer">
+
+            <div class="footer-informacion">
+
+                <h3>MTC</h3>
+
+                <p>Multimedia, Tecnología y Ciencia</p>
+
+                <p>Proyecto de Herramientas Multimedia 2CV21</p>
+
+            </div>
+
+        </div>
+
+        <div class="footer-inferior">
+
+            <p>© 2026 MTC. Todos los derechos reservados.</p>
+
+        </div>
+
+    </footer>
+
+    <!-- Fondo animado Vanta -->
+    <script src="js/vanta/three.min.js"></script>
+    <script src="js/vanta/vanta.net.min.js"></script>
+    <script src="js/fondo-vanta.js"></script>
+
+    <!--JavaScript de modo obscuro y traduccion -->
+    <script src="js/tema.js"></script>
+    <script src="js/idioma.js"></script>
+
+    <!-- Menú desplegable de Trabajos -->
+    <script>
+        (() => {
+            const menu = document.querySelector(".menu-desplegable");
+            if (!menu) return;
+
+            document.addEventListener("click", (e) => {
+                if (!menu.contains(e.target) || e.target.closest(".submenu a")) {
+                    menu.open = false;
+                }
+            });
+
+            document.addEventListener("keydown", (e) => {
+                if (e.key === "Escape" && menu.open) {
+                    menu.open = false;
+                    menu.querySelector("summary").focus();
+                }
+            });
+        })();
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,444 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Tercer Unidad</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+
+<body>
+
+    <!-- =========================
+         CONFIGURACIÓN DEL TEMA
+    ========================== -->
+
+    <script>
+        (() => {
+            try {
+                const tema = localStorage.getItem("tema");
+
+                if (tema === "claro") {
+                    document.body.classList.remove("modo-oscuro");
+                } else {
+                    document.body.classList.add("modo-oscuro");
+                }
+            } catch (error) {
+                document.body.classList.add("modo-oscuro");
+            }
+        })();
+    </script>
+
+
+    <!-- =========================
+         FONDO ANIMADO
+    ========================== -->
+
+    <div id="fondo-vanta" aria-hidden="true"></div>
+
+
+    <!-- =========================
+         ENCABEZADO
+    ========================== -->
+
+    <header id="inicio" class="header-portal">
+
+        <div class="encabezado-contenido">
+
+            <a href="index.html"
+               class="marca-mtc"
+               aria-label="MTC - Inicio">
+
+                <img src="img/LogoActualizado.png"
+                     alt="Logo MTC"
+                     class="logo-portal">
+
+                <h1 class="solo-lectores">MTC</h1>
+
+                <span class="nombre-marca">
+                    Multimedia, tecnología y ciencia
+                </span>
+
+            </a>
+
+
+            <!-- MENÚ DE NAVEGACIÓN -->
+
+            <nav class="menu" aria-label="Navegación principal">
+
+                <a href="index.html">
+                    Inicio
+                </a>
+
+
+                <!-- MENÚ DESPLEGABLE -->
+
+                <details class="menu-desplegable">
+
+                    <summary>Trabajos</summary>
+
+                    <div class="submenu">
+
+                        <a href="primerUnidad.html">
+                            1er Unidad
+                        </a>
+
+                        <a href="segundaUnidad.html">
+                            2da Unidad
+                        </a>
+
+                        <a href="tercerUnidad.html">
+                            3er Unidad
+                        </a>
+
+                    </div>
+
+                </details>
+
+
+                <a href="himnoIpn.html">
+                    Himno del IPN
+                </a>
+
+                <a href="AcercaDe.html">
+                    Acerca de
+                </a>
+
+
+                <!-- INTERRUPTOR DE TEMA -->
+
+                <div class="toggle-switch">
+
+                    <label class="switch-label">
+
+                        <input type="checkbox"
+                               class="checkbox"
+                               id="boton-tema"
+                               aria-label="Cambiar a modo claro"
+                               role="switch">
+
+                        <span class="slider"></span>
+
+                    </label>
+
+                </div>
+
+
+                <!-- SELECTOR DE IDIOMA -->
+
+                <div class="selector-idioma">
+
+                    <button type="button"
+                            data-idioma="es"
+                            class="idioma-activo">
+
+                        ES
+
+                    </button>
+
+                    <span>|</span>
+
+                    <button type="button"
+                            data-idioma="en">
+
+                        EN
+
+                    </button>
+
+                </div>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         CONTENIDO PRINCIPAL
+    ========================== -->
+
+    <main class="contenedor">
+
+        <div id="tercer-parcial" class="subseccion">
+
+            <h3>3er Unidad</h3>
+
+
+            <!-- =========================
+                 CARRUSEL 3D
+            ========================== -->
+
+            <div class="carrusel"
+                 role="region"
+                 aria-roledescription="carrusel"
+                 aria-label="Trabajos del 3er parcial">
+
+
+                <!-- BARRA DE NAVEGACIÓN -->
+
+                <div class="carrusel-barra">
+
+                    <button type="button"
+                            class="boton-ver carrusel-anterior">
+
+                        Anterior
+
+                    </button>
+
+
+                    <h4 class="carrusel-titulo"
+                        aria-live="polite">
+                    </h4>
+
+
+                    <button type="button"
+                            class="boton-ver carrusel-siguiente">
+
+                        Siguiente
+
+                    </button>
+
+                </div>
+
+
+                <!-- ESCENARIO DEL CARRUSEL -->
+
+                <div class="carrusel-escenario">
+
+
+                    <!-- TARJETAS -->
+
+                    <div class="carrusel-lista">
+
+
+                        <!-- =========================
+                             TARJETA 1
+                        ========================== -->
+
+                        <a href="u3_videoMultimedia.html"
+                           class="carrusel-tarjeta">
+
+                            <div class="carrusel-imagen">
+
+                                <img src="img/carrusel/videoMultimedia.jpg"
+                                     alt="Videos en las herramientas multimedia">
+
+                            </div>
+
+
+                            <div class="carrusel-informacion">
+
+                                <span class="carrusel-numero">
+                                    01
+                                </span>
+
+                                <h4>
+                                    Videos en las herramientas multimedia
+                                </h4>
+
+                                <span class="carrusel-indicacion">
+                                    Clic para explorar →
+                                </span>
+
+                            </div>
+
+                        </a>
+
+
+                        <!-- =========================
+                             TARJETA 2
+                        ========================== -->
+
+                        <a href="u3_autoriaMultimedia.html"
+                           class="carrusel-tarjeta">
+
+                            <div class="carrusel-imagen">
+
+                                <img src="img/carrusel/autoriaMultimedia.png"
+                                     alt="Autoria de trabajos multimedia">
+
+                            </div>
+
+
+                            <div class="carrusel-informacion">
+
+                                <span class="carrusel-numero">
+                                    02
+                                </span>
+
+                                <h4>
+                                    Autoria de trabajos multimedia
+                                </h4>
+
+                                <span class="carrusel-indicacion">
+                                    Clic para explorar →
+                                </span>
+
+                            </div>
+
+                        </a>
+
+
+                        <!-- =========================
+                             TARJETA 3
+                        ========================== -->
+
+                        <a href="u3_aplicacionesMultimedia.html"
+                           class="carrusel-tarjeta">
+
+                            <div class="carrusel-imagen">
+
+                                <img src="img/carrusel/aplicacionesMultimedia.png"
+                                     alt="Aplicaciones multimedia">
+
+                            </div>
+
+
+                            <div class="carrusel-informacion">
+
+                                <span class="carrusel-numero">
+                                    03
+                                </span>
+
+                                <h4>
+                                    Aplicaciones multimedia
+                                </h4>
+
+                                <span class="carrusel-indicacion">
+                                    Clic para explorar →
+                                </span>
+
+                            </div>
+
+                        </a>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- =========================
+         PIE DE PÁGINA
+    ========================== -->
+
+    <footer class="footer-mtc">
+
+        <div class="footer-contenido">
+
+            <img src="img/EscudoActualizado.png"
+                 alt="IPN"
+                 class="escudo-footer">
+
+
+            <div class="footer-informacion">
+
+                <h3>MTC</h3>
+
+                <p>
+                    Multimedia, Tecnología y Ciencia
+                </p>
+
+                <p>
+                    Proyecto de Herramientas Multimedia 2CV21
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-inferior">
+
+            <p>
+                © 2026 MTC. Todos los derechos reservados.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================
+         SCRIPTS DE VANTA
+    ========================== -->
+
+    <script src="js/vanta/three.min.js"></script>
+
+    <script src="js/vanta/vanta.net.min.js"></script>
+
+    <script src="js/fondo-vanta.js"></script>
+
+    <script src="js/carrusel.js">   </script>
+    <!-- =========================
+         MODO OSCURO Y TRADUCCIÓN
+    ========================== -->
+
+    <script src="js/tema.js"></script>
+
+    <script src="js/idioma.js"></script>
+
+
+    <!-- =========================
+         MENÚ DESPLEGABLE
+    ========================== -->
+
+    <script>
+
+        (() => {
+
+            const menu = document.querySelector(".menu-desplegable");
+
+            if (!menu) return;
+
+
+            document.addEventListener("click", (e) => {
+
+                if (
+                    !menu.contains(e.target) ||
+                    e.target.closest(".submenu a")
+                ) {
+
+                    menu.open = false;
+
+                }
+
+            });
+
+
+            document.addEventListener("keydown", (e) => {
+
+                if (e.key === "Escape" && menu.open) {
+
+                    menu.open = false;
+
+                    menu.querySelector("summary").focus();
+
+                }
+
+            });
+
+            })();
+
+    </script>
+
+
+ 
+
+</body>
+
+</html>

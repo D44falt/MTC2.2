@@ -3,17 +3,33 @@
 
 <head>
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>MTC - Portal Multimedia</title>
 
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 
-
 <body>
+
+    <script>
+        (() => {
+            try {
+                const tema = localStorage.getItem("tema");
+
+                if (tema === "claro") {
+                    document.body.classList.remove("modo-oscuro");
+                } else {
+                    document.body.classList.add("modo-oscuro");
+                }
+            } catch (error) {
+                document.body.classList.add("modo-oscuro");
+            }
+        })();
+    </script>
+
+    <!-- Fondo animado -->
+    <div id="fondo-vanta" aria-hidden="true"></div>
 
 
     <!-- =========================
@@ -24,33 +40,53 @@
 
         <div class="encabezado-contenido">
 
-            <img src="img/LogoActualizado.png"
-                 alt="Logo MTC"
-                 class="logo-portal">
+            <a href="index.html" class="marca-mtc" aria-label="MTC - Inicio">
+
+                <img src="img/LogoActualizado.png"
+                     alt="Logo MTC"
+                     class="logo-portal">
+
+                <h1 class="solo-lectores">MTC</h1>
+
+                <span class="nombre-marca">
+                    Multimedia, tecnología y ciencia
+                </span>
+
+            </a>
 
 
-            <div class="informacion-mtc">
+            <!-- MENÚ PRINCIPAL -->
 
-                <h1>MTC</h1>
-
-                <p>
-                    Multimedia, Tecnología y Ciencia
-                </p>
-
-            </div>
-
-
-            <!-- MENÚ -->
-
-            <nav class="menu">
+            <nav class="menu" aria-label="Navegación principal">
 
                 <a href="index.html">
                     Inicio
                 </a>
 
-                <a href="#trabajos">
-                    Trabajos
-                </a>
+
+                <!-- MENÚ DESPLEGABLE DE TRABAJOS -->
+
+                <details class="menu-desplegable">
+
+                    <summary>Trabajos</summary>
+
+                    <div class="submenu">
+
+                        <a href="primerUnidad.html">
+                            1er Parcial
+                        </a>
+
+                        <a href="segundaUnidad.html">
+                            2do Parcial
+                        </a>
+
+                        <a href="tercerUnidad.html">
+                            3er Parcial
+                        </a>
+
+                    </div>
+
+                </details>
 
 
                 <a href="himnoIpn.html">
@@ -62,15 +98,32 @@
                 </a>
 
 
-                <button id="boton-tema" class="boton-tema" type="button"
-                aria-label="Cambiar tema">
-                <span class="icono-tema">☾</span>
-                <span class="icono-sol">☼</span>
-                <span class="circulo-tema"></span>
-                </button>
+                <!-- INTERRUPTOR DE TEMA -->
+
+                <div class="toggle-switch">
+
+                    <label class="switch-label">
+
+                        <input type="checkbox"
+                               class="checkbox"
+                               id="boton-tema"
+                               aria-label="Cambiar a modo claro"
+                               role="switch">
+
+                        <span class="slider"></span>
+
+                    </label>
+
+                </div>
+
+
+                <!-- SELECTOR DE IDIOMA -->
 
                 <div class="selector-idioma">
-                    <button type="button" data-idioma="es" class="idioma-activo">
+
+                    <button type="button"
+                            data-idioma="es"
+                            class="idioma-activo">
                         ES
                     </button>
 
@@ -79,6 +132,7 @@
                     <button type="button" data-idioma="en">
                         EN
                     </button>
+
                 </div>
 
             </nav>
@@ -92,384 +146,223 @@
          CONTENIDO PRINCIPAL
     ========================== -->
 
-    <main class="contenedor">
+    <main class="contenedor contenedor-inicio">
 
 
         <!-- =========================
-             INICIO
+             BIENVENIDA
         ========================== -->
 
-        <section class="seccion">
+        <section class="seccion seccion-inicio">
 
             <h2>Bienvenidos a MTC</h2>
 
             <p>
-                Este sitio web tiene como propósito presentar y organizar
-                los trabajos realizados durante la materia de Herramientas
-                Multimedia.
-            </p>
-
-            <p>
-                En este portal se podrán consultar actividades, trabajos,
-                imágenes, videos, audios y diferentes recursos relacionados
-                con la materia.
+                Bienvenidos a nuestra página web. Este sitio tiene como
+                propósito presentar y organizar recursos realizados
+                en la materia Herramientas Multimedia, para que los
+                alumnos puedan consultar los trabajos y materiales
+                necesarios para estudiar y preparar el examen
+                extraordinario de la materia.
             </p>
 
         </section>
 
 
+
         <!-- =========================
-             TRABAJOS
+             EXPLORA NUESTRO CONTENIDO
         ========================== -->
 
-        <section id="trabajos" class="seccion">
+        <section class="seccion-explorar">
 
-            <h2>Trabajos</h2>
+            <div class="encabezado-bloque-inicio">
 
-            <p>
-                Selecciona el parcial correspondiente.
-            </p>
-
-
-            <div class="botones-parciales">
-
-                <a href="#primer-parcial">
-                    1er Parcial
-                </a>
-
-                <a href="#segundo-parcial">
-                    2do Parcial
-                </a>
-
-                <a href="#tercer-parcial">
-                    3er Parcial
-                </a>
+                <h2>Explora nuestro contenido</h2>
 
             </div>
 
 
-            <!-- 1ER PARCIAL -->
-
-            <div id="primer-parcial" class="subseccion">
-
-    <h3>1er Parcial</h3>
-
-    <p>
-        Trabajos correspondientes al primer parcial.
-    </p>
+            <div class="rejilla-explorar">
 
 
-    <div class="lista-trabajos">
+                <!-- TRABAJOS -->
 
-        <div class="trabajo">
+                <a href="PrimerUnidad.html"
+                   class="tarjeta-explorar">
 
-            <div class="informacion-trabajo">
+                    <svg viewBox="0 0 24 24"
+                         aria-hidden="true">
 
-                <h4>Antecedentes y fundamentos de la multimedia</h4>
+                        <path d="M3 7.5A2.5 2.5 0 0 1 5.5 5H10l2 2h6.5A2.5 2.5 0 0 1 21 9.5v8a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 17.5z"/>
 
+                        <path d="M3 11h18"/>
 
-            </div>
+                    </svg>
 
+                    <h3>Trabajos</h3>
 
-            <div class="acciones-trabajo">
-
-                <a href="trabajos\1erParcial\T2_01_2CV21_HM_Equipo_12.pdf"
-                   class="boton-ver ver-pdf">
-
-                    Ver
+                    <span>Consultar →</span>
 
                 </a>
 
 
-                <a href="trabajos\1erParcial\T2_01_2CV21_HM_Equipo_12.pdf"
-                   download
-                   class="boton-descargar">
 
-                    Descargar
+                <!-- Himno Ipn -->
 
-                </a>
+                <a href="himnoIpn.html"
+                   class="tarjeta-explorar">
 
-            </div>
+                    <svg viewBox="0 0 24 24"
+                         aria-hidden="true">
 
-        </div>
+                        <path d="M12 7v14"/>
 
+                        <path d="M3 5.5A2.5 2.5 0 0 1 5.5 3H12v18H5.5A2.5 2.5 0 0 0 3 23z"/>
 
+                        <path d="M21 5.5A2.5 2.5 0 0 0 18.5 3H12v18h6.5a2.5 2.5 0 0 1 2.5 2z"/>
 
-        <div class="trabajo">
+                    </svg>
 
-            <div class="informacion-trabajo">
+                    <h3>Himno del IPN</h3>
 
-                <h4>Proceso de producción multimedia</h4>
-
-
-            </div>
-
-
-            <div class="acciones-trabajo">
-
-                <a href="trabajos\1erParcial\T2_02_2CV21_HM_Equipo_12.pdf"
-                   class="boton-ver ver-pdf">
-
-                    Ver
+                    <span>Consultar →</span>
 
                 </a>
 
 
-                <a href="trabajos\1erParcial\T2_02_2CV21_HM_Equipo_12.pdf"
-                   download
-                   class="boton-descargar">
 
-                    Descargar
+                <!-- PROYECTOS RV Y RA -->
 
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-
-
-<div id="segundo-parcial" class="subseccion">
-
-    <h3>2do Parcial</h3>
-
-    <p>
-        Trabajos correspondientes al segundo parcial.
-    </p>
-
-    <!-- DOCUMENTOS -->
-    <h4 class="titulo-recursos">Documentos de la Unidad 2</h4>
-
-    <div class="lista-trabajos">
-
-        <!-- PDF 1 -->
-        <div class="trabajo">
-            <div class="informacion-trabajo">
-                <h4>Unidad 1.3 y 1.4</h4>
-            </div>
-
-            <div class="acciones-trabajo">
-                <a href="trabajos\2doParcial\T2_01_2CV21_HM_Equipo_12.pdf"
-                   rel="noopener"
-                   class="boton-ver ver-pdf">
-                    Ver
-                </a>
-
-                <a href="trabajos\2doParcial\T2_01_2CV21_HM_Equipo_12.pdf"
-                   download
-                   class="boton-descargar">
-                    Descargar
-                </a>
-            </div>
-        </div>
-
-        <!-- PDF 2 -->
-        <div class="trabajo">
-            <div class="informacion-trabajo">
-                <h4>Unidad 2.1 Antecedentes de la realidad virtual</h4>
-            </div>
-
-            <div class="acciones-trabajo">
-                <a href="trabajos\2doParcial\T2_02_2CV21_HM_Equipo_12.pdf"
-                   rel="noopener"
-                   class="boton-ver ver-pdf">
-                    Ver
-                </a>
-
-                <a href="trabajos\2doParcial\T2_02_2CV21_HM_Equipo_12.pdf"
-                   download
-                   class="boton-descargar">
-                    Descargar
-                </a>
-            </div>
-        </div>
-
-        <!-- PDF 3 -->
-        <div class="trabajo">
-            <div class="informacion-trabajo">
-                <h4>Unidad 2.2 Entornos Virtuales</h4>
-            </div>
-
-            <div class="acciones-trabajo">
-                <a href="trabajos\2doParcial\T2_10_2CV21_HM_Equipo_12.pdf"
-                   rel="noopener"
-                   class="boton-ver ver-pdf">
-                    Ver
-                </a>
-
-                <a href="trabajos\2doParcial\T2_10_2CV21_HM_Equipo_12.pdf"
-                   download
-                   class="boton-descargar">
-                    Descargar
-                </a>
-            </div>
-        </div>
-
-        <!-- PDF 4 -->
-        <div class="trabajo">
-            <div class="informacion-trabajo">
-                <h4>Unidad 2.3 y 2.4</h4>
-            </div>
-
-            <div class="acciones-trabajo">
-                <a href="trabajos/2doParcial/T2_11_2CV21_HM_Equipo_12_pdf.pdf"
-                   rel="noopener"
-                   class="boton-ver ver-pdf">
-                    Ver
-                </a>
-
-                <a href="trabajos/2doParcial/T2_11_2CV21_HM_Equipo_12_pdf.pdf"
-                   download
-                   class="boton-descargar">
-                    Descargar
-                </a>
-            </div>
-        </div>
-
-    </div>
-
-    <!-- VIDEOS -->
-    <h4 class="titulo-recursos">Videos:</h4>
-
-    <div class="videos-unidad">
-
-        <!-- VIDEO 1 -->
-        <div class="video-tarjeta">
-            <h4>Antecedentes de la realidad virtual - Sin editar</h4>
-
-            <iframe
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/XHmdMtUo-G4?si=PECVmE0Mav7lF1ow"
-                title="Antecedentes de la realidad virtual - Sin editar"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-                style="display: block; width: 100%; max-width: 100%; height: auto; aspect-ratio: 16 / 9; border: 0; border-radius: 8px; background-color: #000;">
-            </iframe>
-
-        </div>
-
-        <!-- VIDEO 2 -->
-        <div class="video-tarjeta">
-            <h4>Antecedentes de la realidad virtual - Editado</h4>
-
-            <iframe
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/BX7KnQFln3Q?si=u_hdbRoVUWU-Jj7n" 
-                title="Antecedentes de la realidad virtual - Editado"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-                style="display: block; width: 100%; max-width: 100%; height: auto; aspect-ratio: 16 / 9; border: 0; border-radius: 8px; background-color: #000;">
-            </iframe>
-
-        </div>
-
-    </div>
-
-    <!-- ACTIVIDADES 5 Y 6: VR Y AR -->
-    <h4 class="titulo-recursos">Ejemplos de Realidad Virtual y Realidad Aumentada</h4>
-
-    <div class="lista-trabajos">
-
-        <div class="trabajo">
-            <div class="informacion-trabajo">
-                <h4>Ejemplos de Realidad Virtual y Realidad Aumentada</h4>
-            </div>
-
-            <div class="acciones-trabajo">
                 <a href="realidadVirtualAumentada.html"
-                   class="boton-ver">
-                    Ver
-                </a>
-            </div>
-        </div>
+                   class="tarjeta-explorar">
 
-    </div>
+                    <svg viewBox="0 0 24 24"
+                         aria-hidden="true">
 
-</div>
+                        <rect x="3" y="4" width="18" height="14" rx="2"/>
 
+                        <path d="M8 22h8"/>
 
+                        <path d="M12 18v4"/>
 
-            <!-- 3ER PARCIAL -->
+                    </svg>
 
-            <div id="tercer-parcial" class="subseccion">
+                    <h3>Proyectos de RV y RA</h3>
 
-            <h3>3er Parcial</h3>
-
-            <p>
-                Trabajos correspondientes al tercer parcial.
-            </p>
-
-
-    <div class="lista-trabajos">
-
-        <div class="trabajo">
-
-            <div class="informacion-trabajo">
-
-                <h4>---</h4>
-
-
-            </div>
-
-
-            <div class="acciones-trabajo">
-
-                <a href="trabajos/3erParcial/Trabajo 1.pdf"
-                   class="boton-ver ver-pdf">
-
-                    Ver
+                    <span>Consultar →</span>
 
                 </a>
 
-                <a href="trabajos/3erParcial/Trabajo 1.pdf"
-                   download
-                   class="boton-descargar">
 
-                    Descargar
+
+                <!-- ACERCA DE MTC -->
+
+                <a href="AcercaDe.html"
+                   class="tarjeta-explorar">
+
+                    <svg viewBox="0 0 24 24"
+                         aria-hidden="true">
+
+                        <circle cx="12" cy="12" r="9"/>
+
+                        <path d="M12 11v5"/>
+
+                        <path d="M12 8h.01"/>
+
+                    </svg>
+
+                    <h3>Acerca de MTC</h3>
+
+                    <span>Consultar →</span>
 
                 </a>
 
+
             </div>
-
-        </div>
-
-    </div>
-
-</div>
 
         </section>
 
 
+
         <!-- =========================
-             VISOR DE PDF
+             INFORMACIÓN DEL PROYECTO
         ========================== -->
 
-        <section id="visor-pdf" class="seccion visor-oculto">
+        <section class="seccion-informacion">
 
-            <div class="visor-barra">
+            <div class="encabezado-bloque-inicio">
 
-                <h2 id="visor-titulo">Visor de documentos</h2>
-
-                <button type="button"
-                        id="visor-cerrar"
-                        class="boton-descargar">
-                    Cerrar
-                </button>
+                <h2>Información del proyecto</h2>
 
             </div>
 
-            <iframe id="visor-marco"
-                    class="visor-marco"
-                    title="Visor de PDF"></iframe>
+
+            <div class="rejilla-informacion">
+
+
+                <!-- PARCIALES -->
+
+                <div class="dato-proyecto">
+
+                    <strong class="numero-proyecto">
+                        3
+                    </strong>
+
+                    <span>
+                        Parciales
+                    </span>
+
+                </div>
+
+
+
+                <!-- RECURSOS ACADÉMICOS -->
+
+                <div class="dato-proyecto">
+
+                    <svg viewBox="0 0 24 24"
+                         aria-hidden="true">
+
+                        <path d="M5 4v16"/>
+
+                        <path d="M10 4v16"/>
+
+                        <path d="M15 4l5 16"/>
+
+                    </svg>
+
+                    <span>
+                        Recursos académicos
+                    </span>
+
+                </div>
+
+
+
+                <!-- PROYECTOS MULTIMEDIA -->
+
+                <div class="dato-proyecto">
+
+                    <svg viewBox="0 0 24 24"
+                         aria-hidden="true">
+
+                        <path d="m8 8-5 4 5 4"/>
+
+                        <path d="m16 8 5 4-5 4"/>
+
+                        <path d="m14 5-4 14"/>
+
+                    </svg>
+
+                    <span>
+                        Proyectos multimedia
+                    </span>
+
+                </div>
+
+
+            </div>
 
         </section>
 
@@ -477,37 +370,114 @@
     </main>
 
 
+
     <!-- =========================
          PIE DE PÁGINA
     ========================== -->
 
-    <footer>
+    <footer class="footer-mtc">
 
-        <img src="img/EscudoActualizado.png"
-             alt="IPN"
-             class="escudo-footer">
+        <div class="footer-contenido">
 
-        <p>
-            MTC - Multimedia, Tecnología y Ciencia
-        </p>
+            <img src="img/EscudoActualizado.png"
+                 alt="IPN"
+                 class="escudo-footer">
 
-        <p>
-            Proyecto de Herramientas Multimedia 2CV21
-        </p>
+            <div class="footer-informacion">
 
-        <p>
-            2026
-        </p>
+                <h3>MTC</h3>
+
+                <p>
+                    Multimedia, Tecnología y Ciencia
+                </p>
+
+                <p>
+                    Proyecto de Herramientas Multimedia 2CV21
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-inferior">
+
+            <p>
+                © 2026 MTC. Todos los derechos reservados.
+            </p>
+
+        </div>
 
     </footer>
 
-    <!--JavaScript de modo obscuro y traduccion -->
+
+
+    <!-- =========================
+         SCRIPTS
+    ========================== -->
+
+    <!-- Fondo animado Vanta -->
+
+    <script src="js/vanta/three.min.js"></script>
+
+    <script src="js/vanta/vanta.net.min.js"></script>
+
+    <script src="js/fondo-vanta.js"></script>
+
+
+    <!-- Tema e idioma -->
+
     <script src="js/tema.js"></script>
+
     <script src="js/idioma.js"></script>
 
-    <!--JavaScript del visor de PDF -->
+
+    <!-- Visor PDF -->
+
     <script src="js/visor.js"></script>
 
-</body>
 
+
+    <!-- =========================
+         MENÚ DESPLEGABLE
+    ========================== -->
+
+    <script>
+
+        (() => {
+
+            const menu = document.querySelector(".menu-desplegable");
+
+            if (!menu) return;
+
+            document.addEventListener("click", (e) => {
+
+                if (!menu.contains(e.target) ||
+                    e.target.closest(".submenu a")) {
+
+                    menu.open = false;
+
+                }
+
+            });
+
+
+            document.addEventListener("keydown", (e) => {
+
+                if (e.key === "Escape" && menu.open) {
+
+                    menu.open = false;
+
+                    menu.querySelector("summary").focus();
+
+                }
+
+            });
+
+        })();
+
+    </script>
+
+
+</body>
 </html>
